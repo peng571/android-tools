@@ -12,7 +12,6 @@ Use this project as application sub module by using git submodules
 change dir to sub module root project, then do as other project
 
     cd [submodule root]
-    git add .
     git commit -a -m "commit message"
     git push
 
@@ -29,3 +28,6 @@ see google...
 
 
 ## TODO
+
+- finish all doc
+- clean un useful library
