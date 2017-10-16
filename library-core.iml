@@ -23,9 +23,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="false">
-    <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
-    <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/debug" isTestSource="false" generated="true" />
@@ -98,37 +96,5 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 25 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" scope="TEST" name="runner-0.5" level="project" />
-    <orderEntry type="library" exported="" name="espresso-idling-resource-2.2.2" level="project" />
-    <orderEntry type="library" exported="" name="transition-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="design-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="cardview-v7-25.3.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="byte-buddy-agent-1.7.4" level="project" />
-    <orderEntry type="library" exported="" name="support-v13-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="rxandroid-2.0.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="mockito-core-2.10.0" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="hamcrest-all-1.3" level="project" />
-    <orderEntry type="library" exported="" name="rxjava-2.1.4" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="objenesis-2.6" level="project" />
-    <orderEntry type="library" exported="" name="support-core-utils-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="support-fragment-25.3.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="byte-buddy-1.7.4" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="exposed-instrumentation-api-publish-0.5" level="project" />
-    <orderEntry type="library" exported="" name="jackson-databind-2.8.6" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="rules-0.5" level="project" />
-    <orderEntry type="library" exported="" name="jackson-annotations-2.8.6" level="project" />
-    <orderEntry type="library" exported="" name="reactive-streams-1.0.1" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.3" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="junit-4.12" level="project" />
-    <orderEntry type="library" exported="" name="recyclerview-v7-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="jackson-core-2.8.6" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="appcompat-v7-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="support-vector-drawable-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="support-compat-25.3.1" level="project" />
-    <orderEntry type="library" exported="" name="animated-vector-drawable-25.3.1" level="project" />
   </component>
 </module>
