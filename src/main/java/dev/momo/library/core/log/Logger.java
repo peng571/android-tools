@@ -32,6 +32,22 @@ public class Logger {
     private static final String SYSTEM_LOG_FORMAT = "%s(%d) :%s";
 
 
+    private static String getLogType(int logType) {
+        switch (logType) {
+            default:
+            case LOG_NONE:
+                return "";
+            case LOG_ALL:
+                return "A";
+            case LOG_D:
+                return "D";
+            case LOG_E:
+                return "E";
+            case LOG_V:
+                return "V";
+        }
+    }
+
     private static LoggerView loggerView;
 
     public static void setLogView(LoggerView view) {
@@ -59,7 +75,7 @@ public class Logger {
         String fullTag = String.format(Locale.getDefault(), TAG_FORMAT, APP_TAG, tag);
         if (logLevel >= LOG_V) {
             if (log == null) log = "";
-            Log.v(fullTag, log);
+            printLogcat(fullTag, LOG_V, log, null);
             printSystemLog(fullTag, LOG_V, log, null);
             appendLog(fullTag, LOG_V, log);
 
@@ -88,7 +104,7 @@ public class Logger {
         String fullTag = String.format(Locale.getDefault(), TAG_FORMAT, APP_TAG, tag);
         if (logLevel >= LOG_D) {
             if (log == null) log = "";
-            Log.d(fullTag, log);
+            printLogcat(fullTag, LOG_D, log, null);
             printSystemLog(fullTag, LOG_D, log, null);
             appendLog(fullTag, LOG_D, log);
 
@@ -122,7 +138,7 @@ public class Logger {
             } else {
                 Log.w(fullTag, log, error);
             }
-
+            printLogcat(fullTag, LOG_W, log, error);
             printSystemLog(fullTag, LOG_W, log, error);
             appendLog(fullTag, LOG_W, log, error);
 
@@ -140,7 +156,7 @@ public class Logger {
         String fullTag = String.format(Locale.getDefault(), TAG_FORMAT, APP_TAG, tag);
         if (logLevel >= LOG_W) {
             if (log == null) log = "";
-            Log.w(fullTag, log);
+            printLogcat(fullTag, LOG_W, log, null);
             printSystemLog(fullTag, LOG_W, log, null);
             appendLog(fullTag, LOG_W, log);
 
@@ -170,7 +186,7 @@ public class Logger {
         String fullTag = String.format(Locale.getDefault(), TAG_FORMAT, APP_TAG, tag);
         if (log == null) log = "";
         if (logLevel >= LOG_E) {
-            Log.e(fullTag, log, error);
+            printLogcat(fullTag, LOG_E, log, error);
             printSystemLog(fullTag, LOG_E, log, error);
             appendLog(fullTag, LOG_E, log, error);
         }
@@ -205,7 +221,58 @@ public class Logger {
         Logger.ES(tag, format);
     }
 
+    /**
+     * print log with android logcat
+     */
+    // android studio logcat has max limit 1024*4 for each log, so cut log to show all of string
+    private final static int LOG_CAT_MAX = 3000;
 
+    private static void printLogcat(String tag, int level, String sb, Throwable e) {
+        if (sb.length() < LOG_CAT_MAX) {
+            printCutLogcat(tag, level, sb, e);
+        } else {
+            int chunkCount = sb.length() / LOG_CAT_MAX;     // integer division
+            for (int i = 0; i <= chunkCount; i++) {
+                int max = LOG_CAT_MAX * (i + 1);
+                if (max >= sb.length()) {
+                    printCutLogcat(tag + "_" + i, level, sb.substring(LOG_CAT_MAX * i), e);
+                } else {
+                    printCutLogcat(tag + "_" + i, level, sb.substring(LOG_CAT_MAX * i, max), e);
+                }
+            }
+        }
+    }
+
+    private static void printCutLogcat(String tag, int level, String sb, Throwable e) {
+        switch (level) {
+            case LOG_V:
+                Log.v(tag, sb);
+                break;
+            default:
+            case LOG_D:
+                Log.d(tag, sb);
+                break;
+            case LOG_W:
+                if (e == null) {
+                    Log.w(tag, sb);
+                } else {
+                    Log.w(tag, sb, e);
+                }
+                break;
+            case LOG_E:
+                if (e == null) {
+                    Log.e(tag, sb);
+                } else {
+                    Log.e(tag, sb, e);
+                }
+                break;
+        }
+    }
+
+
+    /**
+     * print log with java system (for junit test)
+     */
     private static void printSystemLog(String tag, int level, String log, Throwable e) {
         String logMessage = String.format(Locale.getDefault(), SYSTEM_LOG_FORMAT, tag, level, log);
         switch (level) {
@@ -217,10 +284,14 @@ public class Logger {
                 }
                 break;
             default:
-//                System.out.println(logMessage);
+                System.out.println(logMessage);
         }
     }
 
+
+    /**
+     * log file methods
+     */
     public static void setLoggetFile(String filePath) {
         logFilePath = filePath;
     }
@@ -236,21 +307,6 @@ public class Logger {
     private final static String LOG_FORMAT = "%s (%s) [%s] %s\n";
     private final static String LOG_FORMAT_E = "%s (%s) [%s] %s: %s\n";
 
-    private static String getLogType(int logType) {
-        switch (logType) {
-            default:
-            case LOG_NONE:
-                return "";
-            case LOG_ALL:
-                return "A";
-            case LOG_D:
-                return "D";
-            case LOG_E:
-                return "E";
-            case LOG_V:
-                return "V";
-        }
-    }
 
     private synchronized static void appendLog(String tag, int logType, String text, Throwable ex) {
         if (ex == null) {
@@ -293,4 +349,5 @@ public class Logger {
             Log.e(TAG, "", e);
         }
     }
+
 }
