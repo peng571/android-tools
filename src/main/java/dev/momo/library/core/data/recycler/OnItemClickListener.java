@@ -7,7 +7,7 @@ package dev.momo.library.core.data.recycler;
  * Created by momo peng on 2016/12/29.
  */
 
-public interface OnItemClickListener<  T> {
+public interface OnItemClickListener<T> {
 
     // On hold view holder click
     void onItemClick(ObjectViewHolder viewHolder, int position, T object);
