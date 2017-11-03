@@ -463,17 +463,20 @@ public class Helper {
      * Returns the consumer friendly device name
      */
     public static String getDeviceName() {
-        String manufacturer = getDeviceManu();
-        String model = Build.MODEL;
-        if (model.startsWith(manufacturer)) {
-            return capitalize(model);
-        }
-        return capitalize(manufacturer) + " " + model;
+        return getDeviceBrand() + getDeviceModel();
     }
 
     @TargetApi(19)
-    public static String getDeviceManu(){
+    public static String getDeviceBrand() {
         return Build.MANUFACTURER.toLowerCase();
+    }
+
+    public static String getDeviceModel() {
+        String model = Build.MODEL;
+        if (model.startsWith(getDeviceBrand())) {
+            model = model.substring(getDeviceBrand().length());
+        }
+        return capitalize(model);
     }
 
     private static String capitalize(String str) {
