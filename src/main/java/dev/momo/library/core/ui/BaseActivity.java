@@ -32,26 +32,6 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // TODO StrictMode.setThreadPolicy
-        //            StrictMode.setThreadPolicy(
-        //                    new StrictMode.ThreadPolicy.Builder()
-        //                            .detectDiskReads()
-        //                            .detectDiskWrites()
-        //                            .detectAll()
-        //                            .penaltyLog()
-        //                            .build());
-        //            StrictMode.setVmPolicy(
-        //                    new StrictMode.VmPolicy.Builder()
-        //                            .detectLeakedSqlLiteObjects()
-        //                            .detectLeakedClosableObjects()
-        //                            .penaltyLog()
-        //                            .penaltyDeath()
-        //                            .build());
-
-        // TODO Orientation setting
-        //        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-
         // TODO crash exception handler
         //        Thread.setDefaultUncaughtExceptionHandler(new CrashExceptionHandler(this));
 
@@ -62,7 +42,6 @@ public class BaseActivity extends AppCompatActivity {
         //        if (!ProductMode.DEBUG) {
         //            Logger.setLogLevel(Logger.LOG_NONE);
         //        }
-
         isAlive = true;
     }
 
