@@ -96,10 +96,19 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< HEAD
     <orderEntry type="library" exported="" name="gson-2.8.2" level="project" />
     <orderEntry type="library" exported="" name="transition-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="design-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
+=======
+    <orderEntry type="library" exported="" name="jackson-databind-2.8.6" level="project" />
+    <orderEntry type="library" exported="" name="jackson-annotations-2.8.6" level="project" />
+    <orderEntry type="library" exported="" name="transition-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="design-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="support-core-ui-25.3.1" level="project" />
+    <orderEntry type="library" exported="" name="cardview-v7-25.3.1" level="project" />
+>>>>>>> 1cb5b91c531f50cb6602d60cb60e9d5068db510d
     <orderEntry type="library" exported="" name="support-v13-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-v4-25.3.1" level="project" />
     <orderEntry type="library" exported="" name="support-media-compat-25.3.1" level="project" />

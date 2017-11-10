@@ -45,6 +45,13 @@ dependencies {
     compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
     compile "com.android.support:support-annotations:$rootProject.ext.supportLibraryVersion"
 
+<<<<<<< HEAD
     compile 'com.google.code.gson:gson:2.8.2'
+=======
+    // Jackson parser
+    compile "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
+>>>>>>> 1cb5b91c531f50cb6602d60cb60e9d5068db510d
 
 }
