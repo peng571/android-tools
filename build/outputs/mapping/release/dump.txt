@@ -83987,416 +83987,357 @@ _____________________________________________________________________
 
 Interfaces (count = 0):
 
-Constant Pool (count = 111):
-  + String []
-  + Class [com/fasterxml/jackson/core/JsonParseException]
-  + Class [com/fasterxml/jackson/core/JsonProcessingException]
-  + Class [com/fasterxml/jackson/databind/JsonMappingException]
-  + Class [com/fasterxml/jackson/databind/ObjectMapper]
-  + Class [com/fasterxml/jackson/databind/node/ArrayNode]
-  + Class [com/fasterxml/jackson/databind/node/JsonNodeFactory]
-  + Class [com/fasterxml/jackson/databind/type/TypeFactory]
-  + Class [dev/momo/library/core/log/Logger]
+Constant Pool (count = 68):
+  + Class [com/google/gson/Gson]
   + Class [dev/momo/library/core/tool/SimpleMapper]
-  + Class [java/io/IOException]
+  + Class [dev/momo/library/core/tool/SimpleMapper$1]
+  + Class [dev/momo/library/core/tool/SimpleMapper$2]
   + Class [java/lang/Class]
   + Class [java/lang/Object]
   + Class [java/util/List]
-  + Fieldref [com/fasterxml/jackson/databind/node/JsonNodeFactory.instance Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;]
-  + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Lcom/fasterxml/jackson/databind/ObjectMapper;]
+  + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Ldev/momo/library/core/tool/SimpleMapper;]
+  + Fieldref [dev/momo/library/core/tool/SimpleMapper.E Lcom/google/gson/Gson;]
   + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.<init> ()V]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.getTypeFactory ()Lcom/fasterxml/jackson/databind/type/TypeFactory;]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.readValue (Ljava/io/InputStream;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.readValue (Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.readValue (Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.valueToTree (Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonNode;]
-  + Methodref [com/fasterxml/jackson/databind/ObjectMapper.writeValueAsString (Ljava/lang/Object;)Ljava/lang/String;]
-  + Methodref [com/fasterxml/jackson/databind/node/JsonNodeFactory.arrayNode ()Lcom/fasterxml/jackson/databind/node/ArrayNode;]
-  + Methodref [com/fasterxml/jackson/databind/node/JsonNodeFactory.objectNode ()Lcom/fasterxml/jackson/databind/node/ObjectNode;]
-  + Methodref [com/fasterxml/jackson/databind/type/TypeFactory.constructCollectionType (Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/type/CollectionType;]
-  + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-  + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
+  + Methodref [com/google/gson/Gson.<init> ()V]
+  + Methodref [com/google/gson/Gson.fromJson (Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;]
+  + Methodref [com/google/gson/Gson.toJson (Ljava/lang/Object;)Ljava/lang/String;]
+  + Methodref [dev/momo/library/core/tool/SimpleMapper.<init> ()V]
+  + Methodref [dev/momo/library/core/tool/SimpleMapper$1.<init> ()V]
+  + Methodref [dev/momo/library/core/tool/SimpleMapper$1.getType ()Ljava/lang/reflect/Type;]
+  + Methodref [dev/momo/library/core/tool/SimpleMapper$2.<init> ()V]
+  + Methodref [dev/momo/library/core/tool/SimpleMapper$2.getType ()Ljava/lang/reflect/Type;]
   + Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [D Lcom/fasterxml/jackson/databind/ObjectMapper;]
-  + NameAndType [E (Ljava/lang/String;Ljava/lang/Throwable;)V]
+  + NameAndType [D Ldev/momo/library/core/tool/SimpleMapper;]
+  + NameAndType [E Lcom/google/gson/Gson;]
   + NameAndType [TAG Ljava/lang/String;]
-  + NameAndType [arrayNode ()Lcom/fasterxml/jackson/databind/node/ArrayNode;]
-  + NameAndType [constructCollectionType (Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/type/CollectionType;]
-  + NameAndType [getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
+  + NameAndType [fromJson (Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;]
   + NameAndType [getSimpleName ()Ljava/lang/String;]
-  + NameAndType [getTypeFactory ()Lcom/fasterxml/jackson/databind/type/TypeFactory;]
-  + NameAndType [instance Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;]
-  + NameAndType [objectNode ()Lcom/fasterxml/jackson/databind/node/ObjectNode;]
-  + NameAndType [readValue (Ljava/io/InputStream;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-  + NameAndType [readValue (Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-  + NameAndType [readValue (Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;]
-  + NameAndType [valueToTree (Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonNode;]
-  + NameAndType [writeValueAsString (Ljava/lang/Object;)Ljava/lang/String;]
-  + Utf8 []
-  + Utf8 [()Lcom/fasterxml/jackson/databind/ObjectMapper;]
-  + Utf8 [()Lcom/fasterxml/jackson/databind/node/ArrayNode;]
-  + Utf8 [()Lcom/fasterxml/jackson/databind/node/ObjectNode;]
-  + Utf8 [()Lcom/fasterxml/jackson/databind/type/TypeFactory;]
+  + NameAndType [getType ()Ljava/lang/reflect/Type;]
+  + NameAndType [toJson (Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [()Ldev/momo/library/core/tool/SimpleMapper;]
   + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Ljava/lang/reflect/Type;]
   + Utf8 [()V]
-  + Utf8 [(Ljava/io/InputStream;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-  + Utf8 [(Ljava/io/InputStream;Ljava/lang/Class;)Ljava/util/List;]
-  + Utf8 [(Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/type/CollectionType;]
-  + Utf8 [(Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonNode;]
   + Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
-  + Utf8 [(Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-  + Utf8 [(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;]
-  + Utf8 [(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;]
-  + Utf8 [(Ljava/lang/String;Ljava/lang/Throwable;)V]
-  + Utf8 [([Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/node/ArrayNode;]
-  + Utf8 [<T:Ljava/lang/Object;>(Ljava/io/InputStream;Ljava/lang/Class<TT;>;)Ljava/util/List<TT;>;]
-  + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/Class<TT;>;)Ljava/util/List<TT;>;]
-  + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/Class<TT;>;)TT;]
-  + Utf8 [<T:Ljava/lang/Object;>([TT;)Lcom/fasterxml/jackson/databind/node/ArrayNode;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [(Ljava/lang/String;)Ljava/util/List;]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;]
+  + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)Ljava/util/List<TT;>;]
+  + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;]
   + Utf8 [<clinit>]
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [D]
   + Utf8 [E]
-  + Utf8 [Lcom/fasterxml/jackson/databind/ObjectMapper;]
-  + Utf8 [Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;]
+  + Utf8 [InnerClasses]
+  + Utf8 [Lcom/google/gson/Gson;]
+  + Utf8 [Ldev/momo/library/core/tool/SimpleMapper;]
   + Utf8 [LineNumberTable]
   + Utf8 [Ljava/lang/String;]
   + Utf8 [Signature]
   + Utf8 [SimpleMapper.java]
   + Utf8 [SourceFile]
   + Utf8 [TAG]
-  + Utf8 [arrayNode]
-  + Utf8 [com/fasterxml/jackson/core/JsonParseException]
-  + Utf8 [com/fasterxml/jackson/core/JsonProcessingException]
-  + Utf8 [com/fasterxml/jackson/databind/JsonMappingException]
-  + Utf8 [com/fasterxml/jackson/databind/ObjectMapper]
-  + Utf8 [com/fasterxml/jackson/databind/node/ArrayNode]
-  + Utf8 [com/fasterxml/jackson/databind/node/JsonNodeFactory]
-  + Utf8 [com/fasterxml/jackson/databind/type/TypeFactory]
-  + Utf8 [constructCollectionType]
-  + Utf8 [dev/momo/library/core/log/Logger]
+  + Utf8 [com/google/gson/Gson]
   + Utf8 [dev/momo/library/core/tool/SimpleMapper]
+  + Utf8 [dev/momo/library/core/tool/SimpleMapper$1]
+  + Utf8 [dev/momo/library/core/tool/SimpleMapper$2]
+  + Utf8 [fromJson]
   + Utf8 [getMapper]
   + Utf8 [getSimpleName]
-  + Utf8 [getTypeFactory]
-  + Utf8 [instance]
-  + Utf8 [java/io/IOException]
+  + Utf8 [getType]
   + Utf8 [java/lang/Class]
   + Utf8 [java/lang/Object]
   + Utf8 [java/util/List]
-  + Utf8 [newArrayNode]
-  + Utf8 [newNode]
-  + Utf8 [objectNode]
-  + Utf8 [readValue]
-  + Utf8 [toArrayNode]
+  + Utf8 [toJson]
   + Utf8 [toObject]
   + Utf8 [toObjectList]
   + Utf8 [toString]
-  + Utf8 [valueToTree]
-  + Utf8 [writeValueAsString]
 
-Fields (count = 2):
+Fields (count = 3):
   + Field:        TAG Ljava/lang/String;
     Access flags: 0x1a
       = private static final java.lang.String TAG
-  + Field:        D Lcom/fasterxml/jackson/databind/ObjectMapper;
+  + Field:        D Ldev/momo/library/core/tool/SimpleMapper;
     Access flags: 0xa
-      = private static com.fasterxml.jackson.databind.ObjectMapper D
+      = private static dev.momo.library.core.tool.SimpleMapper D
+  + Field:        E Lcom/google/gson/Gson;
+    Access flags: 0xa
+      = private static com.google.gson.Gson E
 
-Methods (count = 10):
+Methods (count = 6):
   - Method:       <init>()V
-    Access flags: 0x1
-      = public SimpleMapper()
+    Access flags: 0x2
+      = private SimpleMapper()
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+    + Code attribute instructions (code length = 15, locals = 1, stack = 2):
       [0] aload_0 v0
-      [1] invokespecial #31
+      [1] invokespecial #20
         + Methodref [java/lang/Object.<init> ()V]
-      [4] return
+      [4] new #1
+        + Class [com/google/gson/Gson]
+      [7] dup
+      [8] invokespecial #11
+        + Methodref [com/google/gson/Gson.<init> ()V]
+      [11] putstatic #9
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.E Lcom/google/gson/Gson;]
+      [14] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 1)
-        [0] -> line 21
-  + Method:       getMapper()Lcom/fasterxml/jackson/databind/ObjectMapper;
+      + Line number table attribute (count = 3)
+        [0] -> line 20
+        [4] -> line 21
+        [14] -> line 22
+  + Method:       getMapper()Ldev/momo/library/core/tool/SimpleMapper;
     Access flags: 0x9
-      = public static com.fasterxml.jackson.databind.ObjectMapper getMapper()
+      = public static dev.momo.library.core.tool.SimpleMapper getMapper()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 20, locals = 0, stack = 2):
-      [0] getstatic #16
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Lcom/fasterxml/jackson/databind/ObjectMapper;]
+      [0] getstatic #8
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Ldev/momo/library/core/tool/SimpleMapper;]
       [3] ifnonnull +13 (target=16)
-      [6] new #5
-        + Class [com/fasterxml/jackson/databind/ObjectMapper]
+      [6] new #2
+        + Class [dev/momo/library/core/tool/SimpleMapper]
       [9] dup
-      [10] invokespecial #18
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.<init> ()V]
-      [13] putstatic #16
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [16] getstatic #16
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Lcom/fasterxml/jackson/databind/ObjectMapper;]
+      [10] invokespecial #14
+        + Methodref [dev/momo/library/core/tool/SimpleMapper.<init> ()V]
+      [13] putstatic #8
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Ldev/momo/library/core/tool/SimpleMapper;]
+      [16] getstatic #8
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Ldev/momo/library/core/tool/SimpleMapper;]
       [19] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Line number table attribute (count = 3)
-        [0] -> line 28
-        [6] -> line 29
-        [16] -> line 31
+        [0] -> line 25
+        [6] -> line 26
+        [16] -> line 28
   + Method:       toString(Ljava/lang/Object;)Ljava/lang/String;
     Access flags: 0x9
       = public static java.lang.String toString(java.lang.Object)
     Class member attributes (count = 1):
-    + Code attribute instructions (code length = 19, locals = 2, stack = 2):
-      [0] invokestatic #29
-        + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
+    + Code attribute instructions (code length = 8, locals = 1, stack = 2):
+      [0] getstatic #9
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.E Lcom/google/gson/Gson;]
       [3] aload_0 v0
-      [4] invokevirtual #24
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.writeValueAsString (Ljava/lang/Object;)Ljava/lang/String;]
+      [4] invokevirtual #13
+        + Methodref [com/google/gson/Gson.toJson (Ljava/lang/Object;)Ljava/lang/String;]
       [7] areturn
-      [8] astore_1 v1
-      [9] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [12] aload_1 v1
-      [13] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [16] ldc #1
-        + String []
-      [18] areturn
-      Code attribute exceptions (count = 1):
-      - ExceptionInfo (0 -> 7: 8):
-      + Class [com/fasterxml/jackson/core/JsonProcessingException]
+      Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 4)
+      + Line number table attribute (count = 1)
+        [0] -> line 34
+  + Method:       toObject(Ljava/lang/String;)Ljava/lang/Object;
+    Access flags: 0x9
+      = public static java.lang.Object toObject(java.lang.String)
+    Class member attributes (count = 2):
+    + Code attribute instructions (code length = 20, locals = 2, stack = 3):
+      [0] new #3
+        + Class [dev/momo/library/core/tool/SimpleMapper$1]
+      [3] dup
+      [4] invokespecial #15
+        + Methodref [dev/momo/library/core/tool/SimpleMapper$1.<init> ()V]
+      [7] invokevirtual #16
+        + Methodref [dev/momo/library/core/tool/SimpleMapper$1.getType ()Ljava/lang/reflect/Type;]
+      [10] astore_1 v1
+      [11] getstatic #9
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.E Lcom/google/gson/Gson;]
+      [14] aload_0 v0
+      [15] aload_1 v1
+      [16] invokevirtual #12
+        + Methodref [com/google/gson/Gson.fromJson (Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;]
+      [19] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 2)
         [0] -> line 39
-        [8] -> line 40
-        [9] -> line 41
-        [16] -> line 42
-  + Method:       toObject(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;
-    Access flags: 0x9
-      = public static java.lang.Object toObject(java.lang.String,java.lang.Class)
-    Class member attributes (count = 2):
-    + Code attribute instructions (code length = 29, locals = 3, stack = 3):
-      [0] invokestatic #29
-        + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [3] aload_0 v0
-      [4] aload_1 v1
-      [5] invokevirtual #22
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.readValue (Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;]
-      [8] areturn
-      [9] astore_2 v2
-      [10] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [13] aload_2 v2
-      [14] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [17] aconst_null
-      [18] areturn
-      [19] astore_2 v2
-      [20] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [23] aload_2 v2
-      [24] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [27] aconst_null
-      [28] areturn
-      Code attribute exceptions (count = 3):
-      - ExceptionInfo (0 -> 8: 9):
-      + Class [com/fasterxml/jackson/core/JsonParseException]
-      - ExceptionInfo (0 -> 8: 9):
-      + Class [com/fasterxml/jackson/databind/JsonMappingException]
-      - ExceptionInfo (0 -> 8: 19):
-      + Class [java/io/IOException]
-      Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 7)
-        [0] -> line 49
-        [9] -> line 50
-        [10] -> line 51
-        [17] -> line 52
-        [19] -> line 53
-        [20] -> line 54
-        [27] -> line 55
+        [11] -> line 40
     + Signature attribute:
-      + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/Class<TT;>;)TT;]
-  + Method:       toObjectList(Ljava/io/InputStream;Ljava/lang/Class;)Ljava/util/List;
+      + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;]
+  + Method:       toObjectList(Ljava/lang/String;)Ljava/util/List;
     Access flags: 0x9
-      = public static java.util.List toObjectList(java.io.InputStream,java.lang.Class)
+      = public static java.util.List toObjectList(java.lang.String)
     Class member attributes (count = 2):
-    + Code attribute instructions (code length = 43, locals = 3, stack = 5):
-      [0] invokestatic #29
-        + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [3] aload_0 v0
-      [4] invokestatic #29
-        + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [7] invokevirtual #19
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.getTypeFactory ()Lcom/fasterxml/jackson/databind/type/TypeFactory;]
-      [10] ldc #14
-        + Class [java/util/List]
-      [12] aload_1 v1
-      [13] invokevirtual #27
-        + Methodref [com/fasterxml/jackson/databind/type/TypeFactory.constructCollectionType (Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/type/CollectionType;]
-      [16] invokevirtual #20
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.readValue (Ljava/io/InputStream;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-      [19] checkcast #14
+    + Code attribute instructions (code length = 23, locals = 2, stack = 3):
+      [0] new #4
+        + Class [dev/momo/library/core/tool/SimpleMapper$2]
+      [3] dup
+      [4] invokespecial #17
+        + Methodref [dev/momo/library/core/tool/SimpleMapper$2.<init> ()V]
+      [7] invokevirtual #18
+        + Methodref [dev/momo/library/core/tool/SimpleMapper$2.getType ()Ljava/lang/reflect/Type;]
+      [10] astore_1 v1
+      [11] getstatic #9
+        + Fieldref [dev/momo/library/core/tool/SimpleMapper.E Lcom/google/gson/Gson;]
+      [14] aload_0 v0
+      [15] aload_1 v1
+      [16] invokevirtual #12
+        + Methodref [com/google/gson/Gson.fromJson (Ljava/lang/String;Ljava/lang/reflect/Type;)Ljava/lang/Object;]
+      [19] checkcast #7
         + Class [java/util/List]
       [22] areturn
-      [23] astore_2 v2
-      [24] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [27] aload_2 v2
-      [28] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [31] aconst_null
-      [32] areturn
-      [33] astore_2 v2
-      [34] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [37] aload_2 v2
-      [38] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [41] aconst_null
-      [42] areturn
-      Code attribute exceptions (count = 3):
-      - ExceptionInfo (0 -> 22: 23):
-      + Class [com/fasterxml/jackson/core/JsonParseException]
-      - ExceptionInfo (0 -> 22: 23):
-      + Class [com/fasterxml/jackson/databind/JsonMappingException]
-      - ExceptionInfo (0 -> 22: 33):
-      + Class [java/io/IOException]
-      Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 7)
-        [0] -> line 61
-        [23] -> line 62
-        [24] -> line 63
-        [31] -> line 64
-        [33] -> line 65
-        [34] -> line 66
-        [41] -> line 67
-    + Signature attribute:
-      + Utf8 [<T:Ljava/lang/Object;>(Ljava/io/InputStream;Ljava/lang/Class<TT;>;)Ljava/util/List<TT;>;]
-  + Method:       toObjectList(Ljava/lang/String;Ljava/lang/Class;)Ljava/util/List;
-    Access flags: 0x9
-      = public static java.util.List toObjectList(java.lang.String,java.lang.Class)
-    Class member attributes (count = 2):
-    + Code attribute instructions (code length = 43, locals = 3, stack = 5):
-      [0] invokestatic #29
-        + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [3] aload_0 v0
-      [4] invokestatic #29
-        + Methodref [dev/momo/library/core/tool/SimpleMapper.getMapper ()Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [7] invokevirtual #19
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.getTypeFactory ()Lcom/fasterxml/jackson/databind/type/TypeFactory;]
-      [10] ldc #14
-        + Class [java/util/List]
-      [12] aload_1 v1
-      [13] invokevirtual #27
-        + Methodref [com/fasterxml/jackson/databind/type/TypeFactory.constructCollectionType (Ljava/lang/Class;Ljava/lang/Class;)Lcom/fasterxml/jackson/databind/type/CollectionType;]
-      [16] invokevirtual #21
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.readValue (Ljava/lang/String;Lcom/fasterxml/jackson/databind/JavaType;)Ljava/lang/Object;]
-      [19] checkcast #14
-        + Class [java/util/List]
-      [22] areturn
-      [23] astore_2 v2
-      [24] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [27] aload_2 v2
-      [28] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [31] aconst_null
-      [32] areturn
-      [33] astore_2 v2
-      [34] getstatic #17
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
-      [37] aload_2 v2
-      [38] invokestatic #28
-        + Methodref [dev/momo/library/core/log/Logger.E (Ljava/lang/String;Ljava/lang/Throwable;)V]
-      [41] aconst_null
-      [42] areturn
-      Code attribute exceptions (count = 3):
-      - ExceptionInfo (0 -> 22: 23):
-      + Class [com/fasterxml/jackson/core/JsonParseException]
-      - ExceptionInfo (0 -> 22: 23):
-      + Class [com/fasterxml/jackson/databind/JsonMappingException]
-      - ExceptionInfo (0 -> 22: 33):
-      + Class [java/io/IOException]
-      Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 7)
-        [0] -> line 73
-        [23] -> line 74
-        [24] -> line 75
-        [31] -> line 76
-        [33] -> line 77
-        [34] -> line 78
-        [41] -> line 79
-    + Signature attribute:
-      + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;Ljava/lang/Class<TT;>;)Ljava/util/List<TT;>;]
-  + Method:       toArrayNode([Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/node/ArrayNode;
-    Access flags: 0x9
-      = public static com.fasterxml.jackson.databind.node.ArrayNode toArrayNode(java.lang.Object[])
-    Class member attributes (count = 2):
-    + Code attribute instructions (code length = 11, locals = 1, stack = 2):
-      [0] getstatic #16
-        + Fieldref [dev/momo/library/core/tool/SimpleMapper.D Lcom/fasterxml/jackson/databind/ObjectMapper;]
-      [3] aload_0 v0
-      [4] invokevirtual #23
-        + Methodref [com/fasterxml/jackson/databind/ObjectMapper.valueToTree (Ljava/lang/Object;)Lcom/fasterxml/jackson/databind/JsonNode;]
-      [7] checkcast #6
-        + Class [com/fasterxml/jackson/databind/node/ArrayNode]
-      [10] areturn
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 1)
-        [0] -> line 85
+      + Line number table attribute (count = 2)
+        [0] -> line 44
+        [11] -> line 45
     + Signature attribute:
-      + Utf8 [<T:Ljava/lang/Object;>([TT;)Lcom/fasterxml/jackson/databind/node/ArrayNode;]
-  + Method:       newNode()Lcom/fasterxml/jackson/databind/node/ObjectNode;
-    Access flags: 0x9
-      = public static com.fasterxml.jackson.databind.node.ObjectNode newNode()
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 7, locals = 0, stack = 1):
-      [0] getstatic #15
-        + Fieldref [com/fasterxml/jackson/databind/node/JsonNodeFactory.instance Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;]
-      [3] invokevirtual #26
-        + Methodref [com/fasterxml/jackson/databind/node/JsonNodeFactory.objectNode ()Lcom/fasterxml/jackson/databind/node/ObjectNode;]
-      [6] areturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 1)
-        [0] -> line 93
-  + Method:       newArrayNode()Lcom/fasterxml/jackson/databind/node/ArrayNode;
-    Access flags: 0x9
-      = public static com.fasterxml.jackson.databind.node.ArrayNode newArrayNode()
-    Class member attributes (count = 1):
-    + Code attribute instructions (code length = 7, locals = 0, stack = 1):
-      [0] getstatic #15
-        + Fieldref [com/fasterxml/jackson/databind/node/JsonNodeFactory.instance Lcom/fasterxml/jackson/databind/node/JsonNodeFactory;]
-      [3] invokevirtual #25
-        + Methodref [com/fasterxml/jackson/databind/node/JsonNodeFactory.arrayNode ()Lcom/fasterxml/jackson/databind/node/ArrayNode;]
-      [6] areturn
-      Code attribute exceptions (count = 0):
-      Code attribute attributes (attribute count = 1):
-      + Line number table attribute (count = 1)
-        [0] -> line 100
+      + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)Ljava/util/List<TT;>;]
   - Method:       <clinit>()V
     Access flags: 0x8
       = static void <clinit>()
     Class member attributes (count = 1):
     + Code attribute instructions (code length = 9, locals = 0, stack = 1):
-      [0] ldc #10
+      [0] ldc #2
         + Class [dev/momo/library/core/tool/SimpleMapper]
-      [2] invokevirtual #30
+      [2] invokevirtual #19
         + Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
-      [5] putstatic #17
+      [5] putstatic #10
         + Fieldref [dev/momo/library/core/tool/SimpleMapper.TAG Ljava/lang/String;]
       [8] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):
       + Line number table attribute (count = 1)
-        [0] -> line 23
+        [0] -> line 15
 
-Class file attributes (count = 1):
+Class file attributes (count = 2):
+  + Inner classes attribute (count = 2)
+    - InnerClassesInfo:
+      Access flags:  0x8 = static 
+      + Class [dev/momo/library/core/tool/SimpleMapper$2]
+    - InnerClassesInfo:
+      Access flags:  0x8 = static 
+      + Class [dev/momo/library/core/tool/SimpleMapper$1]
+  + Source file attribute:
+    + Utf8 [SimpleMapper.java]
+
+_____________________________________________________________________
++ Program class: dev/momo/library/core/tool/SimpleMapper$1
+  Superclass:    com/google/gson/reflect/TypeToken
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x30
+    = final class dev.momo.library.core.tool.SimpleMapper$1 extends com.google.gson.reflect.TypeToken
+
+Interfaces (count = 0):
+
+Constant Pool (count = 22):
+  + Class [com/google/gson/reflect/TypeToken]
+  + Class [dev/momo/library/core/tool/SimpleMapper]
+  + Class [dev/momo/library/core/tool/SimpleMapper$1]
+  + Methodref [com/google/gson/reflect/TypeToken.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [toObject (Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [()V]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [EnclosingMethod]
+  + Utf8 [InnerClasses]
+  + Utf8 [Lcom/google/gson/reflect/TypeToken<TT;>;]
+  + Utf8 [LineNumberTable]
+  + Utf8 [Signature]
+  + Utf8 [SimpleMapper.java]
+  + Utf8 [SourceFile]
+  + Utf8 [com/google/gson/reflect/TypeToken]
+  + Utf8 [dev/momo/library/core/tool/SimpleMapper]
+  + Utf8 [dev/momo/library/core/tool/SimpleMapper$1]
+  + Utf8 [toObject]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = SimpleMapper$1()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [com/google/gson/reflect/TypeToken.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 39
+
+Class file attributes (count = 4):
+  + Enclosing method attribute:
+    + Class [dev/momo/library/core/tool/SimpleMapper]
+    + NameAndType [toObject (Ljava/lang/String;)Ljava/lang/Object;]
+  + Inner classes attribute (count = 1)
+    - InnerClassesInfo:
+      Access flags:  0x8 = static 
+      + Class [dev/momo/library/core/tool/SimpleMapper$1]
+  + Signature attribute:
+    + Utf8 [Lcom/google/gson/reflect/TypeToken<TT;>;]
+  + Source file attribute:
+    + Utf8 [SimpleMapper.java]
+
+_____________________________________________________________________
++ Program class: dev/momo/library/core/tool/SimpleMapper$2
+  Superclass:    com/google/gson/reflect/TypeToken
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x30
+    = final class dev.momo.library.core.tool.SimpleMapper$2 extends com.google.gson.reflect.TypeToken
+
+Interfaces (count = 0):
+
+Constant Pool (count = 22):
+  + Class [com/google/gson/reflect/TypeToken]
+  + Class [dev/momo/library/core/tool/SimpleMapper]
+  + Class [dev/momo/library/core/tool/SimpleMapper$2]
+  + Methodref [com/google/gson/reflect/TypeToken.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [toObjectList (Ljava/lang/String;)Ljava/util/List;]
+  + Utf8 [()V]
+  + Utf8 [(Ljava/lang/String;)Ljava/util/List;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [EnclosingMethod]
+  + Utf8 [InnerClasses]
+  + Utf8 [Lcom/google/gson/reflect/TypeToken<Ljava/util/List<TT;>;>;]
+  + Utf8 [LineNumberTable]
+  + Utf8 [Signature]
+  + Utf8 [SimpleMapper.java]
+  + Utf8 [SourceFile]
+  + Utf8 [com/google/gson/reflect/TypeToken]
+  + Utf8 [dev/momo/library/core/tool/SimpleMapper]
+  + Utf8 [dev/momo/library/core/tool/SimpleMapper$2]
+  + Utf8 [toObjectList]
+
+Fields (count = 0):
+
+Methods (count = 1):
+  - Method:       <init>()V
+    Access flags: 0x0
+      = SimpleMapper$2()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #4
+        + Methodref [com/google/gson/reflect/TypeToken.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 44
+
+Class file attributes (count = 4):
+  + Enclosing method attribute:
+    + Class [dev/momo/library/core/tool/SimpleMapper]
+    + NameAndType [toObjectList (Ljava/lang/String;)Ljava/util/List;]
+  + Inner classes attribute (count = 1)
+    - InnerClassesInfo:
+      Access flags:  0x8 = static 
+      + Class [dev/momo/library/core/tool/SimpleMapper$2]
+  + Signature attribute:
+    + Utf8 [Lcom/google/gson/reflect/TypeToken<Ljava/util/List<TT;>;>;]
   + Source file attribute:
     + Utf8 [SimpleMapper.java]
 
@@ -85232,6 +85173,1098 @@ Class file attributes (count = 1):
     + Utf8 [StorageHelper.java]
 
 _____________________________________________________________________
++ Program class: dev/momo/library/core/tool/json/JsonFace
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x601
+    = public interface dev.momo.library.core.tool.json.JsonFace extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 15):
+  + Class [dev/momo/library/core/tool/json/JsonFace]
+  + Class [java/lang/Object]
+  + Utf8 [(Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [(Ljava/lang/String;)Ljava/lang/Object;]
+  + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;]
+  + Utf8 [<T:Ljava/lang/Object;>(TT;)Ljava/lang/String;]
+  + Utf8 [JsonFace.java]
+  + Utf8 [Signature]
+  + Utf8 [SourceFile]
+  + Utf8 [dev/momo/library/core/tool/json/JsonFace]
+  + Utf8 [java/lang/Object]
+  + Utf8 [toObject]
+  + Utf8 [toObjectList]
+  + Utf8 [toString]
+
+Fields (count = 0):
+
+Methods (count = 3):
+  + Method:       toString(Ljava/lang/Object;)Ljava/lang/String;
+    Access flags: 0x401
+      = public abstract java.lang.String toString(java.lang.Object)
+    Class member attributes (count = 1):
+    + Signature attribute:
+      + Utf8 [<T:Ljava/lang/Object;>(TT;)Ljava/lang/String;]
+  + Method:       toObject(Ljava/lang/String;)Ljava/lang/Object;
+    Access flags: 0x401
+      = public abstract java.lang.Object toObject(java.lang.String)
+    Class member attributes (count = 1):
+    + Signature attribute:
+      + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;]
+  + Method:       toObjectList(Ljava/lang/String;)Ljava/lang/Object;
+    Access flags: 0x401
+      = public abstract java.lang.Object toObjectList(java.lang.String)
+    Class member attributes (count = 1):
+    + Signature attribute:
+      + Utf8 [<T:Ljava/lang/Object;>(Ljava/lang/String;)TT;]
+
+Class file attributes (count = 1):
+  + Source file attribute:
+    + Utf8 [JsonFace.java]
+
+_____________________________________________________________________
++ Program class: dev/momo/library/core/ui/BaseActivity
+  Superclass:    android/support/v7/app/AppCompatActivity
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x21
+    = public class dev.momo.library.core.ui.BaseActivity extends android.support.v7.app.AppCompatActivity
+
+Interfaces (count = 0):
+
+Constant Pool (count = 110):
+  + Integer [-2147483648]
+  + Integer [21]
+  + Integer [67108864]
+  + Class [android/os/Build]
+  + Class [android/os/Build$VERSION]
+  + Class [android/os/Build$VERSION_CODES]
+  + Class [android/support/v7/app/AppCompatActivity]
+  + Class [android/view/View]
+  + Class [android/view/Window]
+  + Class [android/view/WindowManager]
+  + Class [android/view/WindowManager$LayoutParams]
+  + Class [dev/momo/library/core/Helper]
+  + Class [dev/momo/library/core/tool/ResourceHelper]
+  + Class [dev/momo/library/core/ui/BaseActivity]
+  + Class [java/lang/Class]
+  + Fieldref [android/os/Build$VERSION.SDK_INT I]
+  + Fieldref [dev/momo/library/core/ui/BaseActivity.TAG Ljava/lang/String;]
+  + Fieldref [dev/momo/library/core/ui/BaseActivity.isAlive Z]
+  + Fieldref [dev/momo/library/core/ui/BaseActivity.isShown Z]
+  + Methodref [android/support/v7/app/AppCompatActivity.<init> ()V]
+  + Methodref [android/support/v7/app/AppCompatActivity.onCreate (Landroid/os/Bundle;)V]
+  + Methodref [android/support/v7/app/AppCompatActivity.onDestroy ()V]
+  + Methodref [android/support/v7/app/AppCompatActivity.onPause ()V]
+  + Methodref [android/support/v7/app/AppCompatActivity.onResume ()V]
+  + Methodref [android/view/View.setSystemUiVisibility (I)V]
+  + Methodref [android/view/Window.addFlags (I)V]
+  + Methodref [android/view/Window.clearFlags (I)V]
+  + Methodref [android/view/Window.getDecorView ()Landroid/view/View;]
+  + Methodref [android/view/Window.setStatusBarColor (I)V]
+  + Methodref [dev/momo/library/core/Helper.initInstance (Landroid/content/Context;)Ldev/momo/library/core/Helper;]
+  + Methodref [dev/momo/library/core/tool/ResourceHelper.getColor (I)I]
+  + Methodref [dev/momo/library/core/ui/BaseActivity.getWindow ()Landroid/view/Window;]
+  + Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
+  + NameAndType [<init> ()V]
+  + NameAndType [SDK_INT I]
+  + NameAndType [TAG Ljava/lang/String;]
+  + NameAndType [addFlags (I)V]
+  + NameAndType [clearFlags (I)V]
+  + NameAndType [getColor (I)I]
+  + NameAndType [getDecorView ()Landroid/view/View;]
+  + NameAndType [getSimpleName ()Ljava/lang/String;]
+  + NameAndType [getWindow ()Landroid/view/Window;]
+  + NameAndType [initInstance (Landroid/content/Context;)Ldev/momo/library/core/Helper;]
+  + NameAndType [isAlive Z]
+  + NameAndType [isShown Z]
+  + NameAndType [onCreate (Landroid/os/Bundle;)V]
+  + NameAndType [onDestroy ()V]
+  + NameAndType [onPause ()V]
+  + NameAndType [onResume ()V]
+  + NameAndType [setStatusBarColor (I)V]
+  + NameAndType [setSystemUiVisibility (I)V]
+  + Utf8 [()Landroid/app/Activity;]
+  + Utf8 [()Landroid/view/View;]
+  + Utf8 [()Landroid/view/Window;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()V]
+  + Utf8 [(I)I]
+  + Utf8 [(I)V]
+  + Utf8 [(Landroid/content/Context;)Ldev/momo/library/core/Helper;]
+  + Utf8 [(Landroid/os/Bundle;)V]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [BaseActivity.java]
+  + Utf8 [Code]
+  + Utf8 [I]
+  + Utf8 [InnerClasses]
+  + Utf8 [Landroid/annotation/TargetApi;]
+  + Utf8 [Landroid/support/annotation/ColorRes;]
+  + Utf8 [LayoutParams]
+  + Utf8 [LineNumberTable]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [RuntimeInvisibleAnnotations]
+  + Utf8 [RuntimeInvisibleParameterAnnotations]
+  + Utf8 [SDK_INT]
+  + Utf8 [SourceFile]
+  + Utf8 [TAG]
+  + Utf8 [VERSION]
+  + Utf8 [VERSION_CODES]
+  + Utf8 [Z]
+  + Utf8 [addFlags]
+  + Utf8 [android/os/Build]
+  + Utf8 [android/os/Build$VERSION]
+  + Utf8 [android/os/Build$VERSION_CODES]
+  + Utf8 [android/support/v7/app/AppCompatActivity]
+  + Utf8 [android/view/View]
+  + Utf8 [android/view/Window]
+  + Utf8 [android/view/WindowManager]
+  + Utf8 [android/view/WindowManager$LayoutParams]
+  + Utf8 [clearFlags]
+  + Utf8 [dev/momo/library/core/Helper]
+  + Utf8 [dev/momo/library/core/tool/ResourceHelper]
+  + Utf8 [dev/momo/library/core/ui/BaseActivity]
+  + Utf8 [getActivity]
+  + Utf8 [getColor]
+  + Utf8 [getDecorView]
+  + Utf8 [getSimpleName]
+  + Utf8 [getWindow]
+  + Utf8 [hideStatusBar]
+  + Utf8 [initInstance]
+  + Utf8 [isAlive]
+  + Utf8 [isShown]
+  + Utf8 [java/lang/Class]
+  + Utf8 [onCreate]
+  + Utf8 [onDestroy]
+  + Utf8 [onPause]
+  + Utf8 [onResume]
+  + Utf8 [setStatusBarColor]
+  + Utf8 [setSystemUiVisibility]
+  + Utf8 [value]
+
+Fields (count = 3):
+  + Field:        TAG Ljava/lang/String;
+    Access flags: 0x1a
+      = private static final java.lang.String TAG
+  + Field:        isAlive Z
+    Access flags: 0x4
+      = protected boolean isAlive
+  + Field:        isShown Z
+    Access flags: 0x4
+      = protected boolean isShown
+
+Methods (count = 9):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public BaseActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #20
+        + Methodref [android/support/v7/app/AppCompatActivity.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 22
+  + Method:       onCreate(Landroid/os/Bundle;)V
+    Access flags: 0x4
+      = protected void onCreate(android.os.Bundle)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 2, stack = 2):
+      [0] aload_0 v0
+      [1] aload_1 v1
+      [2] invokespecial #21
+        + Methodref [android/support/v7/app/AppCompatActivity.onCreate (Landroid/os/Bundle;)V]
+      [5] aload_0 v0
+      [6] invokestatic #30
+        + Methodref [dev/momo/library/core/Helper.initInstance (Landroid/content/Context;)Ldev/momo/library/core/Helper;]
+      [9] pop
+      [10] aload_0 v0
+      [11] iconst_1
+      [12] putfield #18
+        + Fieldref [dev/momo/library/core/ui/BaseActivity.isAlive Z]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 4)
+        [0] -> line 34
+        [5] -> line 58
+        [10] -> line 66
+        [15] -> line 67
+  + Method:       onResume()V
+    Access flags: 0x4
+      = protected void onResume()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #24
+        + Methodref [android/support/v7/app/AppCompatActivity.onResume ()V]
+      [4] aload_0 v0
+      [5] iconst_1
+      [6] putfield #19
+        + Fieldref [dev/momo/library/core/ui/BaseActivity.isShown Z]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 3)
+        [0] -> line 72
+        [4] -> line 73
+        [9] -> line 74
+  + Method:       onPause()V
+    Access flags: 0x4
+      = protected void onPause()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] invokespecial #23
+        + Methodref [android/support/v7/app/AppCompatActivity.onPause ()V]
+      [4] aload_0 v0
+      [5] iconst_0
+      [6] putfield #19
+        + Fieldref [dev/momo/library/core/ui/BaseActivity.isShown Z]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 3)
+        [0] -> line 78
+        [4] -> line 79
+        [9] -> line 80
+  + Method:       onDestroy()V
+    Access flags: 0x4
+      = protected void onDestroy()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] aload_0 v0
+      [1] iconst_0
+      [2] putfield #18
+        + Fieldref [dev/momo/library/core/ui/BaseActivity.isAlive Z]
+      [5] aload_0 v0
+      [6] invokespecial #22
+        + Methodref [android/support/v7/app/AppCompatActivity.onDestroy ()V]
+      [9] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 3)
+        [0] -> line 84
+        [5] -> line 85
+        [9] -> line 86
+  + Method:       getActivity()Landroid/app/Activity;
+    Access flags: 0x1
+      = public android.app.Activity getActivity()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 2, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 89
+  + Method:       setStatusBarColor(I)V
+    Access flags: 0x1
+      = public void setStatusBarColor(int)
+    Class member attributes (count = 3):
+    + Code attribute instructions (code length = 35, locals = 3, stack = 2):
+      [0] getstatic #16
+        + Fieldref [android/os/Build$VERSION.SDK_INT I]
+      [3] bipush 21
+      [5] ificmpge +4 (target=9)
+      [8] return
+      [9] aload_0 v0
+      [10] invokevirtual #32
+        + Methodref [dev/momo/library/core/ui/BaseActivity.getWindow ()Landroid/view/Window;]
+      [13] astore_2 v2
+      [14] aload_2 v2
+      [15] ldc #3
+        + Integer [67108864]
+      [17] invokevirtual #27
+        + Methodref [android/view/Window.clearFlags (I)V]
+      [20] aload_2 v2
+      [21] ldc #1
+        + Integer [-2147483648]
+      [23] invokevirtual #26
+        + Methodref [android/view/Window.addFlags (I)V]
+      [26] aload_2 v2
+      [27] iload_1 v1
+      [28] invokestatic #31
+        + Methodref [dev/momo/library/core/tool/ResourceHelper.getColor (I)I]
+      [31] invokevirtual #29
+        + Methodref [android/view/Window.setStatusBarColor (I)V]
+      [34] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 6)
+        [0] -> line 97
+        [9] -> line 99
+        [14] -> line 101
+        [20] -> line 103
+        [26] -> line 105
+        [34] -> line 106
+    + Runtime invisible annotations attribute:
+      - Annotation [Landroid/annotation/TargetApi;]:
+        - Constant element value [value 'I']
+          + Integer [21]
+    + Runtime invisible parameter annotations attribute (parameter count = 1):
+      - Annotation [Landroid/support/annotation/ColorRes;]:
+  + Method:       hideStatusBar()V
+    Access flags: 0x1
+      = public void hideStatusBar()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 3, stack = 2):
+      [0] aload_0 v0
+      [1] invokevirtual #32
+        + Methodref [dev/momo/library/core/ui/BaseActivity.getWindow ()Landroid/view/Window;]
+      [4] invokevirtual #28
+        + Methodref [android/view/Window.getDecorView ()Landroid/view/View;]
+      [7] astore_1 v1
+      [8] iconst_4
+      [9] istore_2 v2
+      [10] aload_1 v1
+      [11] iload_2 v2
+      [12] invokevirtual #25
+        + Methodref [android/view/View.setSystemUiVisibility (I)V]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 4)
+        [0] -> line 110
+        [8] -> line 112
+        [10] -> line 113
+        [15] -> line 114
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 9, locals = 0, stack = 1):
+      [0] ldc #14
+        + Class [dev/momo/library/core/ui/BaseActivity]
+      [2] invokevirtual #33
+        + Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
+      [5] putstatic #17
+        + Fieldref [dev/momo/library/core/ui/BaseActivity.TAG Ljava/lang/String;]
+      [8] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 24
+
+Class file attributes (count = 2):
+  + Inner classes attribute (count = 3)
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      + Class [android/os/Build$VERSION_CODES]
+      + Class [android/os/Build]
+      + Utf8 [VERSION_CODES]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      + Class [android/view/WindowManager$LayoutParams]
+      + Class [android/view/WindowManager]
+      + Utf8 [LayoutParams]
+    - InnerClassesInfo:
+      Access flags:  0x9 = public static 
+      + Class [android/os/Build$VERSION]
+      + Class [android/os/Build]
+      + Utf8 [VERSION]
+  + Source file attribute:
+    + Utf8 [BaseActivity.java]
+
+_____________________________________________________________________
++ Program class: dev/momo/library/core/ui/DisplayHelper
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x21
+    = public class dev.momo.library.core.ui.DisplayHelper extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 161):
+  + Float [0.5]
+  + String [DEVICE_HEIGHT %d - getNavigationHeight(context) %d - getStatusBarHeight(context) %d = %d]
+  + String [Screen W:%d, H:%d, Ratio(H/W)%.2f]
+  + String [android]
+  + String [dimen]
+  + String [init Display Helper with non-activity context]
+  + String [navigation_bar_height]
+  + String [status_bar_height]
+  + Class [android/app/Activity]
+  + Class [android/content/Context]
+  + Class [android/content/res/Resources]
+  + Class [android/graphics/Point]
+  + Class [android/util/DisplayMetrics]
+  + Class [android/view/Display]
+  + Class [android/view/WindowManager]
+  + Class [dev/momo/library/core/log/Logger]
+  + Class [dev/momo/library/core/ui/DisplayHelper]
+  + Class [java/lang/Class]
+  + Class [java/lang/Float]
+  + Class [java/lang/Integer]
+  + Class [java/lang/Object]
+  + Class [java/lang/String]
+  + Class [java/util/Locale]
+  + Fieldref [android/util/DisplayMetrics.density F]
+  + Fieldref [android/util/DisplayMetrics.densityDpi I]
+  + Fieldref [android/util/DisplayMetrics.heightPixels I]
+  + Fieldref [android/util/DisplayMetrics.widthPixels I]
+  + Fieldref [dev/momo/library/core/ui/DisplayHelper.DEVICE_HEIGHT I]
+  + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DENSITY F]
+  + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DPI I]
+  + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+  + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_WIDTH I]
+  + Fieldref [dev/momo/library/core/ui/DisplayHelper.TAG Ljava/lang/String;]
+  + Methodref [android/app/Activity.getWindowManager ()Landroid/view/WindowManager;]
+  + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
+  + Methodref [android/content/res/Resources.getDimensionPixelSize (I)I]
+  + Methodref [android/content/res/Resources.getIdentifier (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I]
+  + Methodref [android/graphics/Point.<init> (II)V]
+  + Methodref [android/util/DisplayMetrics.<init> ()V]
+  + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
+  + Methodref [dev/momo/library/core/log/Logger.ES (Ljava/lang/String;Ljava/lang/String;)V]
+  + Methodref [dev/momo/library/core/log/Logger.I (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V]
+  + Methodref [dev/momo/library/core/ui/DisplayHelper.d (Landroid/content/Context;)I]
+  + Methodref [dev/momo/library/core/ui/DisplayHelper.e (Landroid/content/Context;)I]
+  + Methodref [dev/momo/library/core/ui/DisplayHelper.getScreenRatio ()F]
+  + Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
+  + Methodref [java/lang/Float.valueOf (F)Ljava/lang/Float;]
+  + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/lang/String.format (Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+  + Methodref [java/util/Locale.getDefault ()Ljava/util/Locale;]
+  + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [<init> ()V]
+  + NameAndType [<init> (II)V]
+  + NameAndType [DEVICE_HEIGHT I]
+  + NameAndType [ES (Ljava/lang/String;Ljava/lang/String;)V]
+  + NameAndType [I (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V]
+  + NameAndType [SCREEN_DENSITY F]
+  + NameAndType [SCREEN_DPI I]
+  + NameAndType [SCREEN_HEIGHT I]
+  + NameAndType [SCREEN_WIDTH I]
+  + NameAndType [TAG Ljava/lang/String;]
+  + NameAndType [d (Landroid/content/Context;)I]
+  + NameAndType [density F]
+  + NameAndType [densityDpi I]
+  + NameAndType [e (Landroid/content/Context;)I]
+  + NameAndType [format (Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+  + NameAndType [getDefault ()Ljava/util/Locale;]
+  + NameAndType [getDefaultDisplay ()Landroid/view/Display;]
+  + NameAndType [getDimensionPixelSize (I)I]
+  + NameAndType [getIdentifier (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I]
+  + NameAndType [getMetrics (Landroid/util/DisplayMetrics;)V]
+  + NameAndType [getResources ()Landroid/content/res/Resources;]
+  + NameAndType [getScreenRatio ()F]
+  + NameAndType [getSimpleName ()Ljava/lang/String;]
+  + NameAndType [getWindowManager ()Landroid/view/WindowManager;]
+  + NameAndType [heightPixels I]
+  + NameAndType [valueOf (F)Ljava/lang/Float;]
+  + NameAndType [valueOf (I)Ljava/lang/Integer;]
+  + NameAndType [widthPixels I]
+  + Utf8 [()F]
+  + Utf8 [()Landroid/content/res/Resources;]
+  + Utf8 [()Landroid/graphics/Point;]
+  + Utf8 [()Landroid/view/Display;]
+  + Utf8 [()Landroid/view/WindowManager;]
+  + Utf8 [()Ljava/lang/String;]
+  + Utf8 [()Ljava/util/Locale;]
+  + Utf8 [()V]
+  + Utf8 [(F)I]
+  + Utf8 [(F)Ljava/lang/Float;]
+  + Utf8 [(I)I]
+  + Utf8 [(I)Ljava/lang/Integer;]
+  + Utf8 [(II)V]
+  + Utf8 [(Landroid/content/Context;)I]
+  + Utf8 [(Landroid/content/Context;)V]
+  + Utf8 [(Landroid/util/DisplayMetrics;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;)V]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I]
+  + Utf8 [(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V]
+  + Utf8 [(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+  + Utf8 [<clinit>]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [DEVICE_HEIGHT]
+  + Utf8 [DEVICE_HEIGHT %d - getNavigationHeight(context) %d - getStatusBarHeight(context) %d = %d]
+  + Utf8 [DisplayHelper.java]
+  + Utf8 [ES]
+  + Utf8 [F]
+  + Utf8 [I]
+  + Utf8 [LineNumberTable]
+  + Utf8 [Ljava/lang/String;]
+  + Utf8 [SCREEN_DENSITY]
+  + Utf8 [SCREEN_DPI]
+  + Utf8 [SCREEN_HEIGHT]
+  + Utf8 [SCREEN_WIDTH]
+  + Utf8 [Screen W:%d, H:%d, Ratio(H/W)%.2f]
+  + Utf8 [SourceFile]
+  + Utf8 [TAG]
+  + Utf8 [android]
+  + Utf8 [android/app/Activity]
+  + Utf8 [android/content/Context]
+  + Utf8 [android/content/res/Resources]
+  + Utf8 [android/graphics/Point]
+  + Utf8 [android/util/DisplayMetrics]
+  + Utf8 [android/view/Display]
+  + Utf8 [android/view/WindowManager]
+  + Utf8 [d]
+  + Utf8 [density]
+  + Utf8 [densityDpi]
+  + Utf8 [dev/momo/library/core/log/Logger]
+  + Utf8 [dev/momo/library/core/ui/DisplayHelper]
+  + Utf8 [dimen]
+  + Utf8 [dpToPixel]
+  + Utf8 [e]
+  + Utf8 [format]
+  + Utf8 [getDefault]
+  + Utf8 [getDefaultDisplay]
+  + Utf8 [getDimensionPixelSize]
+  + Utf8 [getIdentifier]
+  + Utf8 [getInfoMessage]
+  + Utf8 [getMetrics]
+  + Utf8 [getResources]
+  + Utf8 [getScreenMetrics]
+  + Utf8 [getScreenRatio]
+  + Utf8 [getSimpleName]
+  + Utf8 [getWindowManager]
+  + Utf8 [heightPixels]
+  + Utf8 [init]
+  + Utf8 [init Display Helper with non-activity context]
+  + Utf8 [java/lang/Class]
+  + Utf8 [java/lang/Float]
+  + Utf8 [java/lang/Integer]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/lang/String]
+  + Utf8 [java/util/Locale]
+  + Utf8 [navigation_bar_height]
+  + Utf8 [pixelToDp]
+  + Utf8 [status_bar_height]
+  + Utf8 [valueOf]
+  + Utf8 [widthPixels]
+
+Fields (count = 6):
+  + Field:        TAG Ljava/lang/String;
+    Access flags: 0x1a
+      = private static final java.lang.String TAG
+  + Field:        DEVICE_HEIGHT I
+    Access flags: 0x9
+      = public static int DEVICE_HEIGHT
+  + Field:        SCREEN_DPI I
+    Access flags: 0x9
+      = public static int SCREEN_DPI
+  + Field:        SCREEN_DENSITY F
+    Access flags: 0x9
+      = public static float SCREEN_DENSITY
+  + Field:        SCREEN_WIDTH I
+    Access flags: 0x9
+      = public static int SCREEN_WIDTH
+  + Field:        SCREEN_HEIGHT I
+    Access flags: 0x9
+      = public static int SCREEN_HEIGHT
+
+Methods (count = 11):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public DisplayHelper()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 5, locals = 1, stack = 1):
+      [0] aload_0 v0
+      [1] invokespecial #49
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 17
+  + Method:       init(Landroid/content/Context;)V
+    Access flags: 0x9
+      = public static void init(android.content.Context)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 136, locals = 2, stack = 6):
+      [0] aload_0 v0
+      [1] instanceof #9
+        + Class [android/app/Activity]
+      [4] ifne +12 (target=16)
+      [7] getstatic #33
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.TAG Ljava/lang/String;]
+      [10] ldc #6
+        + String [init Display Helper with non-activity context]
+      [12] invokestatic #41
+        + Methodref [dev/momo/library/core/log/Logger.ES (Ljava/lang/String;Ljava/lang/String;)V]
+      [15] return
+      [16] new #13
+        + Class [android/util/DisplayMetrics]
+      [19] dup
+      [20] invokespecial #39
+        + Methodref [android/util/DisplayMetrics.<init> ()V]
+      [23] astore_1 v1
+      [24] aload_0 v0
+      [25] checkcast #9
+        + Class [android/app/Activity]
+      [28] invokevirtual #34
+        + Methodref [android/app/Activity.getWindowManager ()Landroid/view/WindowManager;]
+      [31] invokeinterface #52, 256
+        + InterfaceMethodref [android/view/WindowManager.getDefaultDisplay ()Landroid/view/Display;]
+      [36] aload_1 v1
+      [37] invokevirtual #40
+        + Methodref [android/view/Display.getMetrics (Landroid/util/DisplayMetrics;)V]
+      [40] aload_1 v1
+      [41] getfield #27
+        + Fieldref [android/util/DisplayMetrics.widthPixels I]
+      [44] putstatic #32
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_WIDTH I]
+      [47] aload_1 v1
+      [48] getfield #26
+        + Fieldref [android/util/DisplayMetrics.heightPixels I]
+      [51] putstatic #28
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.DEVICE_HEIGHT I]
+      [54] getstatic #28
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.DEVICE_HEIGHT I]
+      [57] aload_0 v0
+      [58] invokestatic #43
+        + Methodref [dev/momo/library/core/ui/DisplayHelper.d (Landroid/content/Context;)I]
+      [61] isub
+      [62] aload_0 v0
+      [63] invokestatic #44
+        + Methodref [dev/momo/library/core/ui/DisplayHelper.e (Landroid/content/Context;)I]
+      [66] isub
+      [67] putstatic #31
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+      [70] getstatic #33
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.TAG Ljava/lang/String;]
+      [73] ldc #2
+        + String [DEVICE_HEIGHT %d - getNavigationHeight(context) %d - getStatusBarHeight(context) %d = %d]
+      [75] iconst_4
+      [76] anewarray #21
+        + Class [java/lang/Object]
+      [79] dup
+      [80] iconst_0
+      [81] aload_1 v1
+      [82] getfield #26
+        + Fieldref [android/util/DisplayMetrics.heightPixels I]
+      [85] invokestatic #48
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [88] aastore
+      [89] dup
+      [90] iconst_1
+      [91] aload_0 v0
+      [92] invokestatic #43
+        + Methodref [dev/momo/library/core/ui/DisplayHelper.d (Landroid/content/Context;)I]
+      [95] invokestatic #48
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [98] aastore
+      [99] dup
+      [100] iconst_2
+      [101] aload_0 v0
+      [102] invokestatic #44
+        + Methodref [dev/momo/library/core/ui/DisplayHelper.e (Landroid/content/Context;)I]
+      [105] invokestatic #48
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [108] aastore
+      [109] dup
+      [110] iconst_3
+      [111] getstatic #31
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+      [114] invokestatic #48
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [117] aastore
+      [118] invokestatic #42
+        + Methodref [dev/momo/library/core/log/Logger.I (Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V]
+      [121] aload_1 v1
+      [122] getfield #24
+        + Fieldref [android/util/DisplayMetrics.density F]
+      [125] putstatic #29
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DENSITY F]
+      [128] aload_1 v1
+      [129] getfield #25
+        + Fieldref [android/util/DisplayMetrics.densityDpi I]
+      [132] putstatic #30
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DPI I]
+      [135] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 14)
+        [0] -> line 30
+        [7] -> line 31
+        [15] -> line 32
+        [16] -> line 34
+        [24] -> line 35
+        [40] -> line 36
+        [47] -> line 37
+        [54] -> line 38
+        [70] -> line 39
+        [85] -> line 40
+        [118] -> line 39
+        [121] -> line 41
+        [128] -> line 42
+        [135] -> line 43
+  + Method:       d(Landroid/content/Context;)I
+    Access flags: 0xa
+      = private static int d(android.content.Context)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] invokevirtual #35
+        + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
+      [4] astore_1 v1
+      [5] aload_1 v1
+      [6] ldc #7
+        + String [navigation_bar_height]
+      [8] ldc #5
+        + String [dimen]
+      [10] ldc #4
+        + String [android]
+      [12] invokevirtual #37
+        + Methodref [android/content/res/Resources.getIdentifier (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I]
+      [15] istore_2 v2
+      [16] iload_2 v2
+      [17] ifle +9 (target=26)
+      [20] aload_1 v1
+      [21] iload_2 v2
+      [22] invokevirtual #36
+        + Methodref [android/content/res/Resources.getDimensionPixelSize (I)I]
+      [25] ireturn
+      [26] iconst_0
+      [27] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 5)
+        [0] -> line 47
+        [5] -> line 48
+        [16] -> line 49
+        [20] -> line 50
+        [26] -> line 52
+  + Method:       e(Landroid/content/Context;)I
+    Access flags: 0xa
+      = private static int e(android.content.Context)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 28, locals = 3, stack = 4):
+      [0] aload_0 v0
+      [1] invokevirtual #35
+        + Methodref [android/content/Context.getResources ()Landroid/content/res/Resources;]
+      [4] astore_1 v1
+      [5] aload_1 v1
+      [6] ldc #8
+        + String [status_bar_height]
+      [8] ldc #5
+        + String [dimen]
+      [10] ldc #4
+        + String [android]
+      [12] invokevirtual #37
+        + Methodref [android/content/res/Resources.getIdentifier (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)I]
+      [15] istore_2 v2
+      [16] iload_2 v2
+      [17] ifle +9 (target=26)
+      [20] aload_1 v1
+      [21] iload_2 v2
+      [22] invokevirtual #36
+        + Methodref [android/content/res/Resources.getDimensionPixelSize (I)I]
+      [25] ireturn
+      [26] iconst_0
+      [27] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 5)
+        [0] -> line 56
+        [5] -> line 57
+        [16] -> line 58
+        [20] -> line 59
+        [26] -> line 61
+  + Method:       dpToPixel(I)I
+    Access flags: 0x9
+      = public static int dpToPixel(int)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 11, locals = 1, stack = 2):
+      [0] iload_0 v0
+      [1] i2f
+      [2] getstatic #29
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DENSITY F]
+      [5] fmul
+      [6] ldc #1
+        + Float [0.5]
+      [8] fadd
+      [9] f2i
+      [10] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 66
+  + Method:       dpToPixel(F)I
+    Access flags: 0x9
+      = public static int dpToPixel(float)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] fload_0 v0
+      [1] getstatic #29
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DENSITY F]
+      [4] fmul
+      [5] ldc #1
+        + Float [0.5]
+      [7] fadd
+      [8] f2i
+      [9] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 70
+  + Method:       pixelToDp(F)I
+    Access flags: 0x9
+      = public static int pixelToDp(float)
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 1, stack = 2):
+      [0] fload_0 v0
+      [1] getstatic #29
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DENSITY F]
+      [4] fdiv
+      [5] ldc #1
+        + Float [0.5]
+      [7] fadd
+      [8] f2i
+      [9] ireturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 74
+  + Method:       getScreenMetrics()Landroid/graphics/Point;
+    Access flags: 0x9
+      = public static android.graphics.Point getScreenMetrics()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 14, locals = 0, stack = 4):
+      [0] new #12
+        + Class [android/graphics/Point]
+      [3] dup
+      [4] getstatic #32
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_WIDTH I]
+      [7] getstatic #31
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+      [10] invokespecial #38
+        + Methodref [android/graphics/Point.<init> (II)V]
+      [13] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 78
+  + Method:       getScreenRatio()F
+    Access flags: 0x9
+      = public static float getScreenRatio()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 10, locals = 0, stack = 2):
+      [0] getstatic #31
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+      [3] i2f
+      [4] getstatic #32
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_WIDTH I]
+      [7] i2f
+      [8] fdiv
+      [9] freturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 82
+  + Method:       getInfoMessage()Ljava/lang/String;
+    Access flags: 0x9
+      = public static java.lang.String getInfoMessage()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 40, locals = 0, stack = 6):
+      [0] invokestatic #51
+        + Methodref [java/util/Locale.getDefault ()Ljava/util/Locale;]
+      [3] ldc #3
+        + String [Screen W:%d, H:%d, Ratio(H/W)%.2f]
+      [5] iconst_3
+      [6] anewarray #21
+        + Class [java/lang/Object]
+      [9] dup
+      [10] iconst_0
+      [11] getstatic #32
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_WIDTH I]
+      [14] invokestatic #48
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [17] aastore
+      [18] dup
+      [19] iconst_1
+      [20] getstatic #31
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+      [23] invokestatic #48
+        + Methodref [java/lang/Integer.valueOf (I)Ljava/lang/Integer;]
+      [26] aastore
+      [27] dup
+      [28] iconst_2
+      [29] invokestatic #45
+        + Methodref [dev/momo/library/core/ui/DisplayHelper.getScreenRatio ()F]
+      [32] invokestatic #47
+        + Methodref [java/lang/Float.valueOf (F)Ljava/lang/Float;]
+      [35] aastore
+      [36] invokestatic #50
+        + Methodref [java/lang/String.format (Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;]
+      [39] areturn
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 1)
+        [0] -> line 86
+  - Method:       <clinit>()V
+    Access flags: 0x8
+      = static void <clinit>()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 29, locals = 0, stack = 1):
+      [0] ldc #17
+        + Class [dev/momo/library/core/ui/DisplayHelper]
+      [2] invokevirtual #46
+        + Methodref [java/lang/Class.getSimpleName ()Ljava/lang/String;]
+      [5] putstatic #33
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.TAG Ljava/lang/String;]
+      [8] iconst_0
+      [9] putstatic #28
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.DEVICE_HEIGHT I]
+      [12] iconst_0
+      [13] putstatic #30
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DPI I]
+      [16] fconst_0
+      [17] putstatic #29
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_DENSITY F]
+      [20] iconst_0
+      [21] putstatic #32
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_WIDTH I]
+      [24] iconst_0
+      [25] putstatic #31
+        + Fieldref [dev/momo/library/core/ui/DisplayHelper.SCREEN_HEIGHT I]
+      [28] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 6)
+        [0] -> line 19
+        [8] -> line 21
+        [12] -> line 23
+        [16] -> line 24
+        [20] -> line 25
+        [24] -> line 26
+
+Class file attributes (count = 1):
+  + Source file attribute:
+    + Utf8 [DisplayHelper.java]
+
+_____________________________________________________________________
++ Program class: dev/momo/library/core/ui/UIController
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x421
+    = public abstract class dev.momo.library.core.ui.UIController extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 23):
+  + Class [dev/momo/library/core/ui/UIController]
+  + Class [java/lang/Object]
+  + Class [java/util/ArrayList]
+  + Fieldref [dev/momo/library/core/ui/UIController.F Ljava/util/List;]
+  + Methodref [java/lang/Object.<init> ()V]
+  + Methodref [java/util/ArrayList.<init> ()V]
+  + NameAndType [<init> ()V]
+  + NameAndType [F Ljava/util/List;]
+  + Utf8 [()V]
+  + Utf8 [<E:Ljava/lang/Object;>Ljava/lang/Object;]
+  + Utf8 [<init>]
+  + Utf8 [Code]
+  + Utf8 [F]
+  + Utf8 [LineNumberTable]
+  + Utf8 [Ljava/util/List;]
+  + Utf8 [Ljava/util/List<Ldev/momo/library/core/ui/UIListener<TE;>;>;]
+  + Utf8 [Signature]
+  + Utf8 [SourceFile]
+  + Utf8 [UIController.java]
+  + Utf8 [dev/momo/library/core/ui/UIController]
+  + Utf8 [java/lang/Object]
+  + Utf8 [java/util/ArrayList]
+
+Fields (count = 1):
+  + Field:        F Ljava/util/List;
+    Access flags: 0x0
+      = java.util.List F
+    Class member attributes (count = 1):
+    + Signature attribute:
+      + Utf8 [Ljava/util/List<Ldev/momo/library/core/ui/UIListener<TE;>;>;]
+
+Methods (count = 1):
+  - Method:       <init>()V
+    Access flags: 0x1
+      = public UIController()
+    Class member attributes (count = 1):
+    + Code attribute instructions (code length = 16, locals = 1, stack = 3):
+      [0] aload_0 v0
+      [1] invokespecial #5
+        + Methodref [java/lang/Object.<init> ()V]
+      [4] aload_0 v0
+      [5] new #3
+        + Class [java/util/ArrayList]
+      [8] dup
+      [9] invokespecial #6
+        + Methodref [java/util/ArrayList.<init> ()V]
+      [12] putfield #4
+        + Fieldref [dev/momo/library/core/ui/UIController.F Ljava/util/List;]
+      [15] return
+      Code attribute exceptions (count = 0):
+      Code attribute attributes (attribute count = 1):
+      + Line number table attribute (count = 2)
+        [0] -> line 12
+        [4] -> line 14
+
+Class file attributes (count = 2):
+  + Signature attribute:
+    + Utf8 [<E:Ljava/lang/Object;>Ljava/lang/Object;]
+  + Source file attribute:
+    + Utf8 [UIController.java]
+
+_____________________________________________________________________
++ Program class: dev/momo/library/core/ui/UIListener
+  Superclass:    java/lang/Object
+  Major version: 0x32
+  Minor version: 0x0
+    = target 1.6
+  Access flags:  0x601
+    = public interface dev.momo.library.core.ui.UIListener extends java.lang.Object
+
+Interfaces (count = 0):
+
+Constant Pool (count = 14):
+  + Class [dev/momo/library/core/ui/UIListener]
+  + Class [java/lang/Object]
+  + Utf8 [(ILjava/lang/Object;)V]
+  + Utf8 [(ITD;)V]
+  + Utf8 [(Ldev/momo/library/core/ui/UIController;)V]
+  + Utf8 [<D:Ljava/lang/Object;>Ljava/lang/Object;]
+  + Utf8 [Signature]
+  + Utf8 [SourceFile]
+  + Utf8 [UIListener.java]
+  + Utf8 [dev/momo/library/core/ui/UIListener]
+  + Utf8 [java/lang/Object]
+  + Utf8 [onUIDraw]
+  + Utf8 [setUIController]
+
+Fields (count = 0):
+
+Methods (count = 2):
+  + Method:       setUIController(Ldev/momo/library/core/ui/UIController;)V
+    Access flags: 0x401
+      = public abstract void setUIController(dev.momo.library.core.ui.UIController)
+  + Method:       onUIDraw(ILjava/lang/Object;)V
+    Access flags: 0x401
+      = public abstract void onUIDraw(int,java.lang.Object)
+    Class member attributes (count = 1):
+    + Signature attribute:
+      + Utf8 [(ITD;)V]
+
+Class file attributes (count = 2):
+  + Signature attribute:
+    + Utf8 [<D:Ljava/lang/Object;>Ljava/lang/Object;]
+  + Source file attribute:
+    + Utf8 [UIListener.java]
+
+_____________________________________________________________________
 + Program class: dev/momo/library/core/util/KeyboardUtil
   Superclass:    java/lang/Object
   Major version: 0x32
@@ -85763,13 +86796,13 @@ Constant Pool (count = 45):
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
   + Fieldref [dev/momo/library/core/Helper.mainUIHandler Landroid/os/Handler;]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.E Landroid/app/Activity;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.G Landroid/app/Activity;]
   + Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
   + Methodref [dev/momo/library/core/util/KeyboardUtil$1$1.<init> (Ldev/momo/library/core/util/KeyboardUtil$1;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ldev/momo/library/core/util/KeyboardUtil$1;)V]
-  + NameAndType [E Landroid/app/Activity;]
+  + NameAndType [G Landroid/app/Activity;]
   + NameAndType [hideKeyboard (Landroid/app/Activity;J)V]
   + NameAndType [mainUIHandler Landroid/os/Handler;]
   + NameAndType [post (Ljava/lang/Runnable;)Z]
@@ -85780,8 +86813,8 @@ Constant Pool (count = 45):
   + Utf8 [(Ljava/lang/Runnable;)Z]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [E]
   + Utf8 [EnclosingMethod]
+  + Utf8 [G]
   + Utf8 [InnerClasses]
   + Utf8 [KeyboardUtil.java]
   + Utf8 [Landroid/app/Activity;]
@@ -85801,9 +86834,9 @@ Constant Pool (count = 45):
   + Utf8 [run]
 
 Fields (count = 1):
-  + Field:        E Landroid/app/Activity;
+  + Field:        G Landroid/app/Activity;
     Access flags: 0x1010
-      = final synthetic android.app.Activity E
+      = final synthetic android.app.Activity G
 
 Methods (count = 2):
   - Method:       <init>(Landroid/app/Activity;)V
@@ -85814,7 +86847,7 @@ Methods (count = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #9
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.E Landroid/app/Activity;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.G Landroid/app/Activity;]
       [5] aload_0 v0
       [6] invokespecial #12
         + Methodref [java/lang/Object.<init> ()V]
@@ -85878,13 +86911,13 @@ Constant Pool (count = 36):
   + Class [dev/momo/library/core/util/KeyboardUtil$1$1]
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.E Landroid/app/Activity;]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$1$1.F Ldev/momo/library/core/util/KeyboardUtil$1;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.G Landroid/app/Activity;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$1$1.H Ldev/momo/library/core/util/KeyboardUtil$1;]
   + Methodref [dev/momo/library/core/util/KeyboardUtil.hideKeyboard (Landroid/app/Activity;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [E Landroid/app/Activity;]
-  + NameAndType [F Ldev/momo/library/core/util/KeyboardUtil$1;]
+  + NameAndType [G Landroid/app/Activity;]
+  + NameAndType [H Ldev/momo/library/core/util/KeyboardUtil$1;]
   + NameAndType [hideKeyboard (Landroid/app/Activity;)V]
   + NameAndType [run ()V]
   + Utf8 [()V]
@@ -85892,9 +86925,9 @@ Constant Pool (count = 36):
   + Utf8 [(Ldev/momo/library/core/util/KeyboardUtil$1;)V]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [E]
   + Utf8 [EnclosingMethod]
-  + Utf8 [F]
+  + Utf8 [G]
+  + Utf8 [H]
   + Utf8 [InnerClasses]
   + Utf8 [KeyboardUtil.java]
   + Utf8 [Landroid/app/Activity;]
@@ -85910,9 +86943,9 @@ Constant Pool (count = 36):
   + Utf8 [run]
 
 Fields (count = 1):
-  + Field:        F Ldev/momo/library/core/util/KeyboardUtil$1;
+  + Field:        H Ldev/momo/library/core/util/KeyboardUtil$1;
     Access flags: 0x1010
-      = final synthetic dev.momo.library.core.util.KeyboardUtil$1 F
+      = final synthetic dev.momo.library.core.util.KeyboardUtil$1 H
 
 Methods (count = 2):
   - Method:       <init>(Ldev/momo/library/core/util/KeyboardUtil$1;)V
@@ -85923,7 +86956,7 @@ Methods (count = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #7
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1$1.F Ldev/momo/library/core/util/KeyboardUtil$1;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1$1.H Ldev/momo/library/core/util/KeyboardUtil$1;]
       [5] aload_0 v0
       [6] invokespecial #9
         + Methodref [java/lang/Object.<init> ()V]
@@ -85939,9 +86972,9 @@ Methods (count = 2):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #7
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1$1.F Ldev/momo/library/core/util/KeyboardUtil$1;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1$1.H Ldev/momo/library/core/util/KeyboardUtil$1;]
       [4] getfield #6
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.E Landroid/app/Activity;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$1.G Landroid/app/Activity;]
       [7] invokestatic #8
         + Methodref [dev/momo/library/core/util/KeyboardUtil.hideKeyboard (Landroid/app/Activity;)V]
       [10] return
@@ -85986,13 +87019,13 @@ Constant Pool (count = 45):
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
   + Fieldref [dev/momo/library/core/Helper.mainUIHandler Landroid/os/Handler;]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.G Landroid/content/Context;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.I Landroid/content/Context;]
   + Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
   + Methodref [dev/momo/library/core/util/KeyboardUtil$2$1.<init> (Ldev/momo/library/core/util/KeyboardUtil$2;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ldev/momo/library/core/util/KeyboardUtil$2;)V]
-  + NameAndType [G Landroid/content/Context;]
+  + NameAndType [I Landroid/content/Context;]
   + NameAndType [mainUIHandler Landroid/os/Handler;]
   + NameAndType [post (Ljava/lang/Runnable;)Z]
   + NameAndType [showKeyboard (Landroid/content/Context;J)V]
@@ -86004,7 +87037,7 @@ Constant Pool (count = 45):
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [EnclosingMethod]
-  + Utf8 [G]
+  + Utf8 [I]
   + Utf8 [InnerClasses]
   + Utf8 [KeyboardUtil.java]
   + Utf8 [Landroid/content/Context;]
@@ -86024,9 +87057,9 @@ Constant Pool (count = 45):
   + Utf8 [showKeyboard]
 
 Fields (count = 1):
-  + Field:        G Landroid/content/Context;
+  + Field:        I Landroid/content/Context;
     Access flags: 0x1010
-      = final synthetic android.content.Context G
+      = final synthetic android.content.Context I
 
 Methods (count = 2):
   - Method:       <init>(Landroid/content/Context;)V
@@ -86037,7 +87070,7 @@ Methods (count = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #9
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.G Landroid/content/Context;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.I Landroid/content/Context;]
       [5] aload_0 v0
       [6] invokespecial #12
         + Methodref [java/lang/Object.<init> ()V]
@@ -86101,13 +87134,13 @@ Constant Pool (count = 36):
   + Class [dev/momo/library/core/util/KeyboardUtil$2$1]
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.G Landroid/content/Context;]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$2$1.H Ldev/momo/library/core/util/KeyboardUtil$2;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.I Landroid/content/Context;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$2$1.J Ldev/momo/library/core/util/KeyboardUtil$2;]
   + Methodref [dev/momo/library/core/util/KeyboardUtil.showKeyboard (Landroid/content/Context;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [G Landroid/content/Context;]
-  + NameAndType [H Ldev/momo/library/core/util/KeyboardUtil$2;]
+  + NameAndType [I Landroid/content/Context;]
+  + NameAndType [J Ldev/momo/library/core/util/KeyboardUtil$2;]
   + NameAndType [run ()V]
   + NameAndType [showKeyboard (Landroid/content/Context;)V]
   + Utf8 [()V]
@@ -86116,9 +87149,9 @@ Constant Pool (count = 36):
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [EnclosingMethod]
-  + Utf8 [G]
-  + Utf8 [H]
+  + Utf8 [I]
   + Utf8 [InnerClasses]
+  + Utf8 [J]
   + Utf8 [KeyboardUtil.java]
   + Utf8 [Landroid/content/Context;]
   + Utf8 [Ldev/momo/library/core/util/KeyboardUtil$2;]
@@ -86133,9 +87166,9 @@ Constant Pool (count = 36):
   + Utf8 [showKeyboard]
 
 Fields (count = 1):
-  + Field:        H Ldev/momo/library/core/util/KeyboardUtil$2;
+  + Field:        J Ldev/momo/library/core/util/KeyboardUtil$2;
     Access flags: 0x1010
-      = final synthetic dev.momo.library.core.util.KeyboardUtil$2 H
+      = final synthetic dev.momo.library.core.util.KeyboardUtil$2 J
 
 Methods (count = 2):
   - Method:       <init>(Ldev/momo/library/core/util/KeyboardUtil$2;)V
@@ -86146,7 +87179,7 @@ Methods (count = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #7
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2$1.H Ldev/momo/library/core/util/KeyboardUtil$2;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2$1.J Ldev/momo/library/core/util/KeyboardUtil$2;]
       [5] aload_0 v0
       [6] invokespecial #9
         + Methodref [java/lang/Object.<init> ()V]
@@ -86162,9 +87195,9 @@ Methods (count = 2):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #7
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2$1.H Ldev/momo/library/core/util/KeyboardUtil$2;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2$1.J Ldev/momo/library/core/util/KeyboardUtil$2;]
       [4] getfield #6
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.G Landroid/content/Context;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$2.I Landroid/content/Context;]
       [7] invokestatic #8
         + Methodref [dev/momo/library/core/util/KeyboardUtil.showKeyboard (Landroid/content/Context;)V]
       [10] return
@@ -86209,13 +87242,13 @@ Constant Pool (count = 45):
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
   + Fieldref [dev/momo/library/core/Helper.mainUIHandler Landroid/os/Handler;]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.I Landroid/app/Dialog;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.K Landroid/app/Dialog;]
   + Methodref [android/os/Handler.post (Ljava/lang/Runnable;)Z]
   + Methodref [dev/momo/library/core/util/KeyboardUtil$3$1.<init> (Ldev/momo/library/core/util/KeyboardUtil$3;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
   + NameAndType [<init> (Ldev/momo/library/core/util/KeyboardUtil$3;)V]
-  + NameAndType [I Landroid/app/Dialog;]
+  + NameAndType [K Landroid/app/Dialog;]
   + NameAndType [mainUIHandler Landroid/os/Handler;]
   + NameAndType [post (Ljava/lang/Runnable;)Z]
   + NameAndType [showKeyboard (Landroid/app/Dialog;J)V]
@@ -86227,8 +87260,8 @@ Constant Pool (count = 45):
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [EnclosingMethod]
-  + Utf8 [I]
   + Utf8 [InnerClasses]
+  + Utf8 [K]
   + Utf8 [KeyboardUtil.java]
   + Utf8 [Landroid/app/Dialog;]
   + Utf8 [Landroid/os/Handler;]
@@ -86247,9 +87280,9 @@ Constant Pool (count = 45):
   + Utf8 [showKeyboard]
 
 Fields (count = 1):
-  + Field:        I Landroid/app/Dialog;
+  + Field:        K Landroid/app/Dialog;
     Access flags: 0x1010
-      = final synthetic android.app.Dialog I
+      = final synthetic android.app.Dialog K
 
 Methods (count = 2):
   - Method:       <init>(Landroid/app/Dialog;)V
@@ -86260,7 +87293,7 @@ Methods (count = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #9
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.I Landroid/app/Dialog;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.K Landroid/app/Dialog;]
       [5] aload_0 v0
       [6] invokespecial #12
         + Methodref [java/lang/Object.<init> ()V]
@@ -86324,13 +87357,13 @@ Constant Pool (count = 36):
   + Class [dev/momo/library/core/util/KeyboardUtil$3$1]
   + Class [java/lang/Object]
   + Class [java/lang/Runnable]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.I Landroid/app/Dialog;]
-  + Fieldref [dev/momo/library/core/util/KeyboardUtil$3$1.J Ldev/momo/library/core/util/KeyboardUtil$3;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.K Landroid/app/Dialog;]
+  + Fieldref [dev/momo/library/core/util/KeyboardUtil$3$1.L Ldev/momo/library/core/util/KeyboardUtil$3;]
   + Methodref [dev/momo/library/core/util/KeyboardUtil.showKeyboard (Landroid/app/Dialog;)V]
   + Methodref [java/lang/Object.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [I Landroid/app/Dialog;]
-  + NameAndType [J Ldev/momo/library/core/util/KeyboardUtil$3;]
+  + NameAndType [K Landroid/app/Dialog;]
+  + NameAndType [L Ldev/momo/library/core/util/KeyboardUtil$3;]
   + NameAndType [run ()V]
   + NameAndType [showKeyboard (Landroid/app/Dialog;)V]
   + Utf8 [()V]
@@ -86339,10 +87372,10 @@ Constant Pool (count = 36):
   + Utf8 [<init>]
   + Utf8 [Code]
   + Utf8 [EnclosingMethod]
-  + Utf8 [I]
   + Utf8 [InnerClasses]
-  + Utf8 [J]
+  + Utf8 [K]
   + Utf8 [KeyboardUtil.java]
+  + Utf8 [L]
   + Utf8 [Landroid/app/Dialog;]
   + Utf8 [Ldev/momo/library/core/util/KeyboardUtil$3;]
   + Utf8 [LineNumberTable]
@@ -86356,9 +87389,9 @@ Constant Pool (count = 36):
   + Utf8 [showKeyboard]
 
 Fields (count = 1):
-  + Field:        J Ldev/momo/library/core/util/KeyboardUtil$3;
+  + Field:        L Ldev/momo/library/core/util/KeyboardUtil$3;
     Access flags: 0x1010
-      = final synthetic dev.momo.library.core.util.KeyboardUtil$3 J
+      = final synthetic dev.momo.library.core.util.KeyboardUtil$3 L
 
 Methods (count = 2):
   - Method:       <init>(Ldev/momo/library/core/util/KeyboardUtil$3;)V
@@ -86369,7 +87402,7 @@ Methods (count = 2):
       [0] aload_0 v0
       [1] aload_1 v1
       [2] putfield #7
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3$1.J Ldev/momo/library/core/util/KeyboardUtil$3;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3$1.L Ldev/momo/library/core/util/KeyboardUtil$3;]
       [5] aload_0 v0
       [6] invokespecial #9
         + Methodref [java/lang/Object.<init> ()V]
@@ -86385,9 +87418,9 @@ Methods (count = 2):
     + Code attribute instructions (code length = 11, locals = 1, stack = 1):
       [0] aload_0 v0
       [1] getfield #7
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3$1.J Ldev/momo/library/core/util/KeyboardUtil$3;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3$1.L Ldev/momo/library/core/util/KeyboardUtil$3;]
       [4] getfield #6
-        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.I Landroid/app/Dialog;]
+        + Fieldref [dev/momo/library/core/util/KeyboardUtil$3.K Landroid/app/Dialog;]
       [7] invokestatic #8
         + Methodref [dev/momo/library/core/util/KeyboardUtil.showKeyboard (Landroid/app/Dialog;)V]
       [10] return
@@ -87039,16 +88072,16 @@ Constant Pool (count = 23):
   + Class [dev/momo/library/core/view/UIController]
   + Class [java/lang/Object]
   + Class [java/util/ArrayList]
-  + Fieldref [dev/momo/library/core/view/UIController.K Ljava/util/List;]
+  + Fieldref [dev/momo/library/core/view/UIController.F Ljava/util/List;]
   + Methodref [java/lang/Object.<init> ()V]
   + Methodref [java/util/ArrayList.<init> ()V]
   + NameAndType [<init> ()V]
-  + NameAndType [K Ljava/util/List;]
+  + NameAndType [F Ljava/util/List;]
   + Utf8 [()V]
   + Utf8 [<E:Ljava/lang/Object;>Ljava/lang/Object;]
   + Utf8 [<init>]
   + Utf8 [Code]
-  + Utf8 [K]
+  + Utf8 [F]
   + Utf8 [LineNumberTable]
   + Utf8 [Ljava/util/List;]
   + Utf8 [Ljava/util/List<Ldev/momo/library/core/view/UIListener<TE;>;>;]
@@ -87060,9 +88093,9 @@ Constant Pool (count = 23):
   + Utf8 [java/util/ArrayList]
 
 Fields (count = 1):
-  + Field:        K Ljava/util/List;
+  + Field:        F Ljava/util/List;
     Access flags: 0x0
-      = java.util.List K
+      = java.util.List F
     Class member attributes (count = 1):
     + Signature attribute:
       + Utf8 [Ljava/util/List<Ldev/momo/library/core/view/UIListener<TE;>;>;]
@@ -87083,7 +88116,7 @@ Methods (count = 1):
       [9] invokespecial #6
         + Methodref [java/util/ArrayList.<init> ()V]
       [12] putfield #4
-        + Fieldref [dev/momo/library/core/view/UIController.K Ljava/util/List;]
+        + Fieldref [dev/momo/library/core/view/UIController.F Ljava/util/List;]
       [15] return
       Code attribute exceptions (count = 0):
       Code attribute attributes (attribute count = 1):

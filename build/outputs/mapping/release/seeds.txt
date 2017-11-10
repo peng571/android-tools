@@ -5519,15 +5519,10 @@ dev.momo.library.core.tool.ResourceHelper: int getDimenPixel(int)
 dev.momo.library.core.tool.ResourceHelper: int getDimenDp(int)
 dev.momo.library.core.tool.ResourceHelper: float getDimenFloat(int)
 dev.momo.library.core.tool.SimpleMapper
-dev.momo.library.core.tool.SimpleMapper: SimpleMapper()
-dev.momo.library.core.tool.SimpleMapper: com.fasterxml.jackson.databind.ObjectMapper getMapper()
+dev.momo.library.core.tool.SimpleMapper: dev.momo.library.core.tool.SimpleMapper getMapper()
 dev.momo.library.core.tool.SimpleMapper: java.lang.String toString(java.lang.Object)
-dev.momo.library.core.tool.SimpleMapper: java.lang.Object toObject(java.lang.String,java.lang.Class)
-dev.momo.library.core.tool.SimpleMapper: java.util.List toObjectList(java.io.InputStream,java.lang.Class)
-dev.momo.library.core.tool.SimpleMapper: java.util.List toObjectList(java.lang.String,java.lang.Class)
-dev.momo.library.core.tool.SimpleMapper: com.fasterxml.jackson.databind.node.ArrayNode toArrayNode(java.lang.Object[])
-dev.momo.library.core.tool.SimpleMapper: com.fasterxml.jackson.databind.node.ObjectNode newNode()
-dev.momo.library.core.tool.SimpleMapper: com.fasterxml.jackson.databind.node.ArrayNode newArrayNode()
+dev.momo.library.core.tool.SimpleMapper: java.lang.Object toObject(java.lang.String)
+dev.momo.library.core.tool.SimpleMapper: java.util.List toObjectList(java.lang.String)
 dev.momo.library.core.tool.StorageHelper
 dev.momo.library.core.tool.StorageHelper: StorageHelper()
 dev.momo.library.core.tool.StorageHelper: boolean fileExist(java.lang.String)
@@ -5548,6 +5543,40 @@ dev.momo.library.core.tool.StorageHelper: java.lang.String getFileName(java.lang
 dev.momo.library.core.tool.StorageHelper: java.lang.String join(java.lang.String,java.lang.String)
 dev.momo.library.core.tool.StorageHelper: java.lang.String join(java.io.File,java.lang.String)
 dev.momo.library.core.tool.StorageHelper: java.lang.String join(java.io.File,java.lang.String[])
+dev.momo.library.core.tool.json.JsonFace
+dev.momo.library.core.tool.json.JsonFace: java.lang.String toString(java.lang.Object)
+dev.momo.library.core.tool.json.JsonFace: java.lang.Object toObject(java.lang.String)
+dev.momo.library.core.tool.json.JsonFace: java.lang.Object toObjectList(java.lang.String)
+dev.momo.library.core.ui.BaseActivity
+dev.momo.library.core.ui.BaseActivity: boolean isAlive
+dev.momo.library.core.ui.BaseActivity: boolean isShown
+dev.momo.library.core.ui.BaseActivity: BaseActivity()
+dev.momo.library.core.ui.BaseActivity: void onCreate(android.os.Bundle)
+dev.momo.library.core.ui.BaseActivity: void onResume()
+dev.momo.library.core.ui.BaseActivity: void onPause()
+dev.momo.library.core.ui.BaseActivity: void onDestroy()
+dev.momo.library.core.ui.BaseActivity: android.app.Activity getActivity()
+dev.momo.library.core.ui.BaseActivity: void setStatusBarColor(int)
+dev.momo.library.core.ui.BaseActivity: void hideStatusBar()
+dev.momo.library.core.ui.DisplayHelper
+dev.momo.library.core.ui.DisplayHelper: int DEVICE_HEIGHT
+dev.momo.library.core.ui.DisplayHelper: int SCREEN_DPI
+dev.momo.library.core.ui.DisplayHelper: float SCREEN_DENSITY
+dev.momo.library.core.ui.DisplayHelper: int SCREEN_WIDTH
+dev.momo.library.core.ui.DisplayHelper: int SCREEN_HEIGHT
+dev.momo.library.core.ui.DisplayHelper: DisplayHelper()
+dev.momo.library.core.ui.DisplayHelper: void init(android.content.Context)
+dev.momo.library.core.ui.DisplayHelper: int dpToPixel(int)
+dev.momo.library.core.ui.DisplayHelper: int dpToPixel(float)
+dev.momo.library.core.ui.DisplayHelper: int pixelToDp(float)
+dev.momo.library.core.ui.DisplayHelper: android.graphics.Point getScreenMetrics()
+dev.momo.library.core.ui.DisplayHelper: float getScreenRatio()
+dev.momo.library.core.ui.DisplayHelper: java.lang.String getInfoMessage()
+dev.momo.library.core.ui.UIController
+dev.momo.library.core.ui.UIController: UIController()
+dev.momo.library.core.ui.UIListener
+dev.momo.library.core.ui.UIListener: void setUIController(dev.momo.library.core.ui.UIController)
+dev.momo.library.core.ui.UIListener: void onUIDraw(int,java.lang.Object)
 dev.momo.library.core.util.KeyboardUtil
 dev.momo.library.core.util.KeyboardUtil: KeyboardUtil()
 dev.momo.library.core.util.KeyboardUtil: void hideKeyboard(android.app.Activity)

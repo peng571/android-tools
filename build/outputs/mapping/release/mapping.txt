@@ -5698,17 +5698,18 @@ dev.momo.library.core.tool.ResourceHelper -> dev.momo.library.core.tool.Resource
     24:24:void <clinit>() -> <clinit>
 dev.momo.library.core.tool.SimpleMapper -> dev.momo.library.core.tool.SimpleMapper:
     java.lang.String TAG -> TAG
-    com.fasterxml.jackson.databind.ObjectMapper mapper -> D
-    21:21:void <init>() -> <init>
-    28:31:com.fasterxml.jackson.databind.ObjectMapper getMapper() -> getMapper
-    39:42:java.lang.String toString(java.lang.Object) -> toString
-    49:55:java.lang.Object toObject(java.lang.String,java.lang.Class) -> toObject
-    61:67:java.util.List toObjectList(java.io.InputStream,java.lang.Class) -> toObjectList
-    73:79:java.util.List toObjectList(java.lang.String,java.lang.Class) -> toObjectList
-    85:85:com.fasterxml.jackson.databind.node.ArrayNode toArrayNode(java.lang.Object[]) -> toArrayNode
-    93:93:com.fasterxml.jackson.databind.node.ObjectNode newNode() -> newNode
-    100:100:com.fasterxml.jackson.databind.node.ArrayNode newArrayNode() -> newArrayNode
-    23:23:void <clinit>() -> <clinit>
+    dev.momo.library.core.tool.SimpleMapper mapper -> D
+    com.google.gson.Gson gson -> E
+    20:22:void <init>() -> <init>
+    25:28:dev.momo.library.core.tool.SimpleMapper getMapper() -> getMapper
+    34:34:java.lang.String toString(java.lang.Object) -> toString
+    39:40:java.lang.Object toObject(java.lang.String) -> toObject
+    44:45:java.util.List toObjectList(java.lang.String) -> toObjectList
+    15:15:void <clinit>() -> <clinit>
+dev.momo.library.core.tool.SimpleMapper$1 -> dev.momo.library.core.tool.SimpleMapper$1:
+    39:39:void <init>() -> <init>
+dev.momo.library.core.tool.SimpleMapper$2 -> dev.momo.library.core.tool.SimpleMapper$2:
+    44:44:void <init>() -> <init>
 dev.momo.library.core.tool.StorageHelper -> dev.momo.library.core.tool.StorageHelper:
     java.lang.String TAG -> TAG
     33:33:void <init>() -> <init>
@@ -5731,6 +5732,47 @@ dev.momo.library.core.tool.StorageHelper -> dev.momo.library.core.tool.StorageHe
     198:203:java.lang.String join(java.io.File,java.lang.String) -> join
     207:211:java.lang.String join(java.io.File,java.lang.String[]) -> join
     35:35:void <clinit>() -> <clinit>
+dev.momo.library.core.tool.json.JsonFace -> dev.momo.library.core.tool.json.JsonFace:
+    java.lang.String toString(java.lang.Object) -> toString
+    java.lang.Object toObject(java.lang.String) -> toObject
+    java.lang.Object toObjectList(java.lang.String) -> toObjectList
+dev.momo.library.core.ui.BaseActivity -> dev.momo.library.core.ui.BaseActivity:
+    java.lang.String TAG -> TAG
+    boolean isAlive -> isAlive
+    boolean isShown -> isShown
+    22:22:void <init>() -> <init>
+    34:67:void onCreate(android.os.Bundle) -> onCreate
+    72:74:void onResume() -> onResume
+    78:80:void onPause() -> onPause
+    84:86:void onDestroy() -> onDestroy
+    89:89:android.app.Activity getActivity() -> getActivity
+    97:106:void setStatusBarColor(int) -> setStatusBarColor
+    110:114:void hideStatusBar() -> hideStatusBar
+    24:24:void <clinit>() -> <clinit>
+dev.momo.library.core.ui.DisplayHelper -> dev.momo.library.core.ui.DisplayHelper:
+    java.lang.String TAG -> TAG
+    int DEVICE_HEIGHT -> DEVICE_HEIGHT
+    int SCREEN_DPI -> SCREEN_DPI
+    float SCREEN_DENSITY -> SCREEN_DENSITY
+    int SCREEN_WIDTH -> SCREEN_WIDTH
+    int SCREEN_HEIGHT -> SCREEN_HEIGHT
+    17:17:void <init>() -> <init>
+    30:43:void init(android.content.Context) -> init
+    47:52:int getNavigationHeight(android.content.Context) -> d
+    56:61:int getStatusBarHeight(android.content.Context) -> e
+    66:66:int dpToPixel(int) -> dpToPixel
+    70:70:int dpToPixel(float) -> dpToPixel
+    74:74:int pixelToDp(float) -> pixelToDp
+    78:78:android.graphics.Point getScreenMetrics() -> getScreenMetrics
+    82:82:float getScreenRatio() -> getScreenRatio
+    86:86:java.lang.String getInfoMessage() -> getInfoMessage
+    19:26:void <clinit>() -> <clinit>
+dev.momo.library.core.ui.UIController -> dev.momo.library.core.ui.UIController:
+    java.util.List listeners -> F
+    12:14:void <init>() -> <init>
+dev.momo.library.core.ui.UIListener -> dev.momo.library.core.ui.UIListener:
+    void setUIController(dev.momo.library.core.ui.UIController) -> setUIController
+    void onUIDraw(int,java.lang.Object) -> onUIDraw
 dev.momo.library.core.util.KeyboardUtil -> dev.momo.library.core.util.KeyboardUtil:
     java.lang.String TAG -> TAG
     13:13:void <init>() -> <init>
@@ -5744,27 +5786,27 @@ dev.momo.library.core.util.KeyboardUtil -> dev.momo.library.core.util.KeyboardUt
     118:128:void hideKeyboard(android.app.Dialog) -> hideKeyboard
     15:15:void <clinit>() -> <clinit>
 dev.momo.library.core.util.KeyboardUtil$1 -> dev.momo.library.core.util.KeyboardUtil$1:
-    android.app.Activity val$activity -> E
+    android.app.Activity val$activity -> G
     51:51:void <init>(android.app.Activity) -> <init>
     53:59:void run() -> run
 dev.momo.library.core.util.KeyboardUtil$1$1 -> dev.momo.library.core.util.KeyboardUtil$1$1:
-    dev.momo.library.core.util.KeyboardUtil$1 this$0 -> F
+    dev.momo.library.core.util.KeyboardUtil$1 this$0 -> H
     53:53:void <init>(dev.momo.library.core.util.KeyboardUtil$1) -> <init>
     56:57:void run() -> run
 dev.momo.library.core.util.KeyboardUtil$2 -> dev.momo.library.core.util.KeyboardUtil$2:
-    android.content.Context val$context -> G
+    android.content.Context val$context -> I
     70:70:void <init>(android.content.Context) -> <init>
     72:78:void run() -> run
 dev.momo.library.core.util.KeyboardUtil$2$1 -> dev.momo.library.core.util.KeyboardUtil$2$1:
-    dev.momo.library.core.util.KeyboardUtil$2 this$0 -> H
+    dev.momo.library.core.util.KeyboardUtil$2 this$0 -> J
     72:72:void <init>(dev.momo.library.core.util.KeyboardUtil$2) -> <init>
     75:76:void run() -> run
 dev.momo.library.core.util.KeyboardUtil$3 -> dev.momo.library.core.util.KeyboardUtil$3:
-    android.app.Dialog val$dialog -> I
+    android.app.Dialog val$dialog -> K
     89:89:void <init>(android.app.Dialog) -> <init>
     91:98:void run() -> run
 dev.momo.library.core.util.KeyboardUtil$3$1 -> dev.momo.library.core.util.KeyboardUtil$3$1:
-    dev.momo.library.core.util.KeyboardUtil$3 this$0 -> J
+    dev.momo.library.core.util.KeyboardUtil$3 this$0 -> L
     91:91:void <init>(dev.momo.library.core.util.KeyboardUtil$3) -> <init>
     94:96:void run() -> run
 dev.momo.library.core.util.SimpleCallback -> dev.momo.library.core.util.SimpleCallback:
@@ -5788,7 +5830,7 @@ dev.momo.library.core.view.DisplayHelper -> dev.momo.library.core.view.DisplayHe
     86:86:java.lang.String getInfoMessage() -> getInfoMessage
     19:26:void <clinit>() -> <clinit>
 dev.momo.library.core.view.UIController -> dev.momo.library.core.view.UIController:
-    java.util.List listeners -> K
+    java.util.List listeners -> F
     12:14:void <init>() -> <init>
 dev.momo.library.core.view.UIListener -> dev.momo.library.core.view.UIListener:
     void setUIController(dev.momo.library.core.view.UIController) -> setUIController
