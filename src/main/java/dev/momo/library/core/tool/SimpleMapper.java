@@ -1,105 +1,44 @@
 package dev.momo.library.core.tool;
 
-import com.fasterxml.jackson.core.JsonParseException;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonMappingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.List;
 
-import dev.momo.library.core.log.Logger;
-
 /**
- * Simple method to use ObjectMapper of Jackson
- * if choose jackson as json parse library
- * Un command this file and rename to SimpleMapper to tool dir to use
- * <p>
+ * Create simple method to use ObjectMapper of Jackson
  * Created by Peng on 2017/1/5.
  */
 public class SimpleMapper {
 
     private static final String TAG = SimpleMapper.class.getSimpleName();
 
-    private static ObjectMapper mapper;
+    private static Gson gson;
 
-    public static ObjectMapper getMapper() {
-        if (mapper == null) {
-            mapper = new ObjectMapper();
+    public static Gson getMapper() {
+        if (gson == null) {
+            gson = new Gson();
         }
-        return mapper;
+        return gson;
     }
 
 
     // Object Wrapper
     public static String toString(Object object) {
-
-        try {
-            return getMapper().writeValueAsString(object);
-        } catch (JsonProcessingException e) {
-            Logger.E(TAG, e);
-            return "";
-        }
+        return gson.toJson(object);
     }
 
 
-    public static <T> T toObject(String jsonString, Class<T> c) {
-        try {
-            return getMapper().readValue(jsonString, c);
-        } catch (JsonParseException | JsonMappingException e1) {
-            Logger.E(TAG, e1);
-            return null;
-        } catch (IOException e2) {
-            Logger.E(TAG, e2);
-            return null;
-        }
+    public static <T> T toObject(String jsonString) {
+        Type type = new TypeToken<T>() {}.getType();
+        return gson.fromJson(jsonString, type);
     }
 
-    public static <T> List<T> toObjectList(InputStream jsonInput, Class<T> c) {
-        try {
-            return getMapper().readValue(jsonInput, getMapper().getTypeFactory().constructCollectionType(List.class, c));
-        } catch (JsonParseException | JsonMappingException e1) {
-            Logger.E(TAG, e1);
-            return null;
-        } catch (IOException e) {
-            Logger.E(TAG, e);
-            return null;
-        }
-    }
-
-    public static <T> List<T> toObjectList(String jsonString, Class<T> c) {
-        try {
-            return getMapper().readValue(jsonString, getMapper().getTypeFactory().constructCollectionType(List.class, c));
-        } catch (JsonParseException | JsonMappingException e1) {
-            Logger.E(TAG, e1);
-            return null;
-        } catch (IOException e) {
-            Logger.E(TAG, e);
-            return null;
-        }
+    public static <T> List<T> toObjectList(String jsonString) {
+        Type type = new TypeToken<List<T>>() {}.getType();
+        return gson.fromJson(jsonString, type);
     }
 
 
-    public static <T> ArrayNode toArrayNode(T[] array) {
-        return mapper.valueToTree(array);
-    }
-
-
-    /**
-     * Simple node method to cover Org.JSON method
-     */
-    public static ObjectNode newNode() {
-        return JsonNodeFactory.instance.objectNode();
-    }
-
-    /**
-     * Simple node method to cover Org.JSONArray method
-     */
-    public static ArrayNode newArrayNode() {
-        return JsonNodeFactory.instance.arrayNode();
-    }
 }
