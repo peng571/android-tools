@@ -55,14 +55,16 @@ public class BaseActivity extends AppCompatActivity {
         // TODO crash exception handler
         //        Thread.setDefaultUncaughtExceptionHandler(new CrashExceptionHandler(this));
 
-        Helper.initInstance(this);
 
+<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
         // TODO logger settup
         //        Logger.setTAG(Constants.TAG);
         //        if (!ProductMode.DEBUG) {
         //            Logger.setLogLevel(Logger.LOG_NONE);
         //        }
 
+=======
+>>>>>>> add data binding
         isAlive = true;
     }
 
@@ -112,7 +114,6 @@ public class BaseActivity extends AppCompatActivity {
         int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
     }
-
 
 
     // TODO TBD...

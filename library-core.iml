@@ -23,6 +23,7 @@
       </configuration>
     </facet>
   </component>
+<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
 <<<<<<< 96a413f7a06afd0692e026e554642b27b4d9f0be
 <<<<<<< f4189bc3295de543768fd905adc69ca58dfa26a4
 <<<<<<< ba7c61f1f583cd7c9673f31e59447218773b60c8
@@ -41,6 +42,9 @@
 =======
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
 >>>>>>> update gradle plugin for AS 3.0
+=======
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+>>>>>>> add data binding
     <output url="file://$MODULE_DIR$/build/intermediates/classes/debug" />
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/debug" />
 >>>>>>> update
@@ -102,9 +106,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
 <<<<<<< 96a413f7a06afd0692e026e554642b27b4d9f0be
 <<<<<<< f4189bc3295de543768fd905adc69ca58dfa26a4
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations" />
+=======
+>>>>>>> add data binding
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/attr" />
 =======
 >>>>>>> update gradle
@@ -116,7 +123,10 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data-binding-compiler" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/data-binding-info" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
+<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-safeguard" />
 <<<<<<< 96a413f7a06afd0692e026e554642b27b4d9f0be
 <<<<<<< f4189bc3295de543768fd905adc69ca58dfa26a4
@@ -131,8 +141,12 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
 >>>>>>> update gradle plugin for AS 3.0
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
+=======
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/intermediate-jars" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
+>>>>>>> add data binding
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard-rules" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
@@ -162,6 +176,7 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 26 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
 <<<<<<< 96a413f7a06afd0692e026e554642b27b4d9f0be
 <<<<<<< ba608781a0835fce9d64d376cc4ea2607defb80e
 <<<<<<< ba7c61f1f583cd7c9673f31e59447218773b60c8
@@ -172,6 +187,12 @@
     <orderEntry type="library" name="com.android.support:cardview-v7-27.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:design-27.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:support-v13-27.0.1" level="project" />
+=======
+    <orderEntry type="library" name="com.android.support:animated-vector-drawable-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.support:appcompat-v7-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.support:design-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.databinding:baseLibrary:3.0.0@jar" level="project" />
+>>>>>>> add data binding
     <orderEntry type="library" name="android.arch.lifecycle:common:1.0.0@jar" level="project" />
     <orderEntry type="library" name="android.arch.core:common:1.0.0@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-compat-27.0.1" level="project" />
@@ -179,6 +200,7 @@
     <orderEntry type="library" name="com.android.support:support-core-utils-27.0.1" level="project" />
     <orderEntry type="library" name="com.android.support:support-core-ui-27.0.1" level="project" />
     <orderEntry type="library" name="android.arch.lifecycle:runtime-1.0.0" level="project" />
+<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
     <orderEntry type="library" name="com.android.support:recyclerview-v7-27.0.1" level="project" />
     <orderEntry type="library" name="com.fasterxml.jackson.core:jackson-databind:2.8.6@jar" level="project" />
     <orderEntry type="library" name="com.android.support:support-media-compat-27.0.1" level="project" />
@@ -218,5 +240,16 @@
 >>>>>>> update
 =======
 >>>>>>> update gradle plugin for AS 3.0
+=======
+    <orderEntry type="library" name="com.android.databinding:library-1.3.1" level="project" />
+    <orderEntry type="library" name="com.android.support:recyclerview-v7-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.support:support-media-compat-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.support:support-annotations:27.0.1@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-fragment-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.databinding:adapters-1.3.1" level="project" />
+    <orderEntry type="library" name="com.google.code.gson:gson:2.8.2@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-v4-27.0.1" level="project" />
+    <orderEntry type="library" name="com.android.support:support-vector-drawable-27.0.1" level="project" />
+>>>>>>> add data binding
   </component>
 </module>
