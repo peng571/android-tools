@@ -1,5 +1,6 @@
 package dev.momo.library.core.data.recycler;
 
+import android.support.v4.util.ArrayMap;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -7,18 +8,18 @@ import java.util.Collection;
 import java.util.List;
 
 import dev.momo.library.core.log.Logger;
-import dev.momo.library.core.tool.SimpleMapper;
 
 /**
- * 
- *
  * Created by momopeng on 3/17/16.
  */
-@Deprecated
 public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     private final static String TAG = ListRecyclerAdapter.class.getSimpleName();
 
     protected List<T> data;
+
+    protected ArrayMap<Integer, OnItemClickListener> clickListener;
+    protected ArrayMap<Integer, OnItemLongClickListener> longClickListener;
+
 
     public ListRecyclerAdapter() {
         this(new ArrayList<T>());
@@ -50,7 +51,7 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         return data.get(index);
     }
 
-    public int indexOf(T item){
+    public int indexOf(T item) {
         return data.indexOf(item);
     }
 
@@ -138,5 +139,21 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         }
         return index;
     }
+
+
+    public void addItemClickListener(int viewType, OnItemClickListener<T> listener) {
+        if (clickListener == null) {
+            clickListener = new ArrayMap<>();
+        }
+        clickListener.put(viewType, listener);
+    }
+
+    public void addItemLongClickListener(int viewType, OnItemLongClickListener<T> listener) {
+        if (longClickListener == null) {
+            longClickListener = new ArrayMap<>();
+        }
+        longClickListener.put(viewType, listener);
+    }
+
 
 }

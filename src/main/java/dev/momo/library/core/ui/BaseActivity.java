@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import dev.momo.library.core.Helper;
 import dev.momo.library.core.tool.ResourceHelper;
 
 /**
