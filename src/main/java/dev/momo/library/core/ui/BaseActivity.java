@@ -56,15 +56,12 @@ public class BaseActivity extends AppCompatActivity {
         //        Thread.setDefaultUncaughtExceptionHandler(new CrashExceptionHandler(this));
 
 
-<<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
         // TODO logger settup
         //        Logger.setTAG(Constants.TAG);
         //        if (!ProductMode.DEBUG) {
         //            Logger.setLogLevel(Logger.LOG_NONE);
         //        }
 
-=======
->>>>>>> add data binding
         isAlive = true;
     }
 

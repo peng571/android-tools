@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Source\\Android\\alc-android\\library-core\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
-        "source": "C:\\Users\\Peng\\.android\\build-cache\\370a42e7d6ca7c3a003db3c70c59e14b020e8811\\output\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
+        "merged": "C:\\Source\\Android\\rx-practice\\library-core\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility.xml",
+        "source": "C:\\Users\\Peng\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.1.aar\\f31e6119c558b42f3bcc199902926415\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
     },
     {
-        "merged": "C:\\Source\\Android\\alc-android\\library-core\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility.xml",
-        "source": "C:\\Users\\Peng\\.android\\build-cache\\370a42e7d6ca7c3a003db3c70c59e14b020e8811\\output\\res\\drawable-anydpi-v21\\design_ic_visibility.xml"
+        "merged": "C:\\Source\\Android\\rx-practice\\library-core\\build\\intermediates\\res\\merged\\release\\drawable-anydpi-v21\\design_ic_visibility_off.xml",
+        "source": "C:\\Users\\Peng\\.gradle\\caches\\transforms-1\\files-1.1\\design-27.0.1.aar\\f31e6119c558b42f3bcc199902926415\\res\\drawable-anydpi-v21\\design_ic_visibility_off.xml"
     }
 ]
