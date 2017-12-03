@@ -1,8 +1,10 @@
 package dev.momo.library.core.tool;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Modifier;
 import java.lang.reflect.Type;
 import java.util.List;
 
@@ -16,9 +18,16 @@ public class SimpleMapper {
 
     private static Gson gson;
 
+    private static final String EMPTY_JSON_ARRAY = "[]";
+    private static final String EMPTY_JSON = "{}";
+
     public static Gson getMapper() {
         if (gson == null) {
-            gson = new Gson();
+            gson = new GsonBuilder()
+                    //                    .excludeFieldsWithoutExposeAnnotation()
+                    .excludeFieldsWithModifiers(Modifier.STATIC | Modifier.FINAL)
+                    .setPrettyPrinting()
+                    .create();
         }
         return gson;
     }
@@ -26,19 +35,18 @@ public class SimpleMapper {
 
     // Object Wrapper
     public static String toString(Object object) {
-        return gson.toJson(object);
+        if (object == null) return EMPTY_JSON;
+        return getMapper().toJson(object);
     }
 
 
     public static <T> T toObject(String jsonString) {
         Type type = new TypeToken<T>() {}.getType();
-        return gson.fromJson(jsonString, type);
+        return getMapper().fromJson(jsonString, type);
     }
 
     public static <T> List<T> toObjectList(String jsonString) {
         Type type = new TypeToken<List<T>>() {}.getType();
-        return gson.fromJson(jsonString, type);
+        return getMapper().fromJson(jsonString, type);
     }
-
-
 }

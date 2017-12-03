@@ -106,12 +106,16 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/rs" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
+<<<<<<< b8fa3221f1b457349ef583016793c16a75f03556
 <<<<<<< cc70c76257cda0bb7e461160c7a914c2855a9154
 <<<<<<< 96a413f7a06afd0692e026e554642b27b4d9f0be
 <<<<<<< f4189bc3295de543768fd905adc69ca58dfa26a4
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations" />
 =======
 >>>>>>> add data binding
+=======
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/annotations" />
+>>>>>>> update gson readme file
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/attr" />
 =======
 >>>>>>> update gradle
@@ -147,6 +151,7 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
 >>>>>>> add data binding
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/proguard-rules" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
@@ -170,7 +175,11 @@
 =======
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
+<<<<<<< b8fa3221f1b457349ef583016793c16a75f03556
 >>>>>>> update gradle plugin for AS 3.0
+=======
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/typedefs.txt" />
+>>>>>>> update gson readme file
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
