@@ -10,8 +10,6 @@
 - Jackson
 - Gson
 
-
-
 ## Jackson
 
 在大檔案和小檔案都有不錯的效率，且有較好的擴充性，但library過於龐大(6000+ methods count)。
@@ -23,18 +21,21 @@
 
 #### 需引用的library
 
-// TODO
+jackson 的library底下還有細分許多小的library，可選擇引用專案所需要的即可，在這邊列出最常使用的三個。
+但儘管jackson可以只選擇部分library來使用，還是無法改變library的主體過於龐大的問題。
+
+    compile "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
+    compile "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
 
 #### 物件
 
 一些常用的屬性
 
+(待補)
+
 - @JsonIgnore 加在Value的上方表示省略
 
-// TODO
-// ...
-
-<!-- - 需要在物件開頭著名 @Jsonxxx... -->
 
 ## Gson [choosen]
 
