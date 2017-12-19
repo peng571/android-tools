@@ -21,6 +21,8 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
     protected int index;
     protected T object;
 
+    private  View clickableItem;
+
     public ObjectViewHolder(final View itemView) {
         super(itemView);
         setClickableItem(itemView);
@@ -65,10 +67,17 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
      * or set at viewHolder adapter
      * - viewHolder.setClickableItem(viewHolder.getView());
      * <p>
+     *
      * @param view clickable item view
      */
     public void setClickableItem(View view) {
-        view.setOnClickListener(listener);
+        if (clickableItem != null) {
+            clickableItem.setOnClickListener(null);
+        }
+        if (view != null) {
+            view.setOnClickListener(listener);
+            clickableItem = view;
+        }
     }
 
 
@@ -78,7 +87,7 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
 
     /**
      * Do the same thing as above.
-     *
+     * <p>
      * But it's strange to set ViewHolder.itemView to setOnClickListener will cause NPE,
      * so parse view inside method instead. Try to FIXME
      *
