@@ -3,13 +3,14 @@ package dev.momo.library.core.log;
 import android.content.Context;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
+import android.widget.TextView;
 
 import dev.momo.library.core.Helper;
 
 /**
  * Created by Peng on 2016/12/2.
  */
-public class LoggerView extends android.support.v7.widget.AppCompatTextView {
+public class LoggerView extends TextView {
 
     private String filterTag = "";
     private int logLevel = Logger.LOG_ALL;
