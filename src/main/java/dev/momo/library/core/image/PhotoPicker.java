@@ -81,7 +81,6 @@ public class PhotoPicker {
             case ImageConfig.TAKE_PICTURE_REQUEST:
                 filePath = getExternalTempImagePath(resultActivity);
                 break;
-
             case ImageConfig.GALLERY_INTENT_REQUEST:
                 if (data != null && data.getData() != null) {
                     filePath = Helper.getRealPathFromURI(data.getData(), resultActivity);

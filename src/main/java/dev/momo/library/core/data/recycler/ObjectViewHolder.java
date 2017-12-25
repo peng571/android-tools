@@ -21,6 +21,8 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
     protected int index;
     protected T object;
 
+    private View clickableItem;
+
     public ObjectViewHolder(final View itemView) {
         super(itemView);
         setClickableItem(itemView);
@@ -69,14 +71,30 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
      * @param view clickable item view
      */
     public void setClickableItem(View view) {
-        if (view == null) return;
-        view.setOnClickListener(listener);
+        // remove old clickable item listener
+        if (clickableItem != null) {
+            clickableItem.setOnClickListener(null);
+        }
+
+        // add click listener to clickable view
+        if (view != null) {
+            view.setOnClickListener(listener);
+            clickableItem = view;
+        }
     }
 
 
     public void setLongClickableItem(View view) {
-        if (view == null) return;
-        view.setOnLongClickListener(longListener);
+        // remove old clickable item listener
+        if (clickableItem != null) {
+            clickableItem.setOnLongClickListener(null);
+        }
+
+        // add click listener to clickable view
+        if (view != null) {
+            view.setOnLongClickListener(longListener);
+            clickableItem = view;
+        }
     }
 
     /**

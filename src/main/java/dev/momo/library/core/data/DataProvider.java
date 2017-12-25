@@ -4,16 +4,12 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.UiThread;
 import android.support.v7.widget.RecyclerView;
-import android.util.SparseArray;
 
-import java.util.AbstractList;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import dev.momo.library.core.log.Logger;
 
 /**
  * to keep change data for adapter
@@ -215,8 +211,12 @@ public class DataProvider<D> {
 
     public void destroy() {
         unbind();
+        positionFixer = null;
+        adapter = null;
+        data.clear();
         notifyIDs.clear();
     }
+
 
     public interface PositionFixer {
         int getFixPosition(int position);

@@ -56,12 +56,9 @@ public class SimpleMapper {
         }
     }
 
-    public static <T> List<T> toObjectList(InputStream jsonInput, Class<T> c){
+    public static <T> List<T> toObjectList(InputStream jsonInput, Class<T> c) {
         try {
             return getMapper().readValue(jsonInput, getMapper().getTypeFactory().constructCollectionType(List.class, c));
-        } catch (JsonParseException | JsonMappingException e1) {
-            Logger.E(TAG, e1);
-            return null;
         } catch (IOException e) {
             Logger.E(TAG, e);
             return null;
@@ -71,9 +68,6 @@ public class SimpleMapper {
     public static <T> List<T> toObjectList(String jsonString, Class<T> c) {
         try {
             return getMapper().readValue(jsonString, getMapper().getTypeFactory().constructCollectionType(List.class, c));
-        } catch (JsonParseException | JsonMappingException e1) {
-            Logger.E(TAG, e1);
-            return null;
         } catch (IOException e) {
             Logger.E(TAG, e);
             return null;
