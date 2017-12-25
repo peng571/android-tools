@@ -40,22 +40,26 @@ public class LoggerView extends TextView {
         if (!TAG.contains(filterTag)) return;
         if (logLevel < level) return;
 
-        Helper.mainUIHandler.post(() -> {
-            if (isTopToBottom()) {
-                // append the new string to bottom
-                append(message + "\n");
-                // find the amount we need to scroll.  This works by
-                // asking the TextView's internal layout for the position
-                // of the final line and then subtracting the TextView's height
-                final int scrollAmount = getLayout().getLineTop(getLineCount() - 1) - getHeight();
-                // if there is no need to scroll, scrollAmount will be <=0
-                if (scrollAmount > 0) {
-                    scrollTo(0, scrollAmount);
+        Helper.mainUIHandler.post(new Runnable() {
+            @Override
+            public void run() {
+
+                if (isTopToBottom()) {
+                    // append the new string to bottom
+                    append(message + "\n");
+                    // find the amount we need to scroll.  This works by
+                    // asking the TextView's internal layout for the position
+                    // of the final line and then subtracting the TextView's height
+                    final int scrollAmount = getLayout().getLineTop(getLineCount() - 1) - getHeight();
+                    // if there is no need to scroll, scrollAmount will be <=0
+                    if (scrollAmount > 0) {
+                        scrollTo(0, scrollAmount);
+                    } else {
+                        scrollTo(0, 0);
+                    }
                 } else {
-                    scrollTo(0, 0);
+                    setText(message + "\n" + getText());
                 }
-            } else {
-                setText(message + "\n" + getText());
             }
         });
     }
