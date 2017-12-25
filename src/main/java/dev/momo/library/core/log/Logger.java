@@ -36,7 +36,7 @@ public class Logger {
         switch (logType) {
             default:
             case LOG_NONE:
-                return "";
+                return "N";
             case LOG_ALL:
                 return "A";
             case LOG_D:
@@ -349,5 +349,4 @@ public class Logger {
             Log.e(TAG, "", e);
         }
     }
-
 }
