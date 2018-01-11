@@ -186,10 +186,31 @@ public class DataProvider<D> {
     }
 
 
+    /**
+     * pump out all notifyIDs into dataIDs
+     *
+     * @return all data in list
+     */
+    public List<D> pumpList() {
+        for (D d : notifyIDs) {
+            if (!data.contains(d)) {
+                data.add(d);
+            }
+        }
+        return data;
+    }
+
+
+    /**
+     * @return current data
+     */
     public List<D> list() {
         return data;
     }
 
+    /**
+     * @return notify data
+     */
     public Set<D> getNotifyIDs() {
         return notifyIDs;
     }
