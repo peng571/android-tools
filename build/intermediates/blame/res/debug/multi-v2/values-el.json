@@ -4,17 +4,7 @@
             "outputFile": "C:\\Source\\Android\\rx-practice\\library-core\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-el\\values-el.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Peng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.1.aar\\ccc951eb127d0f3a35fcec725f0cebdd\\res\\values-el\\values-el.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,223,334,451,536,641,767,855,941,1026,1137,1247,1349,1460,1569,1677,1837,1937",
-                        "endColumns": "117,110,116,84,104,125,87,85,84,110,109,101,110,108,107,159,99,84",
-                        "endOffsets": "218,329,446,531,636,762,850,936,1021,1132,1242,1344,1455,1564,1672,1832,1932,2017"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Peng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\77241030bca52ff7e1df56d24ea448a5\\res\\values-el\\values-el.xml",
+                    "source": "C:\\Users\\momo peng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\75fc74c8ffd8d3680b1fde9111e7fc1e\\res\\values-el\\values-el.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -28,6 +18,16 @@
                         "startOffsets": "2022",
                         "endColumns": "100",
                         "endOffsets": "2118"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\momo peng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.1.aar\\df616c7d6e2e76b5344cb2baa1785a2b\\res\\values-el\\values-el.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,223,334,451,536,641,767,855,941,1026,1137,1247,1349,1460,1569,1677,1837,1937",
+                        "endColumns": "117,110,116,84,104,125,87,85,84,110,109,101,110,108,107,159,99,84",
+                        "endOffsets": "218,329,446,531,636,762,850,936,1021,1132,1242,1344,1455,1564,1672,1832,1932,2017"
                     }
                 }
             ]
@@ -36,17 +36,7 @@
             "outputFile": "C:\\Source\\Android\\rx-practice\\library-core\\build\\intermediates\\res\\merged\\debug\\values-el\\values-el.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Peng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.1.aar\\ccc951eb127d0f3a35fcec725f0cebdd\\res\\values-el\\values-el.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,223,334,451,536,641,767,855,941,1026,1137,1247,1349,1460,1569,1677,1837,1937",
-                        "endColumns": "117,110,116,84,104,125,87,85,84,110,109,101,110,108,107,159,99,84",
-                        "endOffsets": "218,329,446,531,636,762,850,936,1021,1132,1242,1344,1455,1564,1672,1832,1932,2017"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Peng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\77241030bca52ff7e1df56d24ea448a5\\res\\values-el\\values-el.xml",
+                    "source": "C:\\Users\\momo peng\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.1.aar\\75fc74c8ffd8d3680b1fde9111e7fc1e\\res\\values-el\\values-el.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -60,6 +50,16 @@
                         "startOffsets": "2022",
                         "endColumns": "100",
                         "endOffsets": "2118"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\momo peng\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-27.0.1.aar\\df616c7d6e2e76b5344cb2baa1785a2b\\res\\values-el\\values-el.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,223,334,451,536,641,767,855,941,1026,1137,1247,1349,1460,1569,1677,1837,1937",
+                        "endColumns": "117,110,116,84,104,125,87,85,84,110,109,101,110,108,107,159,99,84",
+                        "endOffsets": "218,329,446,531,636,762,850,936,1021,1132,1242,1344,1455,1564,1672,1832,1932,2017"
                     }
                 }
             ]

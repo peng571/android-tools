@@ -36,7 +36,7 @@ public class Logger {
         switch (logType) {
             default:
             case LOG_NONE:
-                return "";
+                return "N";
             case LOG_ALL:
                 return "A";
             case LOG_D:
@@ -48,6 +48,12 @@ public class Logger {
         }
     }
 
+    /**
+     * LoggerView setting
+     * <p>
+     * see @LoggerView.class to know more.
+     * remember to removeLogView when exist logger view parent activtity or fragment.
+     */
     private static LoggerView loggerView;
 
     public static void setLogView(LoggerView view) {
@@ -62,6 +68,11 @@ public class Logger {
         logLevel = level;
     }
 
+
+    /**
+     * TAG setting
+     * @param APP_TAG
+     */
     public static void setTAG(String APP_TAG) {
         Logger.APP_TAG = APP_TAG;
     }
@@ -159,7 +170,6 @@ public class Logger {
             printLogcat(fullTag, LOG_W, log, null);
             printSystemLog(fullTag, LOG_W, log, null);
             appendLog(fullTag, LOG_W, log);
-
         }
 
         if (loggerView != null) {
@@ -349,5 +359,4 @@ public class Logger {
             Log.e(TAG, "", e);
         }
     }
-
 }
