@@ -24,8 +24,8 @@
     <string name="ok">OK</string>
     <string name="cancel">取消</string>
     <string name="not_set">尚未</string>
-    <string name="can_not_be_empty">不可為空.</string>
-    <string name="item_can_not_be_empty">%s不可為空.</string>
+    <string name="can_not_be_empty">不可為空。</string>
+    <string name="item_can_not_be_empty">%s不可為空。</string>
     <string name="no_data_now">沒有資料</string>
     <string name="save">儲存</string>
     <string name="location">地點</string>
