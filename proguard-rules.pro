@@ -59,3 +59,5 @@
     public static **[] values();
     public static ** valueOf(java.lang.String);
 }
+
+-dontwarn java.lang.invoke.**
