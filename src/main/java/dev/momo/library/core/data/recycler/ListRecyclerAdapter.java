@@ -7,14 +7,10 @@ import java.util.Collection;
 import java.util.List;
 
 import dev.momo.library.core.log.Logger;
-import dev.momo.library.core.tool.SimpleMapper;
 
 /**
- * 
- *
  * Created by momopeng on 3/17/16.
  */
-@Deprecated
 public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder> extends RecyclerView.Adapter<VH> {
     private final static String TAG = ListRecyclerAdapter.class.getSimpleName();
 
@@ -50,7 +46,7 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         return data.get(index);
     }
 
-    public int indexOf(T item){
+    public int indexOf(T item) {
         return data.indexOf(item);
     }
 
