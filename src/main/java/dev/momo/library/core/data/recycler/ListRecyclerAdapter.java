@@ -141,11 +141,26 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
     }
 
 
+    public void setItemClickListener(OnItemClickListener<T> listener) {
+        if (clickListener == null) {
+            clickListener = new ArrayMap<>();
+        }
+        clickListener.put(0, listener);
+    }
+
+
     public void addItemClickListener(int viewType, OnItemClickListener<T> listener) {
         if (clickListener == null) {
             clickListener = new ArrayMap<>();
         }
         clickListener.put(viewType, listener);
+    }
+
+    public void setItemLongClickListener(OnItemLongClickListener<T> listener) {
+        if (longClickListener == null) {
+            longClickListener = new ArrayMap<>();
+        }
+        longClickListener.put(0, listener);
     }
 
     public void addItemLongClickListener(int viewType, OnItemLongClickListener<T> listener) {

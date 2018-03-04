@@ -40,13 +40,11 @@ public class SimpleMapper {
     }
 
 
-    public static <T> T toObject(String jsonString) {
-        Type type = new TypeToken<T>() {}.getType();
+    public static <T> T toObject(Class<T> type, String jsonString) {
         return getMapper().fromJson(jsonString, type);
     }
 
-    public static <T> List<T> toObjectList(String jsonString) {
-        Type type = new TypeToken<List<T>>() {}.getType();
-        return getMapper().fromJson(jsonString, type);
-    }
+//    public static <T> List<T> toObjectList(Class<List<T>> type, String jsonString) {
+//        return getMapper().fromJson(jsonString, type);
+//    }
 }
