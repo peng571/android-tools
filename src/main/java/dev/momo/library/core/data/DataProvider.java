@@ -119,6 +119,7 @@ public class DataProvider<D> {
      * Must bind(null) when adapter view is not shown
      */
     public void unbind() {
+        this.positionFixer = null;
         this.adapter = null;
     }
 
@@ -186,10 +187,31 @@ public class DataProvider<D> {
     }
 
 
+    /**
+     * pump out all notifyIDs into dataIDs
+     *
+     * @return all data in list
+     */
+    public List<D> pumpList() {
+        for (D d : notifyIDs) {
+            if (!data.contains(d)) {
+                data.add(d);
+            }
+        }
+        return data;
+    }
+
+
+    /**
+     * @return current data
+     */
     public List<D> list() {
         return data;
     }
 
+    /**
+     * @return notify data
+     */
     public Set<D> getNotifyIDs() {
         return notifyIDs;
     }
