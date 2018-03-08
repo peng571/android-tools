@@ -1,6 +1,5 @@
 package dev.momo.library.core.tool;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -11,6 +10,7 @@ import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
@@ -106,10 +106,11 @@ public class ResourceHelper {
         if (resources == null) return null;
         if (resId == 0) return null;
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
                 return resources.getDrawable(resId, applicationContext.getTheme());
+            } else {
+                return resources.getDrawable(resId);
             }
-            return resources.getDrawable(resId);
         } catch (Resources.NotFoundException e) {
             Logger.E(TAG, e);
             return null;
