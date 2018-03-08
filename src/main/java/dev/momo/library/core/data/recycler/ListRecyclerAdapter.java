@@ -17,7 +17,10 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
 
     protected List<T> data;
 
+    // FIXME not work
+    @Deprecated
     protected ArrayMap<Integer, OnItemClickListener> clickListener;
+    @Deprecated
     protected ArrayMap<Integer, OnItemLongClickListener> longClickListener;
 
 
@@ -141,6 +144,7 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
     }
 
 
+    @Deprecated
     public void setItemClickListener(OnItemClickListener<T> listener) {
         if (clickListener == null) {
             clickListener = new ArrayMap<>();
@@ -149,6 +153,7 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
     }
 
 
+    @Deprecated
     public void addItemClickListener(int viewType, OnItemClickListener<T> listener) {
         if (clickListener == null) {
             clickListener = new ArrayMap<>();
@@ -156,6 +161,7 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         clickListener.put(viewType, listener);
     }
 
+    @Deprecated
     public void setItemLongClickListener(OnItemLongClickListener<T> listener) {
         if (longClickListener == null) {
             longClickListener = new ArrayMap<>();
@@ -163,6 +169,7 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         longClickListener.put(0, listener);
     }
 
+    @Deprecated
     public void addItemLongClickListener(int viewType, OnItemLongClickListener<T> listener) {
         if (longClickListener == null) {
             longClickListener = new ArrayMap<>();
