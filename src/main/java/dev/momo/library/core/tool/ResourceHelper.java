@@ -2,9 +2,11 @@ package dev.momo.library.core.tool;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.support.annotation.ArrayRes;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
@@ -90,6 +92,29 @@ public class ResourceHelper {
         return "";
     }
 
+    public static String[] getStringArray(@ArrayRes int resId) {
+        String[] strings = new String[]{""};
+        if (resources == null) return strings;
+        if (resId == 0) return strings;
+        try {
+            strings = resources.getStringArray(resId);
+        } catch (Resources.NotFoundException e) {
+            Logger.E(TAG, e);
+        }
+        return strings;
+    }
+
+    public static String getString(@ArrayRes int resID, int index) {
+        String[] strings = getStringArray(resID);
+        if (strings == null || strings.length <= index) return "";
+        return strings[index];
+    }
+
+    public static @StringRes int getStringID(@ArrayRes int resID, int index) {
+        if (resources == null) return 0;
+        TypedArray array = resources.obtainTypedArray(resID);
+        return array.getResourceId(index, 0);
+    }
 
     public static Drawable getDrawable(@DrawableRes int resId) {
         if (resources == null) return null;
