@@ -1,3 +1,5 @@
+package dev.momo.library.core.tool.json;
+
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -13,15 +15,12 @@ import java.util.List;
 import dev.momo.library.core.log.Logger;
 
 /**
- * Simple method to use ObjectMapper of Jackson
- * if choose jackson as json parse library
- * Un command this file and rename to SimpleMapper to tool dir to use
- * <p>
+ * Create simple method to use ObjectMapper of Jackson
  * Created by Peng on 2017/1/5.
  */
-public class JacksonMapper {
+public class SimpleMapper {
 
-    private static final String TAG = JacksonMapper.class.getSimpleName();
+    private static final String TAG = SimpleMapper.class.getSimpleName();
 
     private static ObjectMapper mapper;
 
@@ -57,7 +56,7 @@ public class JacksonMapper {
         }
     }
 
-    public static <T> List<T> toObjectList(InputStream jsonInput, Class<T> c){
+    public static <T> List<T> toObjectList(InputStream jsonInput, Class<T> c) {
         try {
             return getMapper().readValue(jsonInput, getMapper().getTypeFactory().constructCollectionType(List.class, c));
         } catch (JsonParseException | JsonMappingException e1) {
