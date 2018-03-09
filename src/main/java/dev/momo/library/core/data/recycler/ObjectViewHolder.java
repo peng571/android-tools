@@ -34,29 +34,31 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
      *
      * @param position
      * @param object
+     * @Deprecated change method name to bind, so use bind(int position, T object) instead
      */
     @CallSuper
+    @Deprecated
     protected void onBind(int position, T object) {
+        bind(position, object);
+    }
+
+
+    @CallSuper
+    protected void bind(int position, T object) {
         this.index = position;
         this.object = object;
     }
 
 
-    final protected View.OnClickListener listener = new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-            if (clickListener == null) return;
-            clickListener.onItemClick(ObjectViewHolder.this, index, object);
-        }
+    final protected View.OnClickListener listener = (View v) -> {
+        if (clickListener == null) return;
+        clickListener.onItemClick(ObjectViewHolder.this, index, object);
     };
 
-    final protected View.OnLongClickListener longListener = new View.OnLongClickListener() {
-        @Override
-        public boolean onLongClick(View view) {
-            if (longClickListener == null) return true;
-            longClickListener.onItemLongClick(ObjectViewHolder.this, index, object);
-            return false;
-        }
+    final protected View.OnLongClickListener longListener = (View view) -> {
+        if (longClickListener == null) return true;
+        longClickListener.onItemLongClick(ObjectViewHolder.this, index, object);
+        return false;
     };
 
 

@@ -10,6 +10,9 @@ import android.support.annotation.ArrayRes;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
@@ -74,13 +77,20 @@ public class ResourceHelper {
         }
     }
 
+    @NonNull
     public static String getString(@StringRes int resId) {
         if (resources == null) return "";
         if (resId == 0) return "";
+        try {
+            return resources.getString(resId);
+        } catch (Resources.NotFoundException e) {
+            Logger.E(TAG, e);
+            return "";
+        }
 
-        return resources.getString(resId);
     }
 
+    @NonNull
     public static String getString(@StringRes int resId, Object... formatArgs) {
         if (resources == null) return "";
         if (resId == 0) return "";
@@ -116,13 +126,20 @@ public class ResourceHelper {
         return array.getResourceId(index, 0);
     }
 
+    @Nullable
     public static Drawable getDrawable(@DrawableRes int resId) {
         if (resources == null) return null;
         if (resId == 0) return null;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return resources.getDrawable(resId, applicationContext.getTheme());
+        try {
+            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
+                return resources.getDrawable(resId, applicationContext.getTheme());
+            } else {
+                return resources.getDrawable(resId);
+            }
+        } catch (Resources.NotFoundException e) {
+            Logger.E(TAG, e);
+            return null;
         }
-        return resources.getDrawable(resId);
     }
 
     public static int getDimenPixel(@DimenRes int resId) {
