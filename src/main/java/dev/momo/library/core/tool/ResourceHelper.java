@@ -114,7 +114,7 @@ public class ResourceHelper {
         return strings;
     }
 
-    public static String getString(@ArrayRes int resID, int index) {
+    public static String getStringInArray(@ArrayRes int resID, int index) {
         String[] strings = getStringArray(resID);
         if (strings == null || strings.length <= index) return "";
         return strings[index];
