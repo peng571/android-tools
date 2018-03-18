@@ -10,21 +10,21 @@ import dev.momo.library.core.util.ThreadUtil;
 /**
  * Created by Peng on 2016/12/2.
  */
-public class LoggerView extends AppCompatTextView {
+public class LogView extends AppCompatTextView {
 
     private String filterTag = "";
     private int logLevel = Logger.LOG_ALL;
 
     boolean topToBottom = false; // show log from top to bottom or bottom to top
 
-    public LoggerView(Context context) {
+    public LogView(Context context) {
         super(context);
         if (!isInEditMode()) {
             init();
         }
     }
 
-    public LoggerView(Context context, AttributeSet attrs) {
+    public LogView(Context context, AttributeSet attrs) {
         super(context, attrs);
         if (!isInEditMode()) {
             init();

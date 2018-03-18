@@ -16,7 +16,6 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import dev.momo.library.core.log.Logger;
 
 public class BitmapHelper {
 

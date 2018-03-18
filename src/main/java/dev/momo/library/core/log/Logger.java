@@ -54,9 +54,9 @@ public class Logger {
      * see @LoggerView.class to know more.
      * remember to removeLogView when exist logger view parent activtity or fragment.
      */
-    private static LoggerView loggerView;
+    private static LogView loggerView;
 
-    public static void setLogView(LoggerView view) {
+    public static void setLogView(LogView view) {
         loggerView = view;
     }
 
@@ -302,11 +302,11 @@ public class Logger {
     /**
      * log file methods
      */
-    public static void setLoggetFile(String filePath) {
+    public static void setLogFile(String filePath) {
         logFilePath = filePath;
     }
 
-    public static String getLoggerFile() {
+    public static String setLogFile() {
         if (logFilePath == null) return "";
         return logFilePath;
     }
