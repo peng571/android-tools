@@ -4,13 +4,18 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.sourceCompatibility
+    }
+
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
     buildTypes {
         debug {
             minifyEnabled false
@@ -23,19 +28,16 @@ android {
         }
     }
 
-    compileOptions {
-        sourceCompatibility rootProject.ext.sourceCompatibility
-        targetCompatibility rootProject.ext.sourceCompatibility
+    dataBinding {
+        enabled = true
     }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Android Support Library
-    compile("com.android.support:support-v13:$rootProject.ext.supportLibraryVersion") {
-        exclude module: 'support-v4'
-    }
     compile "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     compile "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
     compile "com.android.support:design:$rootProject.ext.supportLibraryVersion"
@@ -45,5 +47,6 @@ dependencies {
     compile "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
     compile "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
+//    compile 'com.google.code.gson:gson:2.8.2'
 
 }

@@ -11,6 +11,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import dev.momo.library.core.log.Logger;
+
 /**
  * to keep change data for adapter
  * <p>
@@ -119,7 +121,6 @@ public class DataProvider<D> {
      * Must bind(null) when adapter view is not shown
      */
     public void unbind() {
-        this.positionFixer = null;
         this.adapter = null;
     }
 
@@ -162,6 +163,7 @@ public class DataProvider<D> {
         if (index > count()) index = count();
 
         data.add(index, id);
+        Logger.D(TAG, "addCurrent to %s %d", id.toString(), fixAdapterPosition(index));
         adapter.notifyItemInserted(fixAdapterPosition(index));
     }
 
@@ -172,7 +174,9 @@ public class DataProvider<D> {
         int index = data.indexOf(d);
         if (index < 0) return;
         if (index >= count()) return;
+        Logger.D(TAG, "notify data remove %d", index);
         data.remove(index);
+        Logger.D(TAG, "removeCurrent %s at %d", d.toString(), fixAdapterPosition(index));
         adapter.notifyItemRemoved(fixAdapterPosition(index));
     }
 

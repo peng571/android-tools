@@ -1,5 +1,6 @@
 package dev.momo.library.core.data.recycler;
 
+import android.support.v4.util.ArrayMap;
 import android.support.v7.widget.RecyclerView;
 
 import java.util.ArrayList;
@@ -15,6 +16,13 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
     private final static String TAG = ListRecyclerAdapter.class.getSimpleName();
 
     protected List<T> data;
+
+    // FIXME not work
+    @Deprecated
+    protected ArrayMap<Integer, OnItemClickListener> clickListener;
+    @Deprecated
+    protected ArrayMap<Integer, OnItemLongClickListener> longClickListener;
+
 
     public ListRecyclerAdapter() {
         this(new ArrayList<T>());
@@ -134,5 +142,40 @@ public abstract class ListRecyclerAdapter<T, VH extends RecyclerView.ViewHolder>
         }
         return index;
     }
+
+
+    @Deprecated
+    public void setItemClickListener(OnItemClickListener<T> listener) {
+        if (clickListener == null) {
+            clickListener = new ArrayMap<>();
+        }
+        clickListener.put(0, listener);
+    }
+
+
+    @Deprecated
+    public void addItemClickListener(int viewType, OnItemClickListener<T> listener) {
+        if (clickListener == null) {
+            clickListener = new ArrayMap<>();
+        }
+        clickListener.put(viewType, listener);
+    }
+
+    @Deprecated
+    public void setItemLongClickListener(OnItemLongClickListener<T> listener) {
+        if (longClickListener == null) {
+            longClickListener = new ArrayMap<>();
+        }
+        longClickListener.put(0, listener);
+    }
+
+    @Deprecated
+    public void addItemLongClickListener(int viewType, OnItemLongClickListener<T> listener) {
+        if (longClickListener == null) {
+            longClickListener = new ArrayMap<>();
+        }
+        longClickListener.put(viewType, listener);
+    }
+
 
 }

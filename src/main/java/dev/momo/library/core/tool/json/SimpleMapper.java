@@ -1,4 +1,4 @@
-package dev.momo.library.core.tool;
+package dev.momo.library.core.tool.json;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -59,6 +59,9 @@ public class SimpleMapper {
     public static <T> List<T> toObjectList(InputStream jsonInput, Class<T> c) {
         try {
             return getMapper().readValue(jsonInput, getMapper().getTypeFactory().constructCollectionType(List.class, c));
+        } catch (JsonParseException | JsonMappingException e1) {
+            Logger.E(TAG, e1);
+            return null;
         } catch (IOException e) {
             Logger.E(TAG, e);
             return null;
@@ -68,6 +71,9 @@ public class SimpleMapper {
     public static <T> List<T> toObjectList(String jsonString, Class<T> c) {
         try {
             return getMapper().readValue(jsonString, getMapper().getTypeFactory().constructCollectionType(List.class, c));
+        } catch (JsonParseException | JsonMappingException e1) {
+            Logger.E(TAG, e1);
+            return null;
         } catch (IOException e) {
             Logger.E(TAG, e);
             return null;
@@ -83,14 +89,14 @@ public class SimpleMapper {
     /**
      * Simple node method to cover Org.JSON method
      */
-    public static ObjectNode newNode() {
+    public static ObjectNode newJson() {
         return JsonNodeFactory.instance.objectNode();
     }
 
     /**
      * Simple node method to cover Org.JSONArray method
      */
-    public static ArrayNode newArrayNode() {
+    public static ArrayNode newArray() {
         return JsonNodeFactory.instance.arrayNode();
     }
 }
