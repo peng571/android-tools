@@ -83,7 +83,7 @@ public class PhotoPicker {
                 break;
             case ImageConfig.GALLERY_INTENT_REQUEST:
                 if (data != null && data.getData() != null) {
-                    filePath = AppHelper.getRealPathFromURI(data.getData(), resultActivity);
+                    filePath = StorageUtil.getRealPathFromURI(data.getData(), resultActivity);
                 } else {
                     Logger.ES(TAG, "Pick Image Error!");
                 }

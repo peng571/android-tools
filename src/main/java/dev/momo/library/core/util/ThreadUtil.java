@@ -26,11 +26,19 @@ public class ThreadUtil {
         mainUI = new Handler(appContext.getMainLooper());
     }
 
-    public static Handler background() {
-        return background;
+    public static void background(Runnable runnable) {
+        background.post(runnable);
     }
 
-    public static Handler mainUI() {
-        return mainUI;
+    public static void background(Runnable runnable, long delay) {
+        background.postDelayed(runnable, delay);
+    }
+
+    public static void mainUI(Runnable runnable) {
+        mainUI.post(runnable);
+    }
+
+    public static void mainUI(Runnable runnable, long delay) {
+        mainUI.postDelayed(runnable, delay);
     }
 }

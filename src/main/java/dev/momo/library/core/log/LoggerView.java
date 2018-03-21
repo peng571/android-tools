@@ -5,7 +5,7 @@ import android.support.v7.widget.AppCompatTextView;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
 
-import dev.momo.library.core.AppHelper;
+import dev.momo.library.core.util.ThreadUtil;
 
 /**
  * Created by Peng on 2016/12/2.
@@ -40,7 +40,7 @@ public class LoggerView extends AppCompatTextView {
         if (!TAG.contains(filterTag)) return;
         if (logLevel < level) return;
 
-        AppHelper.mainUIHandler.post(() -> {
+        ThreadUtil.mainUI(() -> {
             if (isTopToBottom()) {
                 // append the new string to bottom
                 append(message + "\n");

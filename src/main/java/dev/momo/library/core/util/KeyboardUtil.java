@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 
-import dev.momo.library.core.AppHelper;
 import dev.momo.library.core.log.Logger;
 
 public class KeyboardUtil {
@@ -48,16 +47,7 @@ public class KeyboardUtil {
     }
 
     public static void hideKeyboard(final Activity activity, long delayMillis) {
-        AppHelper.backgroundHandler.postDelayed(new Runnable() {
-            public void run() {
-                AppHelper.mainUIHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        hideKeyboard(activity);
-                    }
-                });
-            }
-        }, delayMillis);
+        ThreadUtil.mainUI(() -> hideKeyboard(activity), delayMillis);
     }
 
 
@@ -67,16 +57,7 @@ public class KeyboardUtil {
     }
 
     public static void showKeyboard(final Context context, long delayMillis) {
-        AppHelper.backgroundHandler.postDelayed(new Runnable() {
-            public void run() {
-                AppHelper.mainUIHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        showKeyboard(context);
-                    }
-                });
-            }
-        }, delayMillis);
+        ThreadUtil.mainUI(() -> showKeyboard(context), delayMillis);
     }
 
 
@@ -86,17 +67,7 @@ public class KeyboardUtil {
 
 
     public static void showKeyboard(final Dialog dialog, long delayMillis) {
-        AppHelper.backgroundHandler.postDelayed(new Runnable() {
-            public void run() {
-                AppHelper.mainUIHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        showKeyboard(dialog);
-
-                    }
-                });
-            }
-        }, delayMillis);
+        ThreadUtil.mainUI(() -> showKeyboard(dialog), delayMillis);
     }
 
 
