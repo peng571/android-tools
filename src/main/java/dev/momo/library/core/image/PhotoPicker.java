@@ -14,9 +14,9 @@ import android.support.v4.content.ContextCompat;
 
 import java.io.File;
 
-import dev.momo.library.core.Helper;
+import dev.momo.library.core.AppHelper;
 import dev.momo.library.core.log.Logger;
-import dev.momo.library.core.tool.StorageHelper;
+import dev.momo.library.core.util.StorageUtil;
 
 
 /**
@@ -83,7 +83,7 @@ public class PhotoPicker {
                 break;
             case ImageConfig.GALLERY_INTENT_REQUEST:
                 if (data != null && data.getData() != null) {
-                    filePath = Helper.getRealPathFromURI(data.getData(), resultActivity);
+                    filePath = AppHelper.getRealPathFromURI(data.getData(), resultActivity);
                 } else {
                     Logger.ES(TAG, "Pick Image Error!");
                 }
@@ -155,12 +155,12 @@ public class PhotoPicker {
 
 
     private static String getExternalMediaFolderPath(Context context) {
-        return StorageHelper.getAlbumStorageDir(context).toString();
+        return StorageUtil.getAlbumStorageDir(context).toString();
     }
 
 
     private static String getExternalTempImagePath(Context context) {
-        return StorageHelper.join(getExternalMediaFolderPath(context), "tmp.jpg");
+        return StorageUtil.join(getExternalMediaFolderPath(context), "tmp.jpg");
     }
 
 }

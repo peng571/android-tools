@@ -1,16 +1,16 @@
-package dev.momo.library.core.tool;
+package dev.momo.library.core.util;
 
 import android.content.Context;
 import android.net.Uri;
 import android.os.Environment;
-
-import dev.momo.library.core.log.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.channels.FileChannel;
+
+import dev.momo.library.core.log.Logger;
 
 /**
  * Storage Rule:
@@ -30,9 +30,9 @@ import java.nio.channels.FileChannel;
  * All path will be replace '\\' into '/'
  * <p/>
  */
-public class StorageHelper {
+public class StorageUtil {
 
-    private static final String TAG = StorageHelper.class.getSimpleName();
+    private static final String TAG = StorageUtil.class.getSimpleName();
 
     public static boolean fileExist(String filePath) {
         return new File(filePath).exists();
@@ -210,5 +210,48 @@ public class StorageHelper {
         }
         return path;
     }
+
+    public static long dirSize(File dir) {
+        if (dir.exists()) {
+            long result = 0;
+            File[] fileList = dir.listFiles();
+            for (int i = 0; i < fileList.length; i++) {
+                // Recursive call if it's a directory
+                if (fileList[i].isDirectory()) {
+                    result += dirSize(fileList[i]);
+                } else {
+                    // Sum the file size in bytes
+                    result += fileList[i].length();
+                }
+            }
+            return result; // return the file size
+        }
+        return 0;
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is ExternalStorageProvider.
+     */
+    public static boolean isExternalStorageDocument(Uri uri) {
+        return "com.android.externalstorage.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is DownloadsProvider.
+     */
+    public static boolean isDownloadsDocument(Uri uri) {
+        return "com.android.providers.downloads.documents".equals(uri.getAuthority());
+    }
+
+    /**
+     * @param uri The Uri to check.
+     * @return Whether the Uri authority is MediaProvider.
+     */
+    public static boolean isMediaDocument(Uri uri) {
+        return "com.android.providers.media.documents".equals(uri.getAuthority());
+    }
+
 
 }
