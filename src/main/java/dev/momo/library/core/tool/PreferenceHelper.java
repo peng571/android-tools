@@ -2,7 +2,6 @@ package dev.momo.library.core.tool;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 
 /**
@@ -110,6 +109,10 @@ public class PreferenceHelper {
         }
 
         return Double.longBitsToDouble(preferences.getLong(key, 0));
+    }
+
+    public static void release() {
+        preferences = null;
     }
 
 }

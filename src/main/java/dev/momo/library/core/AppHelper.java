@@ -17,9 +17,10 @@ public class AppHelper {
     private final static String TAG = AppHelper.class.getSimpleName();
 
     private static AppHelper instance;
+    private static Context applicationContext;
 
     private AppHelper(@NonNull Context appContext) {
-        Context applicationContext = appContext.getApplicationContext();
+        applicationContext = appContext.getApplicationContext();
         ResourceHelper.init(applicationContext, appContext.getPackageName());
         PreferenceHelper.init(applicationContext, appContext.getPackageName());
         DisplayHelper.init(appContext);
@@ -55,12 +56,18 @@ public class AppHelper {
     }
 
 
-    public static String getVersion(Context context) {
+    public static String getVersion() {
         try {
-            return context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+            return applicationContext.getPackageManager().getPackageInfo(applicationContext.getPackageName(), 0).versionName;
         } catch (Exception e) {
             return "1.0";
         }
+    }
+
+    public static void release() {
+        ResourceHelper.release();
+        PreferenceHelper.release();
+        applicationContext = null;
     }
 
 }
