@@ -4,7 +4,6 @@ package dev.momo.library.core.view;
  * Created by Peng on 2015/12/26.
  */
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
@@ -27,17 +26,12 @@ public class DisplayHelper {
 
 
     public static void init(Context context) {
-        if (!(context instanceof Activity)) {
-            Logger.ES(TAG, "init Display Helper with non-activity context");
-            return;
-        }
-        DisplayMetrics displayMetrics = new DisplayMetrics();
-        ((Activity) context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
         SCREEN_WIDTH = displayMetrics.widthPixels;
         DEVICE_HEIGHT = displayMetrics.heightPixels;
         SCREEN_HEIGHT = DEVICE_HEIGHT - getNavigationHeight(context) - getStatusBarHeight(context);
         Logger.I(TAG, "DEVICE_HEIGHT %d - getNavigationHeight(context) %d - getStatusBarHeight(context) %d = %d",
-                displayMetrics.heightPixels, getNavigationHeight(context), getStatusBarHeight(context), SCREEN_HEIGHT);
+                 displayMetrics.heightPixels, getNavigationHeight(context), getStatusBarHeight(context), SCREEN_HEIGHT);
         SCREEN_DENSITY = displayMetrics.density;
         SCREEN_DPI = displayMetrics.densityDpi;
     }

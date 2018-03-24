@@ -19,26 +19,32 @@ public class ThreadUtil {
     private static Handler background;
     private static Handler mainUI;
 
-    private ThreadUtil(@NonNull Context appContext) {
+
+    public static void init(@NonNull Context appContext) {
         HandlerThread backgroundHandlerThread = new HandlerThread(THREAD_NAME);
         backgroundHandlerThread.start();
         background = new Handler(backgroundHandlerThread.getLooper());
         mainUI = new Handler(appContext.getMainLooper());
     }
 
-    public static void background(Runnable runnable) {
+    public static void background(@NonNull Runnable runnable) {
         background.post(runnable);
     }
 
-    public static void background(Runnable runnable, long delay) {
+    public static void background(@NonNull Runnable runnable, long delay) {
         background.postDelayed(runnable, delay);
     }
 
-    public static void mainUI(Runnable runnable) {
+    public static void mainUI(@NonNull Runnable runnable) {
         mainUI.post(runnable);
     }
 
-    public static void mainUI(Runnable runnable, long delay) {
+    public static void mainUI(@NonNull Runnable runnable, long delay) {
         mainUI.postDelayed(runnable, delay);
+    }
+
+    public static void clear() {
+        mainUI = null;
+        background = null;
     }
 }

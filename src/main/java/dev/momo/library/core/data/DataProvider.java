@@ -163,7 +163,6 @@ public class DataProvider<D> {
         if (index > count()) index = count();
 
         data.add(index, id);
-        Logger.D(TAG, "addCurrent to %s %d", id.toString(), fixAdapterPosition(index));
         adapter.notifyItemInserted(fixAdapterPosition(index));
     }
 
@@ -174,9 +173,7 @@ public class DataProvider<D> {
         int index = data.indexOf(d);
         if (index < 0) return;
         if (index >= count()) return;
-        Logger.D(TAG, "notify data remove %d", index);
         data.remove(index);
-        Logger.D(TAG, "removeCurrent %s at %d", d.toString(), fixAdapterPosition(index));
         adapter.notifyItemRemoved(fixAdapterPosition(index));
     }
 
