@@ -1,0 +1,2 @@
+include ':tool-core'
+include ':app'

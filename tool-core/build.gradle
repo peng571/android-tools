@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.novoda:bintray-release:0.8.0'
+    }
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.sourceCompatibility
+    }
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "0.0.1"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            useProguard false
+        }
+        release {
+            minifyEnabled true
+            useProguard true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    defaultConfig {
+        multiDexEnabled true
+    }
+}
+
+dependencies {
+    // Android Support Library
+    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
+
+    // Jackson parser
+//    compile "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
+//    compile "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
+//    compile "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
+    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+
+}
+
+publish {
+    userOrg = 'pengyr'
+    repoName = 'maven'
+    groupId = 'org.pengyr.tool'
+    artifactId = 'tool-core'
+    publishVersion = '0.0.1'
+    licences = '[\'Apache-2.0\']'
+    desc = 'Tools for develop android application'
+    website = 'https://github.com/peng571/tool-core'
+    uploadName = 'android-tool-core'
+    website = 'https://github.com/peng571/tool-core'
+}
+
+
+
