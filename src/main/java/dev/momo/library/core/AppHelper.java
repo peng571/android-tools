@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 
 import dev.momo.library.core.tool.PreferenceHelper;
 import dev.momo.library.core.tool.ResourceHelper;
+import dev.momo.library.core.util.NetworkUtil;
 import dev.momo.library.core.util.ThreadUtil;
 import dev.momo.library.core.view.DisplayHelper;
 
@@ -26,6 +27,7 @@ public class AppHelper {
         PreferenceHelper.init(applicationContext, appContext.getPackageName());
         DisplayHelper.init(applicationContext);
         ThreadUtil.init(applicationContext);
+        NetworkUtil.init(applicationContext);
     }
 
     public static AppHelper initInstance(@NonNull Context appContext) {

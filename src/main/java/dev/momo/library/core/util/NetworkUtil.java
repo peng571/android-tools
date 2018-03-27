@@ -11,9 +11,16 @@ import android.support.annotation.RequiresPermission;
 
 public class NetworkUtil {
 
+    private static ConnectivityManager connectivityManager;
+
+    public static void init(Context context) {
+        if (context != null) {
+            connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        }
+    }
+
     @RequiresPermission(android.Manifest.permission.ACCESS_NETWORK_STATE)
-    public static boolean isNetworkAvailable(Context context) {
-        final ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+    public static boolean isAvailable() {
         if (connectivityManager == null) return false;
         final NetworkInfo activeNetwork = connectivityManager.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnected();
