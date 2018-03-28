@@ -42,6 +42,17 @@ android {
     defaultConfig {
         multiDexEnabled true
     }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+    }
+
 }
 
 dependencies {
@@ -64,10 +75,10 @@ publish {
     publishVersion = '0.0.1'
     licences = '[\'Apache-2.0\']'
     desc = 'Tools for develop android application'
-    website = 'https://github.com/peng571/tool-core'
     uploadName = 'android-tool-core'
     website = 'https://github.com/peng571/tool-core'
 }
 
-
-
+task javadoc(type: Javadoc) {
+    options.encoding = "utf-8"
+}

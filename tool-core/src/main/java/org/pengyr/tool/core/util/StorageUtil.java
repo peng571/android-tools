@@ -22,9 +22,9 @@ import org.pengyr.tool.core.log.Logger;
  * Storage Rule:
  * <p/>
  * Storage at:
- * - 相簿:  公開的拍照檔，不隨程式移除而消失
- * - 相簿內專案資料夾: 公開的特定類型圖片檔，不隨程式移除而消失
- * - 內部專案資料夾: 用戶可看到，會隨著程式移除而消失
+ * - album: publish folder
+ * - albim/app: publish folder
+ * - db/app: private, will delete when application remove
  * <p/>
  * <p/>
  * File Type With Folder
