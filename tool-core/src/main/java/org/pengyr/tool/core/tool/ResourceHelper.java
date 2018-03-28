@@ -12,13 +12,14 @@ import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
 
-import java.util.IllegalFormatConversionException;
-
 import org.pengyr.tool.core.log.Logger;
+
+import java.util.IllegalFormatConversionException;
 
 /**
  * Created by Peng on 2015/12/3.
@@ -133,13 +134,19 @@ public class ResourceHelper {
             if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
                 return resources.getDrawable(resId, applicationContext.getTheme());
             } else {
-                return resources.getDrawable(resId);
+                return getDrawable22(resId);
             }
         } catch (Resources.NotFoundException e) {
             Logger.E(TAG, e);
             return null;
         }
     }
+
+    @RequiresApi(22)
+    private static Drawable getDrawable22(@DrawableRes int resId) {
+        return resources.getDrawable(resId);
+    }
+
 
     public static int getDimenPixel(@DimenRes int resId) {
         if (resources == null) return 0;

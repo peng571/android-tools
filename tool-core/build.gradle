@@ -1,15 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release' // must be applied after your artifact generating plugin (eg. java / com.android.library)
-
-buildscript {
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.novoda:bintray-release:0.8.0'
-    }
-}
-
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
@@ -57,6 +46,7 @@ android {
 
 dependencies {
     // Android Support Library
+    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
     implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
 
     // Jackson parser
@@ -67,18 +57,4 @@ dependencies {
 
 }
 
-publish {
-    userOrg = 'pengyr'
-    repoName = 'maven'
-    groupId = 'org.pengyr.tool'
-    artifactId = 'tool-core'
-    publishVersion = '0.0.1'
-    licences = '[\'Apache-2.0\']'
-    desc = 'Tools for develop android application'
-    uploadName = 'android-tool-core'
-    website = 'https://github.com/peng571/tool-core'
-}
-
-task javadoc(type: Javadoc) {
-    options.encoding = "utf-8"
-}
+apply from: "bintrayUpload.gradle"

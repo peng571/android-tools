@@ -34,7 +34,7 @@ public abstract class ObjectViewHolder<T> extends RecyclerView.ViewHolder {
      *
      * @param position
      * @param object
-     * @Deprecated change method name to bind, so use bind(int position, T object) instead
+     * @deprecated change method name to bind, so use bind(int position, T object) instead
      */
     @CallSuper
     @Deprecated

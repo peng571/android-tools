@@ -37,9 +37,7 @@ public class PhotoPicker {
 
     private OnPhotoPickListener listener;
 
-    /**
-     * @return PictureFileName
-     */
+
     public PhotoPicker(Activity resultActivity) {
         this.resultActivity = resultActivity;
         this.isFromFragment = false;
@@ -50,12 +48,6 @@ public class PhotoPicker {
         this.resultActivity = resultFragment.getActivity();
         this.isFromFragment = true;
     }
-
-
-    //    public void showPickerOptions() {
-    //        showPickerOptions(resultActivity);
-    //    }
-
 
     public boolean isRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
