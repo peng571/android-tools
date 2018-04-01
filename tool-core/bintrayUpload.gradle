@@ -3,12 +3,12 @@ apply plugin: 'com.jfrog.bintray'
 
 //load properties
 Properties properties = new Properties()
-File localPropertiesFile = project.file("bintray.properties")
+File localPropertiesFile = project.file("../../publish/bintray.properties")
 if (localPropertiesFile.exists()) {
     properties.load(localPropertiesFile.newDataInputStream())
 }
 
-File projectPropertiesFile = project.file("project.properties")
+File projectPropertiesFile = project.file("../../publish/core-project.properties")
 if (projectPropertiesFile.exists()) {
     properties.load(projectPropertiesFile.newDataInputStream())
 }
@@ -29,7 +29,6 @@ def developerName = properties.getProperty("developer.name")
 def developerEmail = properties.getProperty("developer.email")
 def bintrayUser = properties.getProperty("bintray.user")
 def bintrayApikey = properties.getProperty("bintray.apiKey")
-// def bintrayOrganizationId = properties.getProperty("bintray.organizationId")
 def javadocName = properties.getProperty("javadoc.name")
 group = projectGroupId
 

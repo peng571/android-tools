@@ -30,20 +30,6 @@ allprojects {
 }
 
 
-ext {
-    // build setting
-    minSdkVersion = 16
-    compileSdkVersion = 26
-    targetSdkVersion = 26
-    buildToolsVersion = '26.0.2'
-    sourceCompatibility = JavaVersion.VERSION_1_8
-
-    supportLibraryVersion = '27.0.1'
-
-    gsonVersion = "2.8.1"
-    jacksonVersion = "2.9.1"
-}
-
 
 task clean(type: Delete) {
     delete rootProject.buildDir

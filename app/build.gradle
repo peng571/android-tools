@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
 
     compileOptions {
-        sourceCompatibility rootProject.ext.sourceCompatibility
-        targetCompatibility rootProject.ext.sourceCompatibility
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
+        minSdkVersion 19
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
     }
@@ -26,7 +26,7 @@ android {
 
 dependencies {
     implementation project(path: ':tool-core')
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:27.0.1"
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

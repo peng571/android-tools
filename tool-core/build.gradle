@@ -1,19 +1,19 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion rootProject.ext.compileSdkVersion
-    buildToolsVersion rootProject.ext.buildToolsVersion
+    compileSdkVersion 27
+    buildToolsVersion '26.0.2'
 
     compileOptions {
-        sourceCompatibility rootProject.ext.sourceCompatibility
-        targetCompatibility rootProject.ext.sourceCompatibility
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0.0-jackson"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 2
+        versionName "1.0.1"
     }
 
     buildTypes {
@@ -51,11 +51,7 @@ dependencies {
     implementation "com.android.support:design:27.0.1"
     implementation "com.android.support:support-annotations:27.1.0"
 
-    // Jackson parser
-//    implementation "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
-//    implementation "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
-//    implementation "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
-    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
+    implementation "com.google.code.gson:gson:2.8.2"
 }
 
 apply from: "bintrayUpload.gradle"
