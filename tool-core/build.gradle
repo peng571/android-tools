@@ -13,7 +13,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
-        versionName "1.0.0"
+        versionName "1.0.0-jackson"
     }
 
     buildTypes {
@@ -46,17 +46,16 @@ android {
 
 dependencies {
     // Android Support Library
-    implementation "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
-    implementation "com.android.support:recyclerview-v7:$rootProject.ext.supportLibraryVersion"
-    implementation "com.android.support:design:$rootProject.ext.supportLibraryVersion"
-    implementation "com.android.support:support-annotations:$rootProject.ext.supportLibraryVersion"
+    implementation "com.android.support:appcompat-v7:27.1.0"
+    implementation "com.android.support:recyclerview-v7:27.1.0"
+    implementation "com.android.support:design:27.1.0"
+    implementation "com.android.support:support-annotations:27.1.0"
 
     // Jackson parser
-//    compile "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
-//    compile "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
-//    compile "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
-    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
-
+    implementation "com.fasterxml.jackson.core:jackson-annotations:$rootProject.ext.jacksonVersion"
+    implementation "com.fasterxml.jackson.core:jackson-core:$rootProject.ext.jacksonVersion"
+    implementation "com.fasterxml.jackson.core:jackson-databind:$rootProject.ext.jacksonVersion"
+//    implementation "com.google.code.gson:gson:$rootProject.ext.gsonVersion"
 }
 
 apply from: "bintrayUpload.gradle"
