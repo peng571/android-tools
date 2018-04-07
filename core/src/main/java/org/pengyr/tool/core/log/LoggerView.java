@@ -1,16 +1,16 @@
 package org.pengyr.tool.core.log;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatTextView;
 import android.text.method.ScrollingMovementMethod;
 import android.util.AttributeSet;
-import android.widget.TextView;
 
 import org.pengyr.tool.core.util.ThreadUtil;
 
 /**
  * Created by Peng on 2016/12/2.
  */
-public class LoggerView extends TextView {
+public class LoggerView extends AppCompatTextView {
 
     private String filterTag = "";
     private int logLevel = Logger.LOG_ALL;

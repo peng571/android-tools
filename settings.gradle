@@ -1,2 +1,2 @@
-include ':tool-core'
+include ':core'
 include ':app'

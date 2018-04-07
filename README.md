@@ -1,10 +1,11 @@
 # Core library
 
+[![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)
+[ ![Download](https://api.bintray.com/packages/peng571/pengyr_library/tool-core/images/download.svg) ](https://bintray.com/peng571/pengyr_library/tool-core/_latestVersion)
+
 最後修改日期 2018/03/31 MomoPeng
 
 用來幫助Android Application快速建立的Library。
-
- [ ![Download](https://api.bintray.com/packages/peng571/android_quick_build_tools/tool-core/images/download.svg?version=1.0.0) ](https://bintray.com/peng571/android_quick_build_tools/tool-core/1.0.0/link)
 
 
 ## Usage
@@ -13,7 +14,7 @@
 
 if useing gradle, add this line into apps build.gradle
 
-    implementation 'org.pengyr.tool:tool-core:1.0.0'
+    implementation 'org.pengyr.tool:tool-core:[VERSION]'
 
 #### Maven
 
@@ -22,7 +23,7 @@ or useing maven
     <dependency>
         <groupId>org.pengyr.tool</groupId>
         <artifactId>tool-core</artifactId>
-        <version>1.0.0</version>
+        <version>[VERSION]</version>
         <type>pom</type>
     </dependency>
 

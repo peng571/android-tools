@@ -8,6 +8,8 @@ import android.text.TextUtils;
 
 import org.pengyr.tool.core.view.DisplayHelper;
 
+import java.util.Locale;
+
 /**
  * Created by momo peng on 2018/3/21.
  */
@@ -23,7 +25,7 @@ public class MobileUtil {
 
     @TargetApi(19)
     public static String getDeviceBrand() {
-        return Build.MANUFACTURER.toLowerCase();
+        return Build.MANUFACTURER.toLowerCase(Locale.getDefault());
     }
 
     public static String getDeviceModel() {

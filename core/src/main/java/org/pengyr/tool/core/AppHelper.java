@@ -5,11 +5,9 @@ import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 
 import org.pengyr.tool.core.tool.PreferenceHelper;
-import org.pengyr.tool.core.tool.ResourceHelper;
 import org.pengyr.tool.core.util.NetworkUtil;
 import org.pengyr.tool.core.util.ThreadUtil;
 import org.pengyr.tool.core.view.DisplayHelper;
-
 
 
 /**
@@ -24,7 +22,7 @@ public class AppHelper {
 
     private AppHelper(@NonNull Context appContext) {
         applicationContext = appContext.getApplicationContext();
-        ResourceHelper.init(applicationContext, appContext.getPackageName());
+        //        ResourceHelper.init(applicationContext, appContext.getPackageName());
         PreferenceHelper.init(applicationContext, appContext.getPackageName());
         DisplayHelper.init(applicationContext);
         ThreadUtil.init(applicationContext);
@@ -70,7 +68,7 @@ public class AppHelper {
     }
 
     public static void release() {
-        ResourceHelper.release();
+        //        ResourceHelper.release();
         PreferenceHelper.release();
         applicationContext = null;
     }

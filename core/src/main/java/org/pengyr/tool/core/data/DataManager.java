@@ -1,5 +1,6 @@
 package org.pengyr.tool.core.data;
 
+import android.annotation.TargetApi;
 import android.support.annotation.NonNull;
 import android.util.ArrayMap;
 
@@ -13,6 +14,7 @@ import org.pengyr.tool.core.log.Logger;
  * @param <P> Type of Key
  * @param <T> Type of Object must extends DataItem<P>
  */
+@TargetApi(19)
 public class DataManager<P, T extends DataModel<P>> {
 
     private final static String TAG = DataManager.class.getSimpleName();
@@ -21,6 +23,7 @@ public class DataManager<P, T extends DataModel<P>> {
 
     protected ArrayMap<P, T> objectDict; // post id : PostObject
 
+    @TargetApi(19)
     protected DataManager() {
         objectDict = new ArrayMap<>();
     }

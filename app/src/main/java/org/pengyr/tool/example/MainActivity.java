@@ -8,18 +8,16 @@ import org.pengyr.tool.core.log.Logger;
 import org.pengyr.tool.core.tool.PreferenceHelper;
 import org.pengyr.tool.core.tool.ResourceHelper;
 
-
 /**
  * Created by Peng on 2018/3/25.
  */
-
 public class MainActivity extends Activity {
 
     private final static String TAG = MainActivity.class.getSimpleName();
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.main_activity);
 
         // init app helper at entry activity or application
         AppHelper.initInstance(getApplicationContext());
@@ -36,6 +34,5 @@ public class MainActivity extends Activity {
         Logger.D(TAG, "get preference key %s", PreferenceHelper.getString("key", ""));
 
         Logger.D(TAG, "get app name %s from res", ResourceHelper.getString(R.string.app_name));
-
     }
 }

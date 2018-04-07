@@ -26,19 +26,19 @@
 -dontnote com.android.vending.licensing.ILicensingService
 
 
--keep public class dev.momo.library.**{
+-keep public class org.pengyr.tool.**{
     public protected *;
 }
 
 
--keep class dev.momo.library.core.Helper{ *; }
+-keep class org.pengyr.tool.AppHelper{ *; }
 
 -assumenosideeffects class android.util.Log {
     public static *;
 }
 
 
--assumenosideeffects class dev.momo.library.core.log.Logger {
+-assumenosideeffects class org.pengyr.tool.log.Logger {
     public static *;
 }
 
