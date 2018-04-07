@@ -29,9 +29,9 @@ ext{
     libraryDescription = "desc"
     siteUrl = 'https://github.com/peng571/android-tools'
 
-    versionCode = 3
-    versionName = '0.0.3'
-    versionDesc = "test with update multy file to jCenter"
+    versionCode = 4
+    versionName = '0.0.4'
+    versionDesc = "update readme file"
 }
 
 
