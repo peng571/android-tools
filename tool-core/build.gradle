@@ -7,21 +7,9 @@ buildscript {
 }
 
 
-//load & set developer info
-Properties properties = new Properties()
-File localPropertiesFile = project.file("../../PUBLISH/bintray.properties")
-if (localPropertiesFile.exists()) {
-    properties.load(localPropertiesFile.newDataInputStream())
-}
-def bintrayUserName = properties.getProperty("bintray.user")
-def bintrayApikey = properties.getProperty("bintray.apiKey")
-
-
 ext {
-    libraryGroup = 'org.pengyr.tool'
     libraryName = 'tool-core'
     libraryDescription = 'Core tool of peng\'s tools'
-    siteUrl = 'https://github.com/peng571/tool-core'
 }
 
 
@@ -86,7 +74,7 @@ publish {
     desc = libraryDescription
     publishVersion = versionName
     website = siteUrl
-    bintrayUser = bintrayUserName
+    bintrayUser = rootProject.ext.bintrayUserName
     bintrayKey = bintrayApikey
     dryRun = false
     autoPublish = true

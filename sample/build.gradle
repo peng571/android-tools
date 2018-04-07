@@ -36,7 +36,9 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':core')
+    implementation project(path: ':tool-core')
+    implementation project(path: ':tool-listdata')
+    implementation project(path: ':tool-dialog')
     implementation 'com.android.support:appcompat-v7:27.1.1'
 
     testImplementation 'junit:junit:4.12'

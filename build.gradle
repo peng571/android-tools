@@ -23,18 +23,30 @@ allprojects {
 }
 
 
+
+//load & set developer info
+Properties properties = new Properties()
+File localPropertiesFile = project.file("../../PUBLISH/bintray.properties")
+if (localPropertiesFile.exists()) {
+    properties.load(localPropertiesFile.newDataInputStream())
+}
+def userName = properties.getProperty("bintray.user")
+def apikey = properties.getProperty("bintray.apiKey")
+
+
 ext{
     libraryGroup = 'org.pengyr.tool'
-    libraryName = 'tool-dialog'
-    libraryDescription = "desc"
     siteUrl = 'https://github.com/peng571/android-tools'
 
     versionCode = 4
     versionName = '0.0.4'
-    versionDesc = "update readme file"
+
+    bintrayUserName = userName
+    bintrayApikey = apikey
 }
 
 
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

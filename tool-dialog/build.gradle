@@ -7,21 +7,9 @@ buildscript {
 }
 
 
-//load & set developer info
-Properties properties = new Properties()
-File localPropertiesFile = project.file("../../PUBLISH/bintray.properties")
-if (localPropertiesFile.exists()) {
-    properties.load(localPropertiesFile.newDataInputStream())
-}
-def bintrayUserName = properties.getProperty("bintray.user")
-def bintrayApikey = properties.getProperty("bintray.apiKey")
-
-
 ext {
-    libraryGroup = 'org.pengyr.tool'
     libraryName = 'tool-dialog'
     libraryDescription = "dialogs"
-    siteUrl = 'https://github.com/peng571/tool-dialog'
 }
 
 
@@ -35,7 +23,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -60,10 +48,6 @@ android {
         // in the path_to_your_project/module_name/build/outputs/reports/ directory.
         // '$rootDir' sets the path relative to the root directory of the current project.
         reportDir "$rootDir/test-reports"
-        // Changes the directory where Gradle saves test results. By default, Gradle saves test results
-        // in the path_to_your_project/module_name/build/outputs/test-results/ directory.
-        // '$rootDir' sets the path relative to the root directory of the current project.
-        resultsDir "$rootDir/test-results"
     }
 
     testOptions {
@@ -71,16 +55,15 @@ android {
         unitTests {
             // Encapsulates options for controlling how Gradle executes local unit tests. For a list
             // of all the options you can specify, read Gradle's reference documentation.
-//            all {
-//                 Sets JVM argument(s) for the test JVM(s).
-//                jvmArgs '-XX:MaxPermSize=256m'
-//             }
+            all {
+                jvmArgs '-XX:MaxPermSize=256m'
+             }
         }
     }
 }
 
 dependencies {
-    implementation project(path: ':core')
+    implementation project(path: ':tool-core')
     implementation "com.android.support:appcompat-v7:27.1.1"
     implementation "com.android.support:support-annotations:27.1.1"
 
