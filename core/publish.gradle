@@ -12,7 +12,7 @@
 //apply plugin: 'com.github.dcendents.android-maven'
 //apply plugin: 'com.jfrog.bintray'
 //
-////load & set developer info
+//load & set developer info
 //Properties properties = new Properties()
 //File localPropertiesFile = project.file("../../PUBLISH/bintray.properties")
 //if (localPropertiesFile.exists()) {

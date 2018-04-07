@@ -19,9 +19,9 @@ def bintrayApikey = properties.getProperty("bintray.apiKey")
 
 ext {
     libraryGroup = 'org.pengyr.tool'
-    libraryName = 'tool-core'
-    libraryDescription = 'Core tool of peng\'s tools'
-    siteUrl = 'https://github.com/peng571/tool-core'
+    libraryName = 'tool-dialog'
+    libraryDescription = "dialogs"
+    siteUrl = 'https://github.com/peng571/tool-dialog'
 }
 
 
@@ -33,11 +33,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 19
         targetSdkVersion 27
-        versionCode versionCode
-        versionName versionName
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -52,32 +54,39 @@ android {
         }
     }
 
-    defaultConfig {
-        multiDexEnabled true
+    // Encapsulates options for running tests.
+    testOptions {
+        // Changes the directory where Gradle saves test reports. By default, Gradle saves test reports
+        // in the path_to_your_project/module_name/build/outputs/reports/ directory.
+        // '$rootDir' sets the path relative to the root directory of the current project.
+        reportDir "$rootDir/test-reports"
+        // Changes the directory where Gradle saves test results. By default, Gradle saves test results
+        // in the path_to_your_project/module_name/build/outputs/test-results/ directory.
+        // '$rootDir' sets the path relative to the root directory of the current project.
+        resultsDir "$rootDir/test-results"
     }
 
-    lintOptions {
-        abortOnError false
+    testOptions {
+        // Encapsulates options for local unit tests.
+        unitTests {
+            // Encapsulates options for controlling how Gradle executes local unit tests. For a list
+            // of all the options you can specify, read Gradle's reference documentation.
+//            all {
+//                 Sets JVM argument(s) for the test JVM(s).
+//                jvmArgs '-XX:MaxPermSize=256m'
+//             }
+        }
     }
-
-    packagingOptions {
-        exclude 'META-INF/LICENSE'
-        exclude 'META-INF/DEPENDENCIES'
-        exclude 'META-INF/NOTICE'
-    }
-
 }
 
 dependencies {
-    // Android Support Library
+    implementation project(path: ':core')
     implementation "com.android.support:appcompat-v7:27.1.1"
-    implementation "com.android.support:recyclerview-v7:27.1.1"
-    implementation "com.android.support:design:27.1.1"
     implementation "com.android.support:support-annotations:27.1.1"
 
-    implementation "com.google.code.gson:gson:2.8.2"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
 }
-
 
 publish {
     userOrg = bintrayUser
@@ -91,6 +100,4 @@ publish {
     dryRun = false
     autoPublish = true
 }
-
-
 

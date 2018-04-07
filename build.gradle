@@ -7,8 +7,6 @@ buildscript {
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.0.1'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.8.0'
     }
 }
 
@@ -17,10 +15,6 @@ allprojects {
     repositories {
         google()
         jcenter()
-        maven {
-            url 'https://dl.bintray.com/peng571/pengyr_library'
-        }
-
         tasks.withType(Javadoc) {
             options.addStringOption('Xdoclint:none', '-quiet')
             options.addStringOption('encoding', 'UTF-8')
@@ -28,6 +22,17 @@ allprojects {
     }
 }
 
+
+ext{
+    libraryGroup = 'org.pengyr.tool'
+    libraryName = 'tool-dialog'
+    libraryDescription = "desc"
+    siteUrl = 'https://github.com/peng571/android-tools'
+
+    versionCode = 3
+    versionName = '0.0.3'
+    versionDesc = "test with update multy file to jCenter"
+}
 
 
 task clean(type: Delete) {
