@@ -1,4 +1,31 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+buildscript {
+    repositories { jcenter() }
+    dependencies { classpath 'com.novoda:bintray-release:0.8.1' }
+}
+
+
+ext {
+    packagingType = 'aar'
+    packageInceptionYear = 2018
+
+    libraryGroup = 'org.pengyr.tool'
+    libraryName = 'tool-core'
+    libraryDescription = 'Core tool of peng\'s tools'
+
+    siteUrl = 'https://github.com/peng571/tool-core'
+    gitUrl = 'https://github.com/peng571/tool-core.git'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+
+    versionCode = 2
+    versionName = '0.0.2'
+    versionDesc = "second update to jCenter"
+}
+
 
 android {
     compileSdkVersion 27
@@ -11,8 +38,8 @@ android {
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 27
-        versionCode 1
-        versionName "0.0.1"
+        versionCode versionCode
+        versionName versionName
     }
 
     buildTypes {
@@ -53,4 +80,17 @@ dependencies {
     implementation "com.google.code.gson:gson:2.8.2"
 }
 
-apply from: "bintrayUpload.gradle"
+
+//apply from: "publish.gradle"
+
+publish {
+    userOrg = 'peng571'
+    groupId = libraryGroup
+    artifactId = libraryName
+    publishVersion = versionName
+    desc = versionDesc
+    website = siteUrl
+}
+
+
+

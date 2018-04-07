@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
-import org.pengyr.tool.core.tool.ResourceHelper;
 
 /**
  * 所有Activity的父類別
@@ -100,7 +99,7 @@ public class BaseActivity extends AppCompatActivity {
         // add FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS flag to the window
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         // finally change the color
-        window.setStatusBarColor(ResourceHelper.getColor(color));
+        //        window.setStatusBarColor(ResourceHelper.getColor(color));
     }
 
 

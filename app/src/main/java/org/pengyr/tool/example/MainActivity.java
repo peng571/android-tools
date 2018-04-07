@@ -6,7 +6,6 @@ import android.os.Bundle;
 import org.pengyr.tool.core.AppHelper;
 import org.pengyr.tool.core.log.Logger;
 import org.pengyr.tool.core.tool.PreferenceHelper;
-import org.pengyr.tool.core.tool.ResourceHelper;
 
 /**
  * Created by Peng on 2018/3/25.
@@ -31,8 +30,7 @@ public class MainActivity extends Activity {
 
 
         PreferenceHelper.set("key", "value");
-        Logger.D(TAG, "get preference key %s", PreferenceHelper.getString("key", ""));
-
-        Logger.D(TAG, "get app name %s from res", ResourceHelper.getString(R.string.app_name));
+//        Logger.D(TAG, "get preference key %s", PreferenceHelper.getString("key", ""));
+//        Logger.D(TAG, "get app name %s from res", ResourceHelper.getString(R.string.app_name));
     }
 }
