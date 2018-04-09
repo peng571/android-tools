@@ -7,8 +7,8 @@ buildscript {
 }
 
 ext {
-    libraryName = 'tool-listdata'
-    libraryDescription = 'list data'
+    libraryName = 'tool-datalist'
+    libraryDescription = 'data modle with manager, provider and list view'
 }
 
 
