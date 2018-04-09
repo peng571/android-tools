@@ -1,4 +1,4 @@
-<manifest package="org.pengyr.tool.sample"
+<manifest package="org.pengyr.tool.sample.dialog"
           xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application

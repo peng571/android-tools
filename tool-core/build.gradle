@@ -6,24 +6,23 @@ buildscript {
     dependencies { classpath 'com.novoda:bintray-release:0.8.1' }
 }
 
-
 ext {
     libraryName = 'tool-core'
     libraryDescription = 'Core tool of peng\'s tools'
 }
 
-
 android {
-    compileSdkVersion 27
-    buildToolsVersion '26.0.2'
 
+    compileSdkVersion compileVersion
+    buildToolsVersion buildToolVersion
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility javaVersion
+        targetCompatibility javaVersion
     }
+
     defaultConfig {
-        minSdkVersion 16
-        targetSdkVersion 27
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
         versionCode versionCode
         versionName versionName
     }
@@ -40,10 +39,6 @@ android {
         }
     }
 
-    defaultConfig {
-        multiDexEnabled true
-    }
-
     lintOptions {
         abortOnError false
     }
@@ -58,12 +53,13 @@ android {
 
 dependencies {
     // Android Support Library
-    implementation "com.android.support:appcompat-v7:27.1.1"
-    implementation "com.android.support:recyclerview-v7:27.1.1"
-    implementation "com.android.support:design:27.1.1"
-    implementation "com.android.support:support-annotations:27.1.1"
+    implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+    implementation "com.android.support:support-annotations:$supportLibraryVersion"
 
     implementation "com.google.code.gson:gson:2.8.2"
+
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "com.android.support.test:runner:$runnerVersion"
 }
 
 

@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         google()
@@ -23,7 +22,6 @@ allprojects {
 }
 
 
-
 //load & set developer info
 Properties properties = new Properties()
 File localPropertiesFile = project.file("../../PUBLISH/bintray.properties")
@@ -38,11 +36,23 @@ ext{
     libraryGroup = 'org.pengyr.tool'
     siteUrl = 'https://github.com/peng571/android-tools'
 
-    versionCode = 4
-    versionName = '0.0.4'
+    versionCode = 5
+    versionName = '0.0.5'
 
     bintrayUserName = userName
     bintrayApikey = apikey
+
+    javaVersion = JavaVersion.VERSION_1_8
+    compileVersion = 26
+    buildToolVersion =  '27.0.2'
+    targetSdk = 26
+    minSdk = 16
+
+    supportLibraryVersion = '27.1.1'
+
+    junitVersion = '4.12'
+    runnerVersion = '1.0.1'
+
 }
 
 

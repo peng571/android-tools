@@ -7,9 +7,10 @@ buildscript {
 }
 
 ext {
-    libraryName = 'tool-dialog'
-    libraryDescription = "dialogs"
+    libraryName = 'tool-listdata'
+    libraryDescription = 'list data'
 }
+
 
 android {
 
@@ -25,7 +26,6 @@ android {
         targetSdkVersion targetSdk
         versionCode versionCode
         versionName versionName
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -37,25 +37,7 @@ android {
             minifyEnabled true
             useProguard true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-        }
-    }
-
-    // Encapsulates options for running tests.
-    testOptions {
-        // Changes the directory where Gradle saves test reports. By default, Gradle saves test reports
-        // in the path_to_your_project/module_name/build/outputs/reports/ directory.
-        // '$rootDir' sets the path relative to the root directory of the current project.
-        reportDir "$rootDir/test-reports"
-    }
-
-    testOptions {
-        // Encapsulates options for local unit tests.
-        unitTests {
-            // Encapsulates options for controlling how Gradle executes local unit tests. For a list
-            // of all the options you can specify, read Gradle's reference documentation.
-            all {
-                jvmArgs '-XX:MaxPermSize=256m'
-            }
+            testProguardFile "test-proguard-rules.pro"
         }
     }
 }
@@ -63,11 +45,18 @@ android {
 dependencies {
     implementation project(path: ':tool-core')
     implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
-    implementation "com.android.support:support-annotations:$supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$supportLibraryVersion"
+
+    // Retrofit & OKHttp
+    implementation "com.squareup.retrofit2:retrofit:2.4.0"
+    implementation "com.squareup.retrofit2:retrofit-mock:2.4.0"
+    implementation "com.squareup.okhttp3:okhttp:3.10.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:3.10.0"
 
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "com.android.support.test:runner:$runnerVersion"
 }
+
 
 publish {
     userOrg = bintrayUser

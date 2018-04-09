@@ -14,7 +14,6 @@ import org.pengyr.tool.dialog.holder.DialogYesHolder;
 
 import java.lang.reflect.Field;
 
-
 /**
  * Base parent of all dialog,
  * extends from DialogFragment
