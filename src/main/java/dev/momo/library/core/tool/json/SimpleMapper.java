@@ -34,7 +34,7 @@ public class SimpleMapper {
 
     // Object Wrapper
     public static String toString(Object object) {
-
+        if(object == null) return "";
         try {
             return getMapper().writeValueAsString(object);
         } catch (JsonProcessingException e) {
