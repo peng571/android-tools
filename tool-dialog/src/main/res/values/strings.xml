@@ -1,6 +1,0 @@
-<resources>
-    <string name="dialog_ok">OK</string>
-    <string name="dialog_yes">Yes</string>
-    <string name="dialog_no">No</string>
-    <string name="dialog_cancel">Cancel</string>
-</resources>

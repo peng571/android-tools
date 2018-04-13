@@ -5,7 +5,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.1.1'
     }
 }
 
@@ -43,9 +43,9 @@ ext{
     bintrayApikey = apikey
 
     javaVersion = JavaVersion.VERSION_1_8
-    compileVersion = 26
-    buildToolVersion =  '27.0.2'
-    targetSdk = 26
+    buildToolVersion = '27.0.3'
+    compileSdk = 27
+    targetSdk = 27
     minSdk = 16
 
     supportLibraryVersion = '27.1.1'

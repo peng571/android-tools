@@ -13,8 +13,10 @@ ext {
 
 android {
 
-    compileSdkVersion compileVersion
-    buildToolsVersion buildToolVersion
+
+    compileSdkVersion compileSdk
+    buildToolsVersion buildToolsVersion
+
     compileOptions {
         sourceCompatibility javaVersion
         targetCompatibility javaVersion
@@ -25,6 +27,7 @@ android {
         targetSdkVersion targetSdk
         versionCode versionCode
         versionName versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {

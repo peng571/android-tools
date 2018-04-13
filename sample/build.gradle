@@ -1,13 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-        }
-    }
 
-    compileSdkVersion compileVersion
-    buildToolsVersion buildToolVersion
+    compileSdkVersion compileSdk
+    buildToolsVersion buildToolsVersion
+
     compileOptions {
         sourceCompatibility javaVersion
         targetCompatibility javaVersion
@@ -18,6 +15,17 @@ android {
         targetSdkVersion targetSdk
         versionCode versionCode
         versionName versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    defaultConfig {
+        minSdkVersion minSdk
+        targetSdkVersion targetSdk
+        versionCode versionCode
+        versionName versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
