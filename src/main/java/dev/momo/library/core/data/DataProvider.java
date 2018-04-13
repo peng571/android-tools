@@ -121,6 +121,7 @@ public class DataProvider<D> {
      * Must bind(null) when adapter view is not shown
      */
     public void unbind() {
+        this.positionFixer = null;
         this.adapter = null;
     }
 
