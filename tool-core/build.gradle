@@ -13,7 +13,6 @@ ext {
 
 android {
 
-
     compileSdkVersion compileSdk
     buildToolsVersion buildToolsVersion
 

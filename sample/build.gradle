@@ -46,8 +46,6 @@ android {
 dependencies {
     implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
     implementation project(path: ':tool-core')
-//    implementation project(path: ':tool-datalist')
-//    implementation project(path: ':tool-dialog')
 
     testImplementation "junit:junit:$junitVersion"
     androidTestImplementation "com.android.support.test:runner:$runnerVersion"

@@ -30,16 +30,11 @@
     public protected *;
 }
 
+-keep public interface org.pengyr.tool.core.**{
+    public protected *;
+}
 
 -keep class org.pengyr.tool.core.AppHelper{ *; }
-
-# -assumenosideeffects class android.util.Log {
-#    public static *;
-# }
-
-# -assumenosideeffects class org.pengyr.tool.core.log.Logger {
-#    public static *;
-# }
 
 
 # Preserve static fields of inner classes of R classes that might be accessed

@@ -1,5 +1,2 @@
 include ':tool-core'
-include ':tool-datalist'
-include ':tool-dialog'
 include ':sample'
-include ':sample-dialog'
