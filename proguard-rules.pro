@@ -30,7 +30,6 @@
     public protected *;
 }
 
-
 -keep class dev.momo.library.core.Helper{ *; }
 
 -assumenosideeffects class android.util.Log {

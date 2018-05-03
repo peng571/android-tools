@@ -12,9 +12,11 @@ import android.support.annotation.DimenRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
+
 
 import java.util.IllegalFormatConversionException;
 
@@ -56,7 +58,6 @@ public class ResourceHelper {
             int res = applicationContext.getResources().getIdentifier(name, type, appPackageName);
             return res;
         } catch (Resources.NotFoundException e) {
-            //            Logger.E("CAN NOT FIND RES WITH ID " + name);
             Logger.E(TAG, e);
             return 0;
         }
@@ -66,10 +67,7 @@ public class ResourceHelper {
         if (resources == null) return Color.BLACK;
         if (resId == 0) return Color.BLACK;
         try {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                return ContextCompat.getColor(applicationContext, resId);
-            }
-            return resources.getColor(resId);
+            return ContextCompat.getColor(applicationContext, resId);
         } catch (Resources.NotFoundException e) {
             Logger.E(TAG, e);
             return Color.BLACK;
@@ -121,25 +119,18 @@ public class ResourceHelper {
 
     public static @StringRes int getStringID(@ArrayRes int resID, int index) {
         if (resources == null) return 0;
-        TypedArray array = resources.obtainTypedArray(resID);
-        return array.getResourceId(index, 0);
-    }
-
-    @Nullable
-    public static Drawable getDrawable(@DrawableRes int resId) {
-        if (resources == null) return null;
-        if (resId == 0) return null;
+        TypedArray array = null;
         try {
-            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-                return resources.getDrawable(resId, applicationContext.getTheme());
-            } else {
-                return resources.getDrawable(resId);
+            array = resources.obtainTypedArray(resID);
+            return array.getResourceId(index, 0);
+        } finally {
+            if (array != null) {
+                array.recycle();
             }
-        } catch (Resources.NotFoundException e) {
-            Logger.E(TAG, e);
-            return null;
         }
     }
+
+
 
     public static int getDimenPixel(@DimenRes int resId) {
         if (resources == null) return 0;
