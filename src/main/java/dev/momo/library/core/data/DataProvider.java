@@ -121,7 +121,6 @@ public class DataProvider<D> {
      * Must bind(null) when adapter view is not shown
      */
     public void unbind() {
-        this.positionFixer = null;
         this.adapter = null;
     }
 
@@ -156,10 +155,14 @@ public class DataProvider<D> {
     @UiThread
     public synchronized void addCurrent(@NonNull D id, int index) {
         if (adapter == null) return;
+
+        // if already has same data in list, delete and add again
         if (data.indexOf(id) >= 0) {
             removeCurrent(id);
             index--;
         }
+
+        // fix index
         if (index < 0) index = 0;
         if (index > count()) index = count();
 
@@ -174,6 +177,7 @@ public class DataProvider<D> {
         int index = data.indexOf(d);
         if (index < 0) return;
         if (index >= count()) return;
+//        Logger.D(TAG, "remove [%s] at index %d, fix to %d", String.valueOf(d), index, fixAdapterPosition(index));
         data.remove(index);
         adapter.notifyItemRemoved(fixAdapterPosition(index));
     }
