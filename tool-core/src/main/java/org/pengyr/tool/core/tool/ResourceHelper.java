@@ -4,15 +4,10 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.support.annotation.ArrayRes;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DimenRes;
-import android.support.annotation.DrawableRes;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.RequiresApi;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
 import android.util.TypedValue;
@@ -128,28 +123,6 @@ public class ResourceHelper {
             }
         }
     }
-
-    @Nullable
-    public static Drawable getDrawable(@DrawableRes int resId) {
-        if (resources == null) return null;
-        if (resId == 0) return null;
-        try {
-            if (Build.VERSION.SDK_INT > Build.VERSION_CODES.LOLLIPOP) {
-                return resources.getDrawable(resId, applicationContext.getTheme());
-            } else {
-                return getDrawable22(resId);
-            }
-        } catch (Resources.NotFoundException e) {
-            Logger.E(TAG, e);
-            return null;
-        }
-    }
-
-    @RequiresApi(22)
-    private static Drawable getDrawable22(@DrawableRes int resId) {
-        return resources.getDrawable(resId);
-    }
-
 
     public static int getDimenPixel(@DimenRes int resId) {
         if (resources == null) return 0;

@@ -6,7 +6,7 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.text.TextUtils;
 
-import org.pengyr.tool.core.view.DisplayHelper;
+import org.pengyr.tool.core.tool.DisplayHelper;
 
 import java.util.Locale;
 

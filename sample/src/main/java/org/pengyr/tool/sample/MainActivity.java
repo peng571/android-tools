@@ -1,6 +1,7 @@
 package org.pengyr.tool.sample;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import org.pengyr.tool.core.AppHelper;
@@ -12,7 +13,7 @@ import org.pengyr.tool.core.util.ThreadUtil;
 /**
  * Created by Peng on 2018/3/25.
  */
-public class MainActivity extends BaseActivity {
+public class MainActivity extends AppCompatActivity {
 
     private final static String TAG = MainActivity.class.getSimpleName();
 

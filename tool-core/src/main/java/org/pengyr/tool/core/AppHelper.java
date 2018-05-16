@@ -4,11 +4,11 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 
+import org.pengyr.tool.core.tool.DisplayHelper;
 import org.pengyr.tool.core.tool.PreferenceHelper;
 import org.pengyr.tool.core.tool.ResourceHelper;
 import org.pengyr.tool.core.util.NetworkUtil;
 import org.pengyr.tool.core.util.ThreadUtil;
-import org.pengyr.tool.core.view.DisplayHelper;
 
 
 /**

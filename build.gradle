@@ -36,8 +36,8 @@ ext{
     libraryGroup = 'org.pengyr.tool'
     siteUrl = 'https://github.com/peng571/android-tools'
 
-    versionCode = 5
-    versionName = '0.0.5'
+    versionCode = 10001
+    versionName = '1.0.1'
 
     bintrayUserName = userName
     bintrayApikey = apikey

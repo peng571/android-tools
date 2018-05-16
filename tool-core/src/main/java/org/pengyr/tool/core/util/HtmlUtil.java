@@ -1,8 +1,11 @@
 package org.pengyr.tool.core.util;
 
 import android.os.Build;
+import android.support.annotation.StringRes;
 import android.text.Html;
 import android.text.Spanned;
+
+import org.pengyr.tool.core.tool.ResourceHelper;
 
 /**
  * Created by momo peng on 2018/3/21.
@@ -19,8 +22,8 @@ public class HtmlUtil {
         }
     }
 
-    //    @SuppressWarnings("deprecation")
-    //    public static Spanned fromHtml(@StringRes int sourceRes) {
-    //        return fromHtml(ResourceHelper.getString(sourceRes));
-    //    }
+    @SuppressWarnings("deprecation")
+    public static Spanned fromHtml(@StringRes int sourceRes) {
+        return fromHtml(ResourceHelper.getString(sourceRes));
+    }
 }

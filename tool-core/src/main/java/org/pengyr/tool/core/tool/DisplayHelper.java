@@ -1,17 +1,16 @@
-package org.pengyr.tool.core.view;
+package org.pengyr.tool.core.tool;
 
 /**
  * Created by Peng on 2015/12/26.
  */
-
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Point;
 import android.util.DisplayMetrics;
 
-import java.util.Locale;
-
 import org.pengyr.tool.core.log.Logger;
+
+import java.util.Locale;
 
 public class DisplayHelper {
 
