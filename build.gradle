@@ -5,20 +5,16 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath 'com.android.tools.build:gradle:3.1.4'
     }
 }
 
 
 allprojects {
     repositories {
-        google()
-        jcenter()
-        tasks.withType(Javadoc) {
-            options.addStringOption('Xdoclint:none', '-quiet')
-            options.addStringOption('encoding', 'UTF-8')
-        }
-    }
+google()
+jcenter()
+}
 }
 
 
@@ -43,12 +39,12 @@ ext{
     bintrayApikey = apikey
 
     javaVersion = JavaVersion.VERSION_1_8
-    buildToolVersion = '27.0.3'
-    compileSdk = 27
-    targetSdk = 27
-    minSdk = 16
+    buildToolVersion = '28.0.0'
+    compileSdk = 28
+    targetSdk = 28
+    minSdk = 19
 
-    supportLibraryVersion = '27.1.1'
+    supportLibraryVersion = '28.0.0'
 
     junitVersion = '4.12'
     runnerVersion = '1.0.1'
