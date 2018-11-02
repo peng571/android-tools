@@ -6,14 +6,30 @@
 
 用來幫助Android Application快速建立的Library。
 
-
-## Usage
+## Import
 
 #### Gradle
 
 if useing gradle, add this line into apps build.gradle
 
     implementation 'org.pengyr.tool:tool-core:[VERSION]'
+
+
+## Usage
+
+#### AppHelper
+
+set application context to init AppHelper
+
+    AppHelper.initInstance(applicationContext)
+    
+#### Logger
+
+setup logger with main tag to better filter on Logcat
+
+    Logger.setTAG(YOUR_MAIN_TAG)
+    Logger.setLogLevel(if (BuildConfig.DEBUG) Logger.LOG_ALL else Logger.LOG_NONE)
+
 
 ## License
 
